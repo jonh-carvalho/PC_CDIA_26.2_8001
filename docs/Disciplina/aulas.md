@@ -1,11 +1,11 @@
 # Aulas
 
-| Aula               | Conteúdo |
-|--------------------|----------|
+| Aula               | Projeto | Cloud Computing|
+|--------------------|----------| |
 | Aula 01 - 07/08/2026 | :material-cloud-outline: Aula Cancelada |
-| Aula 02 - 14/08/2026 | :octicons-project-roadmap-24: [Projeto de Cloud Computing](../Disciplina/docs/aula01/Pilares_da_Excelência_na_Nuvem.png) | - [Operações Cloud](../Disciplina/docs/aula02/Operações%20Cloud.pdf)  |
-| Aula 03 - 21/08/2026 | :material-check:  [AWS Educate](https://awseducate.instructure.com/courses/1160) <br> :material-check: [Avaliação de Custoss](../Disciplina/docs/aula03/AWS_Financial_Blueprint.pdf) <br> :material-check: Fase de Iniciação |
-| Aula 04 - 28/08/2026 | :material-check:  |
+| Aula 02 - 14/08/2026 | :octicons-project-roadmap-24: [Projeto de Cloud Computing](../Disciplina/docs/aula01/Pilares_da_Excelência_na_Nuvem.png) <br> :octicons-project-roadmap-24: [Operações Cloud](../Disciplina/docs/aula02/Operações%20Cloud.pdf)  | :material-cloud-outline: [Fundamentos de Cloud Computing](../Disciplina/docs/aula02/Fundamentos%20de%20Cloud%20Computing.pdf) <br> :material-cloud-outline: [Introdução ao AWS](../Disciplina/docs/aula02/Introdução%20ao%20AWS.pdf) <br> :material-cloud-outline: [Principais Serviços Aws](../Disciplina/docs/aula02/Principais%20Serviços%20Aws.pdf) |
+| Aula 03 - 21/08/2026 | :octicons-project-roadmap-24:  [AWS Educate](https://awseducate.instructure.com/courses/1160) <br> :octicons-project-roadmap-24: [Avaliação de Custos](../Disciplina/docs/aula03/AWS_Financial_Blueprint.pdf) <br> :octicons-project-roadmap-24: Fase de Iniciação | :material-cloud-outline: [EC2](https://awseducate.instructure.com/courses/941) |
+| Aula 04 - 28/08/2026 | :material-check:  | |
 
 
 <!--
