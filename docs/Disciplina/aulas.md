@@ -2,9 +2,9 @@
 
 | Aula               | Conteúdo |
 |--------------------|----------|
-| Aula 01 - 07/08/2026 | :material-check: Aula Cancelada |
-| Aula 02 - 14/08/2026 | :material-check: [Projeto de Cloud Computing](../Disciplina/docs/aula01/Pilares_da_Excelência_na_Nuvem.png) | - [Operações Cloud](../Disciplina/docs/aula02/Operações%20Cloud.pdf)  |
-| Aula 03 - 21/08/2026 | :material-check: :material-check: [AWS Educate](https://awseducate.instructure.com/courses/1160) <br> :material-check: [Avaliação de Custoss](../Disciplina/docs/aula03/AWS_Financial_Blueprint.pdf) <br> :material-check: Fase de Iniciação |
+| Aula 01 - 07/08/2026 | :material-cloud-outline: Aula Cancelada |
+| Aula 02 - 14/08/2026 | :octicons-project-roadmap-24: [Projeto de Cloud Computing](../Disciplina/docs/aula01/Pilares_da_Excelência_na_Nuvem.png) | - [Operações Cloud](../Disciplina/docs/aula02/Operações%20Cloud.pdf)  |
+| Aula 03 - 21/08/2026 | :material-check:  [AWS Educate](https://awseducate.instructure.com/courses/1160) <br> :material-check: [Avaliação de Custoss](../Disciplina/docs/aula03/AWS_Financial_Blueprint.pdf) <br> :material-check: Fase de Iniciação |
 | Aula 04 - 28/08/2026 | :material-check:  |
 
 
