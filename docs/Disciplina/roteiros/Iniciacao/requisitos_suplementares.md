@@ -1,4 +1,4 @@
-# DOCUMENTO DE REQUISITOS SUPLEMENTARES (v1.0)
+# Documento de Requisitos Suplementares (v1.0)
 
 ## SwiftTrack IoT
 

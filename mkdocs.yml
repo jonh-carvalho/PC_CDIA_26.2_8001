@@ -13,20 +13,21 @@ nav:
         - Case Template: Disciplina/roteiros/Iniciacao/case_template.md
         - Documento de Visão Preenchido: Disciplina/roteiros/Iniciacao/dv_template_preenchido.md
         - Requisitos Suplementares: Disciplina/roteiros/Iniciacao/requisitos_suplementares.md
-  - Iniciação: 
-    - Index: Iniciacao/index.md
-    - Documento de Visão Preenchido: Iniciacao/dv.md
-    - Requisitos Suplementares: Iniciacao/rs.md
-#      - Ambiente: Disciplina/ambiente.md
-    - Roteiros:
+      - Roteiros:
 #        - 01- AWS: Disciplina/roteiros/02 - aws.md
-      - 04 - EC2: Disciplina/roteiros/04 - ec2.md
-      - 04 - Linux Bash: Disciplina/roteiros/04 - linux.md
+        - 04 - EC2: Disciplina/roteiros/04 - ec2.md
+        - 04 - Linux Bash: Disciplina/roteiros/04 - linux.md
 #        - 05 - Nginx: Disciplina/roteiros/05 - nginxsite.md
 #        - 06 - S3: Disciplina/roteiros/06 - s3.md
 #        - 07 - BE: Disciplina/roteiros/07 - eb.md
 #        - 10 - Aurora RDS: Disciplina/roteiros/10 - aurora.md
 #        - 12 - EB MySQL: Disciplina/roteiros/12 - ebmysql.md
+  - Iniciação: 
+    - Index: Iniciacao/index.md
+    - Documento de Visão Preenchido: Iniciacao/dv.md
+    - Requisitos Suplementares: Iniciacao/rs.md
+#      - Ambiente: Disciplina/ambiente.md
+
 #  - Avaliações:
 #      - AC:
 #        - Index: Avalia/index.md
@@ -109,7 +110,7 @@ theme:
     - navigation.indexes
     - navigation.instant
     - navigation.instant.progress
-    - navigation.path
+    #- navigation.path
     - navigation.tabs
     - navigation.top
     - navigation.tracking
