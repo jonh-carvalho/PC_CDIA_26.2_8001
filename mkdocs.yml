@@ -24,7 +24,7 @@ nav:
 #        - 12 - EB MySQL: Disciplina/roteiros/12 - ebmysql.md
   - Iniciação: 
     - Index: Iniciacao/index.md
-    - Documento de Visão Preenchido: Iniciacao/dv.md
+    - Documento de Visão: Iniciacao/dv.md
     - Requisitos Suplementares: Iniciacao/rs.md
 #      - Ambiente: Disciplina/ambiente.md
 
