@@ -5,8 +5,8 @@
 | Aula 01 - 07/08/2026 | :material-cloud-outline: Aula Cancelada |
 | Aula 02 - 14/08/2026 | :octicons-project-roadmap-24: [Projeto de Cloud Computing](./docs/aula01/Cloud_Architecture_Blueprint.pdf) <br> :octicons-project-roadmap-24: [Operações Cloud](../Disciplina/docs/aula02/Operações%20Cloud.pdf)  | :material-cloud-outline: [Fundamentos de Cloud Computing](./docs/aula01/Fundamentos-de-Cloud-Computing-Introducao-a-Computacao-em-Nuvem.pdf) <br> :material-cloud-outline: [Introdução ao Cloud Computing](./docs/aula02/Introdução%20ao%20Cloud%20Computing.pdf) <br> :material-cloud-outline: [Introdução ao AWS](./docs/aula02/Introdução%20a%20AWS.pdf) <br> :material-cloud-outline: [Principais Serviços Aws](./docs/aula02/Principais-Servicos-AWS-Computacao-Armazenamento-e-Redes.pdf) |
 | Aula 03 - 21/08/2026 | :octicons-project-roadmap-24:  [AWS Educate](https://awseducate.instructure.com/courses/1160) <br> :octicons-project-roadmap-24: [Avaliação de Custos](../Disciplina/docs/aula03/AWS_Financial_Blueprint.pdf) <br> :octicons-project-roadmap-24: Fase de Iniciação | :material-cloud-outline: [EC2](https://awseducate.instructure.com/courses/941) |
-| Aula 04 - 28/08/2026 | :octicons-project-roadmap-24:  [Requisitos Suplementares](../Disciplina/docs/aula04/Requisitos%20Suplementares.pdf) |:material-cloud-outline: |
-| Aula 05 - 04/09/2026 | :octicons-project-roadmap-24:  | :material-cloud-outline: |
+| Aula 04 - 28/08/2026 | :octicons-project-roadmap-24:  [Requisitos Suplementares](../Disciplina/docs/aula04/Requisitos%20Suplementares.pdf) |:material-cloud-outline: Roteiros |
+| Aula 05 - 04/09/2026 | :octicons-project-roadmap-24:  Casos de Uso Arquitetural | :material-cloud-outline: Roteiros |
 | Aula 06 - 11/09/2026 | :octicons-project-roadmap-24:  | :material-cloud-outline: |
 | Aula 07 - 18/09/2026 | :octicons-project-roadmap-24:  | :material-cloud-outline: |
 | Aula 08 - 25/09/2026 | :octicons-project-roadmap-24: AP1 | :material-cloud-outline: AP1|
