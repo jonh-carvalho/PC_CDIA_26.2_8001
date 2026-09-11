@@ -9,7 +9,7 @@
 | Aula 05 - 04/09/2026 | :octicons-project-roadmap-24:  Casos de Uso Arquitetural | :material-cloud-outline: Roteiros |
 | Aula 06 - 11/09/2026 | :octicons-project-roadmap-24:  | :material-cloud-outline: |
 | Aula 07 - 18/09/2026 | :octicons-project-roadmap-24:  | :material-cloud-outline: |
-| Aula 08 - 25/09/2026 | :octicons-project-roadmap-24: AP1 | :material-cloud-outline: AP1|
+| Aula 08 - 25/09/2026 | :octicons-project-roadmap-24: AP1 - Apresentação | :material-cloud-outline: AP1 - Apresentação |
 
 <!--
 Aula 05 - 26/03/2026 | :material-check: Roteiro Nginx |
