@@ -62,6 +62,3 @@ Isso fará o download do servidor Nginx e o deixará rodando em segundo plano, e
        ```
     2. **Libere o tráfego de entrada:** No console web da AWS, acesse a aba **Segurança (Security)** da sua instância EC2, clique para editar as **Regras de Entrada (Inbound Rules)** de seu Security Group e adicione uma regra permitindo tráfego **HTTP na porta 80** vindo de qualquer lugar (`0.0.0.0/0`).
 
----
-
-🐳 Deseja que eu te mostre agora como criar o seu próprio **Dockerfile** para empacotar uma aplicação customizada, ou prefere aprender a instalar e usar o **Docker Compose** para subir bancos de dados integrados à sua aplicação?
