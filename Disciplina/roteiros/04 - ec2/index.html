@@ -597,6 +597,8 @@
       
         
       
+        
+      
     
     
     
@@ -730,12 +732,31 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cenario-d-conectando-via-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário D: Conectando via senha
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#como-configurar-o-ssh-para-permitir-autenticacao-por-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como configurar o SSH para permitir autenticação por senha:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como configurar o SSH para permitir autenticação por senha:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#parte-4-explorando-e-finalizando" class="md-nav__link">
     <span class="md-ellipsis">
       Parte 4: Explorando e Finalizando
@@ -743,13 +764,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#resumo-e-checklist-de-boas-praticas" class="md-nav__link">
     <span class="md-ellipsis">
       Resumo e Checklist de Boas Práticas
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -774,6 +800,27 @@
   
   <span class="md-ellipsis">
     04 - Linux Bash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05%20-%20docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 - Docker
   </span>
   
 
@@ -965,8 +1012,6 @@
   
   
 
-
-  <h1>04 - EC2</h1>
 
 <h3 id="provisionando-sua-primeira-instancia-ec2-e-conectando-via-ssh">Provisionando sua Primeira Instância EC2 e Conectando via SSH<a class="headerlink" href="#provisionando-sua-primeira-instancia-ec2-e-conectando-via-ssh" title="Permanent link">&para;</a></h3>
 <p><strong>Objetivo:</strong> Ao final deste roteiro, o aluno terá provisionado (criado) sua primeira máquina virtual na AWS (uma instância EC2), configurado as regras de firewall para permitir acesso, e se conectado a ela de forma segura utilizando SSH, tanto no Windows quanto no macOS/Linux.</p>
@@ -1165,6 +1210,37 @@
 <li>Agora você pode explorar os arquivos, editar código e executar comandos no terminal integrado do VS Code, tudo conectado à sua instância EC2!</li>
 </ol>
 <p><strong>Dica:</strong> Você pode abrir o terminal integrado (Ctrl+`) para executar comandos Linux diretamente na instância.</p>
+<h4 id="cenario-d-conectando-via-senha"><strong>Cenário D:</strong> Conectando via senha<a class="headerlink" href="#cenario-d-conectando-via-senha" title="Permanent link">&para;</a></h4>
+<p>Para conectar via senha, você precisará ter a senha da instância EC2. Isso é menos seguro e não é recomendado em ambientes de produção.</p>
+<p>Recomenda-se sempre usar o método de chave pública/privada para autenticação SSH, pois é mais seguro e evita ataques de força bruta.</p>
+<p>No config do SSH, você pode habilitar a autenticação por senha, mas isso deve ser feito com cautela e apenas em ambientes de teste.</p>
+<h1 id="como-configurar-o-ssh-para-permitir-autenticacao-por-senha">Como configurar o SSH para permitir autenticação por senha:<a class="headerlink" href="#como-configurar-o-ssh-para-permitir-autenticacao-por-senha" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>Conecte-se à instância via console:</p>
+<ul>
+<li>Acesse o AWS Management Console.</li>
+<li>Vá para a seção "EC2".</li>
+<li>Selecione a instância desejada.</li>
+<li>Clique em "Conectar" e siga as instruções para obter a senha.</li>
+</ul>
+</li>
+<li>
+<p>Edite o arquivo de configuração do SSH:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/ssh/sshd_config
+</span></code></pre></div></p>
+</li>
+<li>Descomente ou adicione a linha:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>PasswordAuthentication yes
+</span></code></pre></div></li>
+<li>Reinicie o serviço SSH:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Ubuntu</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>ssh
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Amazon Linux</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>sudo<span class="w"> </span>service<span class="w"> </span>sshd<span class="w"> </span>restart
+</span></code></pre></div></li>
+</ol>
 <h3 id="parte-4-explorando-e-finalizando"><strong>Parte 4:</strong> Explorando e Finalizando<a class="headerlink" href="#parte-4-explorando-e-finalizando" title="Permanent link">&para;</a></h3>
 <p><strong>O que fazer depois de conectar:</strong></p>
 <ul>
