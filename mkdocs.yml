@@ -8,26 +8,34 @@ nav:
   - Home: index.md
   - Disciplina:
       - Aulas: Disciplina/aulas.md
+      - Ambiente: Disciplina/ambiente.md
       - Iniciação: 
-        - Desafios: Disciplina/roteiros/Iniciacao/desafios.md
-        - Case Template: Disciplina/roteiros/Iniciacao/case_template.md
-        - Documento de Visão Preenchido: Disciplina/roteiros/Iniciacao/dv_template_preenchido.md
-        - Requisitos Suplementares: Disciplina/roteiros/Iniciacao/requisitos_suplementares.md
+          - Desafios: Disciplina/roteiros/Iniciacao/desafios.md
+          - Case Template: Disciplina/roteiros/Iniciacao/case_template.md
+          - Documento de Visão Preenchido: Disciplina/roteiros/Iniciacao/dv_template_preenchido.md
+          - Requisitos Suplementares: Disciplina/roteiros/Iniciacao/requisitos_suplementares.md
+      - Elaboração:
+          - Casos de Uso Arquitetural: Disciplina/roteiros/Elaboracao/casos_uso_arquiteturais.md
+          - Modelo de Análise - Segurança: Disciplina/roteiros/Elaboracao/modelo_de_analise-pacotes_subsistemas.md
       - Roteiros:
-#        - 01- AWS: Disciplina/roteiros/02 - aws.md
+        - 01- AWS: Disciplina/roteiros/02 - aws.md
         - 04 - EC2: Disciplina/roteiros/04 - ec2.md
         - 04 - Linux Bash: Disciplina/roteiros/04 - linux.md
         - 05 - Docker: Disciplina/roteiros/05 - docker.md
         - 05 - Nginx: Disciplina/roteiros/05 - nginxsite.md
-#        - 06 - S3: Disciplina/roteiros/06 - s3.md
-#        - 07 - BE: Disciplina/roteiros/07 - eb.md
+        - 06 - S3: Disciplina/roteiros/06 - s3.md
+        - 07 - BE: Disciplina/roteiros/07 - eb.md
 #        - 10 - Aurora RDS: Disciplina/roteiros/10 - aurora.md
 #        - 12 - EB MySQL: Disciplina/roteiros/12 - ebmysql.md
   - Iniciação: 
     - Index: Iniciacao/index.md
     - Documento de Visão: Iniciacao/dv.md
     - Requisitos Suplementares: Iniciacao/rs.md
-#      - Ambiente: Disciplina/ambiente.md
+  - Elaboração:
+    - Index: Elaboracao/index.md
+    - Casos de Uso Arquitetural: Elaboracao/cua.md
+    - Modelo de Análise - Segurança: Elaboracao/maps.md
+        
 
 #  - Avaliações:
 #      - AC:

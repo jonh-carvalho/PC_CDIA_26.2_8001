@@ -1,11 +1,9 @@
-# DOCUMENTO DE REQUISITOS SUPLEMENTARES (v1.0)
+## **Documento de Requisitos Suplementares (v1.0)**
 
-## XXXX
-
-**Projeto:** Projeto de Cloud - Fase de Inception  
-**Data:** 27/08/2026  
-**Status:** Versão inicial para validação arquitetural
-
+**Disciplina:** Projeto de Cloud
+**Projeto:** [Nome do Projeto]  
+**Data:** xx/xx/2026  
+**Status:** xxxx  xxxxx xxxxxx
 ---
 
 ## 1. Propósito e escopo

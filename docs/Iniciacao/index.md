@@ -1,8 +1,8 @@
-# Iniciação
+## Iniciação
 
 > Objetivo: Definir o escopo inicial do projeto e alinhar os objetivos principais.
 
-## Principais atividades:
+### Principais atividades:
 
 * Definição do escopo do projeto
 
