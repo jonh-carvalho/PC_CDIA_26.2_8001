@@ -1,0 +1,3424 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jonh Carvalho">
+      
+      
+      
+        <link rel="prev" href="../casos_uso_arquiteturais/">
+      
+      
+        <link rel="next" href="../../02%20-%20aws/">
+      
+      
+      <link rel="icon" href="../../../../assets/ibmec_icon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Modelo de Análise - Segurança - PC_CDIA_26.2_8001</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelo-de-analise-pacotessubsistemas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="PC_CDIA_26.2_8001" class="md-header__button md-logo" aria-label="PC_CDIA_26.2_8001" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PC_CDIA_26.2_8001
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modelo de Análise - Segurança
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="#193257" data-md-color-accent="#FAB90A"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="all" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jonh-carvalho/PC_CDIA_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../aulas/" class="md-tabs__link">
+          
+  
+    
+  
+  Disciplina
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Iniciacao/" class="md-tabs__link">
+          
+  
+    
+  
+  Iniciação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Elaboracao/" class="md-tabs__link">
+          
+  
+    
+  
+  Elaboração
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../bibliografia/" class="md-tabs__link">
+        
+  
+    
+  
+  Bibliografia
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="PC_CDIA_26.2_8001" class="md-nav__button md-logo" aria-label="PC_CDIA_26.2_8001" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    PC_CDIA_26.2_8001
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jonh-carvalho/PC_CDIA_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Disciplina
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Disciplina
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aulas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ambiente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ambiente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/desafios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desafios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/case_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/dv_template_preenchido/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão Preenchido
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/requisitos_suplementares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elaboração
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../casos_uso_arquiteturais/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso Arquitetural
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Modelo de Análise - Segurança
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Modelo de Análise - Segurança
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#swifttrack-iot-arquitetura-de-seguranca-em-nuvem-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      SWIFTTRACK IOT - ARQUITETURA DE SEGURANÇA EM NUVEM AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. INTRODUÇÃO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. INTRODUÇÃO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Propósito
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Escopo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-definicoes-e-siglas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Definições e Siglas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Referências
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-visao-geral-dos-pacotes-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. VISÃO GERAL DOS PACOTES DE SEGURANÇA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. VISÃO GERAL DOS PACOTES DE SEGURANÇA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-diagrama-de-pacotes-plantuml" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Diagrama de Pacotes (PlantUML)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-descricao-dos-pacotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Descrição dos Pacotes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-matriz-de-rastreamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Matriz de Rastreamento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-especificacao-dos-pacotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. ESPECIFICAÇÃO DOS PACOTES
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. ESPECIFICAÇÃO DOS PACOTES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-pacote-identity-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. PACOTE: IDENTITY &amp; ACCESS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. PACOTE: IDENTITY & ACCESS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1. Responsabilidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-elementos-do-pacote" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2. Elementos do Pacote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-diagrama-de-classes-de-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.3. Diagrama de Classes de Análise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-roles-e-permissoes-swifttrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.4. Roles e Permissões (SwiftTrack)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-politica-iam-exemplo-ec2-api-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.5. Política IAM (Exemplo - EC2-API-Role)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-riscos-e-mitigacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.6. Riscos e Mitigações
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-pacote-network-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. PACOTE: NETWORK SECURITY
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. PACOTE: NETWORK SECURITY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1. Responsabilidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-elementos-do-pacote" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2. Elementos do Pacote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-diagrama-de-classes-de-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3. Diagrama de Classes de Análise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-matriz-de-security-groups-swifttrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.4. Matriz de Security Groups (SwiftTrack)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-matriz-de-nacls-swifttrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.5. Matriz de NACLs (SwiftTrack)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-waf-rules-swifttrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.6. WAF Rules (SwiftTrack)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#327-riscos-e-mitigacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.7. Riscos e Mitigações
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-pacote-data-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. PACOTE: DATA PROTECTION
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. PACOTE: DATA PROTECTION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. Responsabilidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-elementos-do-pacote" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. Elementos do Pacote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-diagrama-de-classes-de-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3. Diagrama de Classes de Análise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-matriz-de-criptografia-swifttrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4. Matriz de Criptografia (SwiftTrack)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#335-politicas-de-backup-swifttrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5. Políticas de Backup (SwiftTrack)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#336-riscos-e-mitigacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.6. Riscos e Mitigações
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-pacote-secrets-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. PACOTE: SECRETS MANAGEMENT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. PACOTE: SECRETS MANAGEMENT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1. Responsabilidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-elementos-do-pacote" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.2. Elementos do Pacote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343-diagrama-de-classes-de-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.3. Diagrama de Classes de Análise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344-segredos-gerenciados-swifttrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.4. Segredos Gerenciados (SwiftTrack)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#345-riscos-e-mitigacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.5. Riscos e Mitigações
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-pacote-audit-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. PACOTE: AUDIT &amp; COMPLIANCE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5. PACOTE: AUDIT & COMPLIANCE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1. Responsabilidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352-elementos-do-pacote" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.2. Elementos do Pacote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353-diagrama-de-classes-de-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.3. Diagrama de Classes de Análise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354-config-rules-swifttrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.4. Config Rules (SwiftTrack)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#355-riscos-e-mitigacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.5. Riscos e Mitigações
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-pacote-monitoring-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. PACOTE: MONITORING &amp; DETECTION
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. PACOTE: MONITORING & DETECTION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-responsabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1. Responsabilidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-elementos-do-pacote" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.2. Elementos do Pacote
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#363-diagrama-de-classes-de-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.3. Diagrama de Classes de Análise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#364-alarmes-configurados-swifttrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.4. Alarmes Configurados (SwiftTrack)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#365-riscos-e-mitigacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.5. Riscos e Mitigações
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-diagrama-de-dependencias-entre-pacotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. DIAGRAMA DE DEPENDÊNCIAS ENTRE PACOTES
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-matriz-de-rastreamento-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. MATRIZ DE RASTREAMENTO COMPLETA
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Roteiros
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Roteiros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02%20-%20aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01- AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04%20-%20ec2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 - EC2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04%20-%20linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 - Linux Bash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05%20-%20docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 - Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05%20-%20nginxsite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 - Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06%20-%20s3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 - S3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07%20-%20eb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07 - BE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Iniciacao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/dv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Elaboracao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Elaboração
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Elaboracao/cua/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso Arquitetural
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Elaboracao/maps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo de Análise - Segurança
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="modelo-de-analise-pacotessubsistemas">Modelo de Análise (Pacotes/Subsistemas)<a class="headerlink" href="#modelo-de-analise-pacotessubsistemas" title="Permanent link">&para;</a></h1>
+<h2 id="swifttrack-iot-arquitetura-de-seguranca-em-nuvem-aws">SWIFTTRACK IOT - ARQUITETURA DE SEGURANÇA EM NUVEM AWS<a class="headerlink" href="#swifttrack-iot-arquitetura-de-seguranca-em-nuvem-aws" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Informação do Documento</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Projeto</strong></td>
+<td style="text-align: left;">SwiftTrack IoT - Plataforma de Telemetria e Gestão Logística</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Documento</strong></td>
+<td style="text-align: left;">Modelo de Análise (Pacotes/Subsistemas) - Segurança</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Em Desenvolvimento</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Responsável</strong></td>
+<td style="text-align: left;">[Nome do Grupo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Disciplina</strong></td>
+<td style="text-align: left;">Projeto de Cloud</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fase RUP/UP</strong></td>
+<td style="text-align: left;">Elaboration</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-introducao">1. INTRODUÇÃO<a class="headerlink" href="#1-introducao" title="Permanent link">&para;</a></h2>
+<h3 id="11-proposito">1.1. Propósito<a class="headerlink" href="#11-proposito" title="Permanent link">&para;</a></h3>
+<p>Este documento apresenta o <strong>Modelo de Análise (Pacotes/Subsistemas)</strong> para a arquitetura de segurança da plataforma <strong>SwiftTrack IoT</strong> na AWS. O modelo organiza os componentes de segurança em pacotes coesos, facilitando a compreensão, manutenção e evolução da arquitetura, além de permitir a rastreabilidade entre requisitos de segurança e elementos técnicos.</p>
+<p>O modelo é derivado diretamente dos seguintes artefatos:
+- <strong>Documento de Visão</strong> (Semana 1) - Seção "Segurança e Privacidade"
+- <strong>Documento de Requisitos Suplementares</strong> (Semana 2) - Seção "Requisitos de Segurança"
+- <strong>Modelo de Casos de Uso Arquiteturais</strong> (Semana 3) - UC-ARQ-002 e UC-ARQ-007</p>
+<h3 id="12-escopo">1.2. Escopo<a class="headerlink" href="#12-escopo" title="Permanent link">&para;</a></h3>
+<p>O modelo abrange os subsistemas de segurança necessários para proteger:
+- <strong>Dados de motoristas e clientes</strong> (LGPD)
+- <strong>Credenciais de banco de dados</strong>
+- <strong>Telemetria de veículos</strong> (coordenadas GPS)
+- <strong>Faturas e notas fiscais</strong>
+- <strong>Logs de auditoria</strong></p>
+<h3 id="13-definicoes-e-siglas">1.3. Definições e Siglas<a class="headerlink" href="#13-definicoes-e-siglas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Sigla</strong></th>
+<th style="text-align: left;"><strong>Definição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>IAM</strong></td>
+<td style="text-align: left;">Identity and Access Management</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>KMS</strong></td>
+<td style="text-align: left;">Key Management Service</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CMK</strong></td>
+<td style="text-align: left;">Customer Managed Key</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SG</strong></td>
+<td style="text-align: left;">Security Group</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NACL</strong></td>
+<td style="text-align: left;">Network Access Control List</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>WAF</strong></td>
+<td style="text-align: left;">Web Application Firewall</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RBAC</strong></td>
+<td style="text-align: left;">Role-Based Access Control</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MFA</strong></td>
+<td style="text-align: left;">Multi-Factor Authentication</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LGPD</strong></td>
+<td style="text-align: left;">Lei Geral de Proteção de Dados</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TLS</strong></td>
+<td style="text-align: left;">Transport Layer Security</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SSE</strong></td>
+<td style="text-align: left;">Server-Side Encryption</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PITR</strong></td>
+<td style="text-align: left;">Point-In-Time Recovery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-referencias">1.4. Referências<a class="headerlink" href="#14-referencias" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Documento de Visão - SwiftTrack IoT (v1.0)</li>
+<li>Documento de Requisitos Suplementares - SwiftTrack IoT (v1.0)</li>
+<li>Modelo de Casos de Uso Arquiteturais - SwiftTrack IoT (v1.0)</li>
+<li>AWS Well-Architected Framework - Security Pillar</li>
+<li>AWS IAM Best Practices</li>
+<li>Lei Geral de Proteção de Dados (LGPD)</li>
+</ul>
+<h2 id="2-visao-geral-dos-pacotes-de-seguranca">2. VISÃO GERAL DOS PACOTES DE SEGURANÇA<a class="headerlink" href="#2-visao-geral-dos-pacotes-de-seguranca" title="Permanent link">&para;</a></h2>
+<h3 id="21-diagrama-de-pacotes-plantuml">2.1. Diagrama de Pacotes (PlantUML)<a class="headerlink" href="#21-diagrama-de-pacotes-plantuml" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@startuml
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>title Modelo de Análise (Pacotes) - Segurança SwiftTrack IoT
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>skinparam packageStyle rectangle
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>skinparam packageBackgroundColor #F5F5F5
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>skinparam packageBorderColor #333333
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>package &quot;Segurança SwiftTrack IoT&quot; {
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  package &quot;Identity &amp; Access&quot; as IAM #E3F2FD {
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    [IAM Users]
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    [IAM Groups]
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    [IAM Roles]
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    [IAM Policies]
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    [MFA]
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    [RBAC]
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  }
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>  package &quot;Network Security&quot; as NetSec #FFF3E0 {
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    [Security Groups]
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    [NACLs]
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    [WAF]
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    [VPC Flow Logs]
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    [Private Subnets]
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>  }
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>  package &quot;Data Protection&quot; as DataProt #E8F5E9 {
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    [KMS Keys]
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    [S3 Encryption]
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    [RDS Encryption]
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    [DynamoDB Encryption]
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    [TLS/ACM]
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    [Backup Policies]
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>  }
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>  package &quot;Secrets Management&quot; as Secrets #FCE4EC {
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    [Secrets Manager]
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    [Parameter Store]
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    [Rotation Policies]
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    [IAM Policies for Secrets]
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>  }
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>  package &quot;Audit &amp; Compliance&quot; as Audit #EDE7F6 {
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    [CloudTrail]
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    [AWS Config]
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    [Config Rules]
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    [Compliance Reports]
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    [S3 Log Bucket]
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>  }
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>  package &quot;Monitoring &amp; Detection&quot; as Monitor #FFF8E1 {
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    [CloudWatch]
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    [GuardDuty]
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    [Security Hub]
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    [Alarms]
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    [SNS Notifications]
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>  }
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>}
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>&#39; Dependências entre pacotes
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>IAM ..&gt; DataProt : &lt;&lt;use&gt;&gt;\n(quem acessa chaves?)
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>NetSec ..&gt; IAM : &lt;&lt;use&gt;&gt;\n(roles para SGs)
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>DataProt ..&gt; Secrets : &lt;&lt;use&gt;&gt;\n(chaves gerenciadas)
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>Audit ..&gt; IAM : &lt;&lt;use&gt;&gt;\n(rastreia ações)
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>Monitor ..&gt; Audit : &lt;&lt;use&gt;&gt;\n(consome logs)
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>Monitor ..&gt; NetSec : &lt;&lt;use&gt;&gt;\n(analisa flow logs)
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>Monitor ..&gt; DataProt : &lt;&lt;use&gt;&gt;\n(detecta anomalias)
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>@enduml
+</span></code></pre></div>
+<h3 id="22-descricao-dos-pacotes">2.2. Descrição dos Pacotes<a class="headerlink" href="#22-descricao-dos-pacotes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Pacote</strong></th>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Serviços AWS</strong></th>
+<th style="text-align: left;"><strong>Requisitos Atendidos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identity &amp; Access</strong></td>
+<td style="text-align: left;">Gerenciar identidades, autenticação e autorização.</td>
+<td style="text-align: left;">IAM, MFA, RBAC</td>
+<td style="text-align: left;">Segurança (LGPD), Manutenibilidade</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Network Security</strong></td>
+<td style="text-align: left;">Controlar tráfego de rede (firewall).</td>
+<td style="text-align: left;">Security Groups, NACLs, WAF</td>
+<td style="text-align: left;">Segurança (LGPD), Disponibilidade</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data Protection</strong></td>
+<td style="text-align: left;">Criptografar dados em repouso e em trânsito.</td>
+<td style="text-align: left;">KMS, ACM, S3/RDS/DynamoDB Encryption</td>
+<td style="text-align: left;">Segurança (LGPD), Compliance</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Secrets Management</strong></td>
+<td style="text-align: left;">Proteger credenciais e chaves.</td>
+<td style="text-align: left;">Secrets Manager, Parameter Store</td>
+<td style="text-align: left;">Segurança (LGPD), Manutenibilidade</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Audit &amp; Compliance</strong></td>
+<td style="text-align: left;">Rastrear ações e garantir conformidade.</td>
+<td style="text-align: left;">CloudTrail, AWS Config</td>
+<td style="text-align: left;">Segurança (LGPD), Compliance</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Monitoring &amp; Detection</strong></td>
+<td style="text-align: left;">Detectar anomalias e ameaças.</td>
+<td style="text-align: left;">CloudWatch, GuardDuty, Security Hub</td>
+<td style="text-align: left;">Manutenibilidade, Disponibilidade</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-matriz-de-rastreamento">2.3. Matriz de Rastreamento<a class="headerlink" href="#23-matriz-de-rastreamento" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito (Doc. Suplementar)</strong></th>
+<th style="text-align: left;"><strong>Pacote Responsável</strong></th>
+<th style="text-align: left;"><strong>Serviço AWS</strong></th>
+<th style="text-align: left;"><strong>Controle</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Criptografia em repouso (AES-256)</td>
+<td style="text-align: left;">Data Protection</td>
+<td style="text-align: left;">KMS, RDS, S3, DynamoDB</td>
+<td style="text-align: left;">SSE-KMS, RDS Encryption</td>
+</tr>
+<tr>
+<td style="text-align: left;">Criptografia em trânsito (TLS 1.3)</td>
+<td style="text-align: left;">Data Protection</td>
+<td style="text-align: left;">ACM, ALB, API Gateway</td>
+<td style="text-align: left;">Certificados SSL</td>
+</tr>
+<tr>
+<td style="text-align: left;">Autenticação MFA para admins</td>
+<td style="text-align: left;">Identity &amp; Access</td>
+<td style="text-align: left;">IAM</td>
+<td style="text-align: left;">MFA obrigatório</td>
+</tr>
+<tr>
+<td style="text-align: left;">Autorização RBAC</td>
+<td style="text-align: left;">Identity &amp; Access</td>
+<td style="text-align: left;">IAM Groups, Policies</td>
+<td style="text-align: left;">Roles granulares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Isolamento de credenciais</td>
+<td style="text-align: left;">Secrets Management</td>
+<td style="text-align: left;">Secrets Manager</td>
+<td style="text-align: left;">Rotação automática</td>
+</tr>
+<tr>
+<td style="text-align: left;">Auditoria de acessos</td>
+<td style="text-align: left;">Audit &amp; Compliance</td>
+<td style="text-align: left;">CloudTrail</td>
+<td style="text-align: left;">Logs imutáveis</td>
+</tr>
+<tr>
+<td style="text-align: left;">Detecção de anomalias</td>
+<td style="text-align: left;">Monitoring &amp; Detection</td>
+<td style="text-align: left;">GuardDuty, CloudWatch</td>
+<td style="text-align: left;">Alarmes, ML</td>
+</tr>
+<tr>
+<td style="text-align: left;">Conformidade LGPD</td>
+<td style="text-align: left;">Audit &amp; Compliance</td>
+<td style="text-align: left;">AWS Config</td>
+<td style="text-align: left;">Config Rules</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-especificacao-dos-pacotes">3. ESPECIFICAÇÃO DOS PACOTES<a class="headerlink" href="#3-especificacao-dos-pacotes" title="Permanent link">&para;</a></h2>
+<h3 id="31-pacote-identity-access">3.1. PACOTE: IDENTITY &amp; ACCESS<a class="headerlink" href="#31-pacote-identity-access" title="Permanent link">&para;</a></h3>
+<h4 id="311-responsabilidade">3.1.1. Responsabilidade<a class="headerlink" href="#311-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Gerenciar identidades (humanos e serviços), autenticação, autorização e permissões de acesso a todos os recursos da SwiftTrack na AWS.</p>
+<h4 id="312-elementos-do-pacote">3.1.2. Elementos do Pacote<a class="headerlink" href="#312-elementos-do-pacote" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Serviço AWS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>IAM Users</strong></td>
+<td style="text-align: left;">Usuários humanos (admins, operadores, auditores).</td>
+<td style="text-align: left;">IAM</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IAM Groups</strong></td>
+<td style="text-align: left;">Agrupamento de usuários por função (RBAC).</td>
+<td style="text-align: left;">IAM Groups</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IAM Roles</strong></td>
+<td style="text-align: left;">Identidades para serviços (EC2, Lambda, RDS).</td>
+<td style="text-align: left;">IAM Roles</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IAM Policies</strong></td>
+<td style="text-align: left;">Permissões granulares (JSON).</td>
+<td style="text-align: left;">IAM Policies</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MFA</strong></td>
+<td style="text-align: left;">Autenticação multifator.</td>
+<td style="text-align: left;">IAM MFA</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RBAC</strong></td>
+<td style="text-align: left;">Controle baseado em papéis.</td>
+<td style="text-align: left;">IAM Groups + Policies</td>
+</tr>
+</tbody>
+</table>
+<h4 id="313-diagrama-de-classes-de-analise">3.1.3. Diagrama de Classes de Análise<a class="headerlink" href="#313-diagrama-de-classes-de-analise" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@startuml
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>title Pacote Identity &amp; Access - Classes de Análise
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>package &quot;Identity &amp; Access&quot; {
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  class &quot;IAMUser&quot; {
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    - username: String
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    - email: String
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    - mfaEnabled: Boolean
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    - groups: List&lt;Group&gt;
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    + authenticate(): Token
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    + enableMFA(): void
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  }
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  class &quot;IAMGroup&quot; {
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    - name: String
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    - policies: List&lt;Policy&gt;
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    + addUser(user: IAMUser): void
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    + attachPolicy(policy: Policy): void
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>  }
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  class &quot;IAMRole&quot; {
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    - name: String
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    - trustPolicy: JSON
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    - permissions: List&lt;Policy&gt;
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    + assumeRole(service: Service): Credentials
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>  }
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>  class &quot;IAMPolicy&quot; {
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>    - name: String
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>    - document: JSON
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>    - effect: Allow/Deny
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>    + validate(): Boolean
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>  }
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>  class &quot;MFADevice&quot; {
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>    - type: Virtual/Hardware
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>    - serialNumber: String
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>    + generateCode(): String
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>    + validateCode(code: String): Boolean
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>  }
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>  IAMUser &quot;1&quot; -- &quot;*&quot; IAMGroup : pertence
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>  IAMGroup &quot;1&quot; -- &quot;*&quot; IAMPolicy : possui
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>  IAMRole &quot;1&quot; -- &quot;*&quot; IAMPolicy : possui
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>  IAMUser &quot;1&quot; -- &quot;0..1&quot; MFADevice : usa
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>}
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>@enduml
+</span></code></pre></div>
+<h4 id="314-roles-e-permissoes-swifttrack">3.1.4. Roles e Permissões (SwiftTrack)<a class="headerlink" href="#314-roles-e-permissoes-swifttrack" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Role</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Serviços Acessados</strong></th>
+<th style="text-align: left;"><strong>Permissões</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Admin-Role</strong></td>
+<td style="text-align: left;">Humano</td>
+<td style="text-align: left;">Todos</td>
+<td style="text-align: left;"><code>*:*</code> (com MFA)</td>
+<td style="text-align: left;">Emergências e gestão.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>DevOps-Role</strong></td>
+<td style="text-align: left;">Humano</td>
+<td style="text-align: left;">EC2, RDS, S3, CodePipeline</td>
+<td style="text-align: left;">Deploy, operação</td>
+<td style="text-align: left;">CI/CD e operações.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Auditor-Role</strong></td>
+<td style="text-align: left;">Humano</td>
+<td style="text-align: left;">CloudTrail, Config</td>
+<td style="text-align: left;">Somente leitura</td>
+<td style="text-align: left;">Auditoria e compliance.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EC2-API-Role</strong></td>
+<td style="text-align: left;">Serviço</td>
+<td style="text-align: left;">S3, Secrets, DynamoDB</td>
+<td style="text-align: left;">Get/Put específicos</td>
+<td style="text-align: left;">API acessa serviços.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lambda-Role</strong></td>
+<td style="text-align: left;">Serviço</td>
+<td style="text-align: left;">DynamoDB, S3, Logs</td>
+<td style="text-align: left;">Put/Write</td>
+<td style="text-align: left;">Ingestão de telemetria.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RDS-Role</strong></td>
+<td style="text-align: left;">Serviço</td>
+<td style="text-align: left;">KMS</td>
+<td style="text-align: left;">Encrypt/Decrypt</td>
+<td style="text-align: left;">Criptografia de dados.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="315-politica-iam-exemplo-ec2-api-role">3.1.5. Política IAM (Exemplo - EC2-API-Role)<a class="headerlink" href="#315-politica-iam-exemplo-ec2-api-role" title="Permanent link">&para;</a></h4>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;S3Access&quot;</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="s2">&quot;s3:GetObject&quot;</span><span class="p">,</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="s2">&quot;s3:PutObject&quot;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="p">],</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">      </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn:aws:s3:::swifttrack-static/*&quot;</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">      </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SecretsAccess&quot;</span><span class="p">,</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">      </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">      </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="s2">&quot;secretsmanager:GetSecretValue&quot;</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">      </span><span class="p">],</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn:aws:secretsmanager:us-east-1:123456789012:secret:rds-credentials-*&quot;</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">      </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DynamoDBAccess&quot;</span><span class="p">,</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">      </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">      </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">        </span><span class="s2">&quot;dynamodb:PutItem&quot;</span><span class="p">,</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">        </span><span class="s2">&quot;dynamodb:GetItem&quot;</span><span class="p">,</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">        </span><span class="s2">&quot;dynamodb:Query&quot;</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">      </span><span class="p">],</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">      </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn:aws:dynamodb:us-east-1:123456789012:table/telemetry&quot;</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="316-riscos-e-mitigacoes">3.1.6. Riscos e Mitigações<a class="headerlink" href="#316-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Credenciais hardcoded</td>
+<td style="text-align: left;">Usar IAM Roles para serviços.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Permissões excessivas</td>
+<td style="text-align: left;">Aplicar princípio de menor privilégio.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Acesso não autorizado</td>
+<td style="text-align: left;">MFA obrigatório para admins.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rotação de credenciais</td>
+<td style="text-align: left;">Rotação automática via Secrets Manager.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-pacote-network-security">3.2. PACOTE: NETWORK SECURITY<a class="headerlink" href="#32-pacote-network-security" title="Permanent link">&para;</a></h3>
+<h4 id="321-responsabilidade">3.2.1. Responsabilidade<a class="headerlink" href="#321-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Controlar e filtrar o tráfego de rede entre as camadas da aplicação, garantindo isolamento e proteção contra acessos não autorizados.</p>
+<h4 id="322-elementos-do-pacote">3.2.2. Elementos do Pacote<a class="headerlink" href="#322-elementos-do-pacote" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Serviço AWS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Security Groups</strong></td>
+<td style="text-align: left;">Firewall de instâncias (stateful).</td>
+<td style="text-align: left;">VPC</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NACLs</strong></td>
+<td style="text-align: left;">Firewall de sub-redes (stateless).</td>
+<td style="text-align: left;">VPC</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>WAF</strong></td>
+<td style="text-align: left;">Firewall de aplicação (L7).</td>
+<td style="text-align: left;">WAF</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>VPC Flow Logs</strong></td>
+<td style="text-align: left;">Logs de tráfego de rede.</td>
+<td style="text-align: left;">VPC</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Private Subnets</strong></td>
+<td style="text-align: left;">Sub-redes sem acesso à Internet.</td>
+<td style="text-align: left;">VPC</td>
+</tr>
+</tbody>
+</table>
+<h4 id="323-diagrama-de-classes-de-analise">3.2.3. Diagrama de Classes de Análise<a class="headerlink" href="#323-diagrama-de-classes-de-analise" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>@startuml
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>title Pacote Network Security - Classes de Análise
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>package &quot;Network Security&quot; {
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  class &quot;SecurityGroup&quot; {
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    - name: String
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    - vpcId: String
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    - inboundRules: List&lt;Rule&gt;
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    - outboundRules: List&lt;Rule&gt;
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    + addInboundRule(rule: Rule): void
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    + addOutboundRule(rule: Rule): void
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>  }
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>  class &quot;NACL&quot; {
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    - name: String
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    - subnetId: String
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    - rules: List&lt;NACLRule&gt;
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    + addRule(rule: NACLRule): void
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>  }
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>  class &quot;Rule&quot; {
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    - protocol: TCP/UDP/ICMP
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    - portRange: String
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    - source: String
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    - action: Allow/Deny
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>  }
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>  class &quot;WAFRule&quot; {
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>    - name: String
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>    - type: SQLi/XSS/RateLimit
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>    - action: Block/Allow/Count
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>  }
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>  class &quot;FlowLog&quot; {
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>    - logGroup: String
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>    - trafficType: ALL/ACCEPT/REJECT
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>    + enable(): void
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>  }
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>  SecurityGroup &quot;1&quot; -- &quot;*&quot; Rule : contém
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>  NACL &quot;1&quot; -- &quot;*&quot; NACLRule : contém
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>  SecurityGroup &quot;1&quot; -- &quot;0..1&quot; FlowLog : monitora
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>}
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>@enduml
+</span></code></pre></div>
+<h4 id="324-matriz-de-security-groups-swifttrack">3.2.4. Matriz de Security Groups (SwiftTrack)<a class="headerlink" href="#324-matriz-de-security-groups-swifttrack" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Security Group</strong></th>
+<th style="text-align: left;"><strong>Regra de Entrada</strong></th>
+<th style="text-align: left;"><strong>Origem</strong></th>
+<th style="text-align: left;"><strong>Regra de Saída</strong></th>
+<th style="text-align: left;"><strong>Destino</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SG-ALB</strong></td>
+<td style="text-align: left;">80, 443</td>
+<td style="text-align: left;">0.0.0.0/0</td>
+<td style="text-align: left;">8000</td>
+<td style="text-align: left;">SG-EC2-API</td>
+<td style="text-align: left;">Exposição pública via HTTPS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SG-EC2-API</strong></td>
+<td style="text-align: left;">8000</td>
+<td style="text-align: left;">SG-ALB</td>
+<td style="text-align: left;">5432</td>
+<td style="text-align: left;">SG-RDS</td>
+<td style="text-align: left;">API acessada apenas pelo ALB.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">443</td>
+<td style="text-align: left;">VPC Endpoints</td>
+<td style="text-align: left;">Acesso a DynamoDB, S3, Secrets.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SG-RDS</strong></td>
+<td style="text-align: left;">5432</td>
+<td style="text-align: left;">SG-EC2-API</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Banco acessível apenas pela API.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SG-Lambda</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">443</td>
+<td style="text-align: left;">VPC Endpoints</td>
+<td style="text-align: left;">Lambda acessa serviços via endpoints.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="325-matriz-de-nacls-swifttrack">3.2.5. Matriz de NACLs (SwiftTrack)<a class="headerlink" href="#325-matriz-de-nacls-swifttrack" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>NACL</strong></th>
+<th style="text-align: left;"><strong>Regra</strong></th>
+<th style="text-align: left;"><strong>Protocolo</strong></th>
+<th style="text-align: left;"><strong>Porta</strong></th>
+<th style="text-align: left;"><strong>Origem/Destino</strong></th>
+<th style="text-align: left;"><strong>Ação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>NACL-Public</strong></td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">TCP</td>
+<td style="text-align: left;">80, 443</td>
+<td style="text-align: left;">0.0.0.0/0</td>
+<td style="text-align: left;">Allow</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">TCP</td>
+<td style="text-align: left;">1024-65535</td>
+<td style="text-align: left;">0.0.0.0/0</td>
+<td style="text-align: left;">Allow (efêmeras)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">*</td>
+<td style="text-align: left;">All</td>
+<td style="text-align: left;">All</td>
+<td style="text-align: left;">0.0.0.0/0</td>
+<td style="text-align: left;">Deny</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NACL-Private</strong></td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">TCP</td>
+<td style="text-align: left;">5432</td>
+<td style="text-align: left;">10.0.1.0/24</td>
+<td style="text-align: left;">Allow</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">TCP</td>
+<td style="text-align: left;">8000</td>
+<td style="text-align: left;">10.0.1.0/24</td>
+<td style="text-align: left;">Allow</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">*</td>
+<td style="text-align: left;">All</td>
+<td style="text-align: left;">All</td>
+<td style="text-align: left;">0.0.0.0/0</td>
+<td style="text-align: left;">Deny</td>
+</tr>
+</tbody>
+</table>
+<h4 id="326-waf-rules-swifttrack">3.2.6. WAF Rules (SwiftTrack)<a class="headerlink" href="#326-waf-rules-swifttrack" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Regra</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Ação</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SQLi Protection</strong></td>
+<td style="text-align: left;">SQL Injection</td>
+<td style="text-align: left;">Block</td>
+<td style="text-align: left;">Proteger API de ataques.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>XSS Protection</strong></td>
+<td style="text-align: left;">Cross-Site Scripting</td>
+<td style="text-align: left;">Block</td>
+<td style="text-align: left;">Proteger dashboards.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rate Limiting</strong></td>
+<td style="text-align: left;">Rate-based</td>
+<td style="text-align: left;">Block (1000 req/5min)</td>
+<td style="text-align: left;">Evitar DDoS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Geo-blocking</strong></td>
+<td style="text-align: left;">Geolocation</td>
+<td style="text-align: left;">Allow (Brasil)</td>
+<td style="text-align: left;">Conformidade LGPD.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="327-riscos-e-mitigacoes">3.2.7. Riscos e Mitigações<a class="headerlink" href="#327-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Security Groups permissivos</td>
+<td style="text-align: left;">Revisão periódica das regras.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Portas expostas</td>
+<td style="text-align: left;">Usar apenas portas necessárias.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ataques DDoS</td>
+<td style="text-align: left;">WAF + Shield Standard.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tráfego não monitorado</td>
+<td style="text-align: left;">VPC Flow Logs habilitados.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33-pacote-data-protection">3.3. PACOTE: DATA PROTECTION<a class="headerlink" href="#33-pacote-data-protection" title="Permanent link">&para;</a></h3>
+<h4 id="331-responsabilidade">3.3.1. Responsabilidade<a class="headerlink" href="#331-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Garantir a criptografia de dados em repouso e em trânsito, além de políticas de backup e recuperação, assegurando conformidade com a LGPD.</p>
+<h4 id="332-elementos-do-pacote">3.3.2. Elementos do Pacote<a class="headerlink" href="#332-elementos-do-pacote" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Serviço AWS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>KMS Keys</strong></td>
+<td style="text-align: left;">Chaves de criptografia gerenciadas.</td>
+<td style="text-align: left;">KMS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S3 Encryption</strong></td>
+<td style="text-align: left;">Criptografia de objetos.</td>
+<td style="text-align: left;">S3 + KMS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RDS Encryption</strong></td>
+<td style="text-align: left;">Criptografia de banco relacional.</td>
+<td style="text-align: left;">RDS + KMS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>DynamoDB Encryption</strong></td>
+<td style="text-align: left;">Criptografia de tabelas NoSQL.</td>
+<td style="text-align: left;">DynamoDB + KMS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TLS/ACM</strong></td>
+<td style="text-align: left;">Certificados SSL/TLS.</td>
+<td style="text-align: left;">ACM</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Backup Policies</strong></td>
+<td style="text-align: left;">Políticas de backup e retenção.</td>
+<td style="text-align: left;">AWS Backup</td>
+</tr>
+</tbody>
+</table>
+<h4 id="333-diagrama-de-classes-de-analise">3.3.3. Diagrama de Classes de Análise<a class="headerlink" href="#333-diagrama-de-classes-de-analise" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>@startuml
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>title Pacote Data Protection - Classes de Análise
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>package &quot;Data Protection&quot; {
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  class &quot;KMSKey&quot; {
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    - keyId: String
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    - alias: String
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    - rotationEnabled: Boolean
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    - keyPolicy: JSON
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    + encrypt(data: Bytes): Bytes
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    + decrypt(data: Bytes): Bytes
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    + rotate(): void
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  }
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>  class &quot;EncryptionConfig&quot; {
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    - service: String
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    - type: SSE-KMS/SSE-S3
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    - kmsKey: KMSKey
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    + apply(): void
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>  }
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>  class &quot;TLSCertificate&quot; {
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    - domain: String
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    - issuer: ACM
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    - expirationDate: Date
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    + validate(): Boolean
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    + renew(): void
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>  }
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>  class &quot;BackupPolicy&quot; {
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>    - frequency: Daily/Weekly
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>    - retentionDays: Integer
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>    - targetServices: List&lt;String&gt;
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>    + execute(): void
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>  }
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>  EncryptionConfig &quot;1&quot; -- &quot;1&quot; KMSKey : usa
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>  BackupPolicy &quot;1&quot; -- &quot;*&quot; EncryptionConfig : protege
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>}
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>@enduml
+</span></code></pre></div>
+<h4 id="334-matriz-de-criptografia-swifttrack">3.3.4. Matriz de Criptografia (SwiftTrack)<a class="headerlink" href="#334-matriz-de-criptografia-swifttrack" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Serviço</strong></th>
+<th style="text-align: left;"><strong>Criptografia em Repouso</strong></th>
+<th style="text-align: left;"><strong>Criptografia em Trânsito</strong></th>
+<th style="text-align: left;"><strong>Chave</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>RDS</strong></td>
+<td style="text-align: left;">AES-256</td>
+<td style="text-align: left;">TLS 1.3</td>
+<td style="text-align: left;">KMS CMK</td>
+<td style="text-align: left;">LGPD: dados de motoristas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S3</strong></td>
+<td style="text-align: left;">SSE-KMS</td>
+<td style="text-align: left;">TLS 1.3</td>
+<td style="text-align: left;">KMS CMK</td>
+<td style="text-align: left;">LGPD: comprovantes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>DynamoDB</strong></td>
+<td style="text-align: left;">AES-256</td>
+<td style="text-align: left;">TLS 1.3</td>
+<td style="text-align: left;">AWS Managed</td>
+<td style="text-align: left;">Telemetria.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Secrets Manager</strong></td>
+<td style="text-align: left;">AES-256</td>
+<td style="text-align: left;">TLS 1.3</td>
+<td style="text-align: left;">AWS Managed</td>
+<td style="text-align: left;">Credenciais.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ALB</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">TLS 1.3</td>
+<td style="text-align: left;">ACM Certificate</td>
+<td style="text-align: left;">API pública.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EBS (EC2)</strong></td>
+<td style="text-align: left;">AES-256</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">KMS CMK</td>
+<td style="text-align: left;">Disco da API.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="335-politicas-de-backup-swifttrack">3.3.5. Políticas de Backup (SwiftTrack)<a class="headerlink" href="#335-politicas-de-backup-swifttrack" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Serviço</strong></th>
+<th style="text-align: left;"><strong>Frequência</strong></th>
+<th style="text-align: left;"><strong>Retenção</strong></th>
+<th style="text-align: left;"><strong>RPO</strong></th>
+<th style="text-align: left;"><strong>RTO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>RDS</strong></td>
+<td style="text-align: left;">Diário (snapshot)</td>
+<td style="text-align: left;">30 dias</td>
+<td style="text-align: left;">15 min (PITR)</td>
+<td style="text-align: left;">1 hora</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>DynamoDB</strong></td>
+<td style="text-align: left;">Contínuo (PITR)</td>
+<td style="text-align: left;">35 dias</td>
+<td style="text-align: left;">5 min</td>
+<td style="text-align: left;">30 min</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S3</strong></td>
+<td style="text-align: left;">Versionamento</td>
+<td style="text-align: left;">90 dias</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EBS</strong></td>
+<td style="text-align: left;">Diário (snapshot)</td>
+<td style="text-align: left;">7 dias</td>
+<td style="text-align: left;">24 horas</td>
+<td style="text-align: left;">2 horas</td>
+</tr>
+</tbody>
+</table>
+<h4 id="336-riscos-e-mitigacoes">3.3.6. Riscos e Mitigações<a class="headerlink" href="#336-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Chaves comprometidas</td>
+<td style="text-align: left;">Rotação automática (90 dias).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dados não criptografados</td>
+<td style="text-align: left;">Criptografia obrigatória em todos os serviços.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Backup não testado</td>
+<td style="text-align: left;">Testes de recuperação trimestrais.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Perda de dados</td>
+<td style="text-align: left;">PITR + Multi-AZ.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-pacote-secrets-management">3.4. PACOTE: SECRETS MANAGEMENT<a class="headerlink" href="#34-pacote-secrets-management" title="Permanent link">&para;</a></h3>
+<h4 id="341-responsabilidade">3.4.1. Responsabilidade<a class="headerlink" href="#341-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Proteger credenciais, chaves de API, tokens e outros segredos, garantindo que não sejam expostos em código ou configurações.</p>
+<h4 id="342-elementos-do-pacote">3.4.2. Elementos do Pacote<a class="headerlink" href="#342-elementos-do-pacote" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Serviço AWS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Secrets Manager</strong></td>
+<td style="text-align: left;">Armazenamento de segredos com rotação.</td>
+<td style="text-align: left;">Secrets Manager</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Parameter Store</strong></td>
+<td style="text-align: left;">Armazenamento de configurações.</td>
+<td style="text-align: left;">Systems Manager</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rotation Policies</strong></td>
+<td style="text-align: left;">Políticas de rotação automática.</td>
+<td style="text-align: left;">Lambda + Secrets Manager</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IAM Policies for Secrets</strong></td>
+<td style="text-align: left;">Controle de acesso aos segredos.</td>
+<td style="text-align: left;">IAM</td>
+</tr>
+</tbody>
+</table>
+<h4 id="343-diagrama-de-classes-de-analise">3.4.3. Diagrama de Classes de Análise<a class="headerlink" href="#343-diagrama-de-classes-de-analise" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>@startuml
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>title Pacote Secrets Management - Classes de Análise
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>package &quot;Secrets Management&quot; {
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>  class &quot;Secret&quot; {
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    - name: String
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    - value: String (encrypted)
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    - rotationEnabled: Boolean
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    - rotationLambda: String
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    + getValue(): String
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    + rotate(): void
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>  }
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>  class &quot;Parameter&quot; {
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    - name: String
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    - value: String
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    - type: StringList/SecureString
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    + getValue(): String
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  }
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>  class &quot;RotationPolicy&quot; {
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>    - frequency: Days
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>    - lambdaArn: String
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>    + execute(): void
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>  }
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>  class &quot;AccessPolicy&quot; {
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>    - secretArn: String
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>    - principals: List&lt;String&gt;
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>    - actions: List&lt;String&gt;
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>    + validate(): Boolean
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>  }
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>  Secret &quot;1&quot; -- &quot;0..1&quot; RotationPolicy : usa
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>  Secret &quot;1&quot; -- &quot;*&quot; AccessPolicy : protegido por
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>}
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>
+</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>@enduml
+</span></code></pre></div>
+<h4 id="344-segredos-gerenciados-swifttrack">3.4.4. Segredos Gerenciados (SwiftTrack)<a class="headerlink" href="#344-segredos-gerenciados-swifttrack" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Segredo</strong></th>
+<th style="text-align: left;"><strong>Serviço</strong></th>
+<th style="text-align: left;"><strong>Rotação</strong></th>
+<th style="text-align: left;"><strong>Acesso</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>rds-credentials</strong></td>
+<td style="text-align: left;">RDS PostgreSQL</td>
+<td style="text-align: left;">90 dias</td>
+<td style="text-align: left;">EC2-API-Role</td>
+<td style="text-align: left;">Evitar hardcoded.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>api-keys</strong></td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">180 dias</td>
+<td style="text-align: left;">Lambda-Role</td>
+<td style="text-align: left;">Autenticação de dispositivos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>jwt-secret</strong></td>
+<td style="text-align: left;">Django</td>
+<td style="text-align: left;">90 dias</td>
+<td style="text-align: left;">EC2-API-Role</td>
+<td style="text-align: left;">Tokens de sessão.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>s3-access</strong></td>
+<td style="text-align: left;">S3</td>
+<td style="text-align: left;">90 dias</td>
+<td style="text-align: left;">EC2-API-Role</td>
+<td style="text-align: left;">Acesso a buckets.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="345-riscos-e-mitigacoes">3.4.5. Riscos e Mitigações<a class="headerlink" href="#345-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Segredos em código</td>
+<td style="text-align: left;">Usar Secrets Manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rotação manual</td>
+<td style="text-align: left;">Rotação automática via Lambda.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Acesso não autorizado</td>
+<td style="text-align: left;">IAM Policies restritivas.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vazamento de segredos</td>
+<td style="text-align: left;">Auditoria via CloudTrail.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="35-pacote-audit-compliance">3.5. PACOTE: AUDIT &amp; COMPLIANCE<a class="headerlink" href="#35-pacote-audit-compliance" title="Permanent link">&para;</a></h3>
+<h4 id="351-responsabilidade">3.5.1. Responsabilidade<a class="headerlink" href="#351-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Rastrear todas as ações realizadas na conta AWS, garantir conformidade com regulamentações (LGPD) e fornecer evidências para auditorias.</p>
+<h4 id="352-elementos-do-pacote">3.5.2. Elementos do Pacote<a class="headerlink" href="#352-elementos-do-pacote" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Serviço AWS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CloudTrail</strong></td>
+<td style="text-align: left;">Registro de todas as ações na conta.</td>
+<td style="text-align: left;">CloudTrail</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>AWS Config</strong></td>
+<td style="text-align: left;">Avaliação de conformidade.</td>
+<td style="text-align: left;">AWS Config</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Config Rules</strong></td>
+<td style="text-align: left;">Regras de conformidade.</td>
+<td style="text-align: left;">AWS Config</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Compliance Reports</strong></td>
+<td style="text-align: left;">Relatórios de conformidade.</td>
+<td style="text-align: left;">AWS Artifact</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S3 Log Bucket</strong></td>
+<td style="text-align: left;">Armazenamento de logs.</td>
+<td style="text-align: left;">S3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="353-diagrama-de-classes-de-analise">3.5.3. Diagrama de Classes de Análise<a class="headerlink" href="#353-diagrama-de-classes-de-analise" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>@startuml
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>title Pacote Audit &amp; Compliance - Classes de Análise
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>package &quot;Audit &amp; Compliance&quot; {
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  class &quot;Trail&quot; {
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    - name: String
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    - s3Bucket: String
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    - regions: List&lt;String&gt;
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    - logFileValidation: Boolean
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    + enable(): void
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    + getEvents(filter: Filter): List&lt;Event&gt;
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>  }
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>  class &quot;ConfigRule&quot; {
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    - name: String
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    - source: AWS/Managed
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    - compliance: Compliant/NonCompliant
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>    + evaluate(): Compliance
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>  }
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>  class &quot;ComplianceReport&quot; {
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>    - framework: LGPD/PCI-DSS
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>    - period: DateRange
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>    - findings: List&lt;Finding&gt;
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>    + generate(): Report
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>  }
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>  class &quot;AuditEvent&quot; {
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>    - eventId: String
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>    - eventTime: DateTime
+</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>    - userIdentity: String
+</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>    - eventName: String
+</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>    - resourceArn: String
+</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>  }
+</span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>
+</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>  Trail &quot;1&quot; -- &quot;*&quot; AuditEvent : registra
+</span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>  ConfigRule &quot;1&quot; -- &quot;*&quot; ComplianceReport : gera
+</span><span id="__span-6-39"><a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>}
+</span><span id="__span-6-40"><a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>
+</span><span id="__span-6-41"><a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>@enduml
+</span></code></pre></div>
+<h4 id="354-config-rules-swifttrack">3.5.4. Config Rules (SwiftTrack)<a class="headerlink" href="#354-config-rules-swifttrack" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Regra</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Serviço Alvo</strong></th>
+<th style="text-align: left;"><strong>Conformidade</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>encrypted-volumes</strong></td>
+<td style="text-align: left;">Volumes EBS criptografados.</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">LGPD</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>rds-storage-encrypted</strong></td>
+<td style="text-align: left;">RDS criptografado.</td>
+<td style="text-align: left;">RDS</td>
+<td style="text-align: left;">LGPD</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>s3-bucket-ssl-requests-only</strong></td>
+<td style="text-align: left;">S3 exige HTTPS.</td>
+<td style="text-align: left;">S3</td>
+<td style="text-align: left;">LGPD</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>iam-password-policy</strong></td>
+<td style="text-align: left;">Política de senhas forte.</td>
+<td style="text-align: left;">IAM</td>
+<td style="text-align: left;">Segurança</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>mfa-enabled-for-iam-console-access</strong></td>
+<td style="text-align: left;">MFA para admins.</td>
+<td style="text-align: left;">IAM</td>
+<td style="text-align: left;">Segurança</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>cloudtrail-enabled</strong></td>
+<td style="text-align: left;">CloudTrail ativo.</td>
+<td style="text-align: left;">CloudTrail</td>
+<td style="text-align: left;">Auditoria</td>
+</tr>
+</tbody>
+</table>
+<h4 id="355-riscos-e-mitigacoes">3.5.5. Riscos e Mitigações<a class="headerlink" href="#355-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Logs não imutáveis</td>
+<td style="text-align: left;">S3 com Object Lock.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Auditoria incompleta</td>
+<td style="text-align: left;">CloudTrail em todas as regiões.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Conformidade não verificada</td>
+<td style="text-align: left;">AWS Config Rules.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Perda de logs</td>
+<td style="text-align: left;">Replicação para outra região.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="36-pacote-monitoring-detection">3.6. PACOTE: MONITORING &amp; DETECTION<a class="headerlink" href="#36-pacote-monitoring-detection" title="Permanent link">&para;</a></h3>
+<h4 id="361-responsabilidade">3.6.1. Responsabilidade<a class="headerlink" href="#361-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Monitorar a saúde dos recursos, detectar anomalias e ameaças, e emitir alertas para a equipe de operações.</p>
+<h4 id="362-elementos-do-pacote">3.6.2. Elementos do Pacote<a class="headerlink" href="#362-elementos-do-pacote" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Serviço AWS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CloudWatch</strong></td>
+<td style="text-align: left;">Métricas, logs e alarmes.</td>
+<td style="text-align: left;">CloudWatch</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>GuardDuty</strong></td>
+<td style="text-align: left;">Detecção de ameaças com ML.</td>
+<td style="text-align: left;">GuardDuty</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Security Hub</strong></td>
+<td style="text-align: left;">Visão centralizada de segurança.</td>
+<td style="text-align: left;">Security Hub</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Alarms</strong></td>
+<td style="text-align: left;">Alarmes baseados em métricas.</td>
+<td style="text-align: left;">CloudWatch</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SNS Notifications</strong></td>
+<td style="text-align: left;">Notificações de incidentes.</td>
+<td style="text-align: left;">SNS</td>
+</tr>
+</tbody>
+</table>
+<h4 id="363-diagrama-de-classes-de-analise">3.6.3. Diagrama de Classes de Análise<a class="headerlink" href="#363-diagrama-de-classes-de-analise" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>@startuml
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>title Pacote Monitoring &amp; Detection - Classes de Análise
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>package &quot;Monitoring &amp; Detection&quot; {
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  class &quot;Metric&quot; {
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    - namespace: String
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    - name: String
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    - value: Double
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    - unit: String
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    - timestamp: DateTime
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    + publish(): void
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>  }
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>  class &quot;Alarm&quot; {
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    - name: String
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    - metric: Metric
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    - threshold: Double
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>    - comparison: GreaterThan/LessThan
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>    - actions: List&lt;Action&gt;
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>    + evaluate(): State
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>  }
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>  class &quot;Dashboard&quot; {
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>    - name: String
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>    - widgets: List&lt;Widget&gt;
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>    + addWidget(widget: Widget): void
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>  }
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>  class &quot;Threat&quot; {
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>    - type: String
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>    - severity: Low/Medium/High
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>    - resource: String
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>    - detectedAt: DateTime
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>  }
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>  class &quot;Notification&quot; {
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>    - topic: String
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>    - recipients: List&lt;String&gt;
+</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>    - channel: Email/SMS/Slack
+</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>    + send(): void
+</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>  }
+</span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>
+</span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>  Alarm &quot;1&quot; -- &quot;*&quot; Metric : monitora
+</span><span id="__span-7-45"><a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a>  Alarm &quot;1&quot; -- &quot;*&quot; Notification : dispara
+</span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a>  Dashboard &quot;1&quot; -- &quot;*&quot; Metric : exibe
+</span><span id="__span-7-47"><a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a>}
+</span><span id="__span-7-48"><a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a>
+</span><span id="__span-7-49"><a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a>@enduml
+</span></code></pre></div>
+<h4 id="364-alarmes-configurados-swifttrack">3.6.4. Alarmes Configurados (SwiftTrack)<a class="headerlink" href="#364-alarmes-configurados-swifttrack" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Alarme</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+<th style="text-align: left;"><strong>Threshold</strong></th>
+<th style="text-align: left;"><strong>Ação</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CPU-High</strong></td>
+<td style="text-align: left;">CPUUtilization</td>
+<td style="text-align: left;">&gt; 80% (5 min)</td>
+<td style="text-align: left;">Auto Scaling + SNS</td>
+<td style="text-align: left;">Escalar API.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Latency-High</strong></td>
+<td style="text-align: left;">TargetResponseTime</td>
+<td style="text-align: left;">&gt; 80ms (5 min)</td>
+<td style="text-align: left;">SNS</td>
+<td style="text-align: left;">SLA de latência.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RDS-Storage-Low</strong></td>
+<td style="text-align: left;">FreeStorageSpace</td>
+<td style="text-align: left;">&lt; 10 GB</td>
+<td style="text-align: left;">SNS</td>
+<td style="text-align: left;">Evitar falha.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lambda-Errors</strong></td>
+<td style="text-align: left;">Errors</td>
+<td style="text-align: left;">&gt; 10 (5 min)</td>
+<td style="text-align: left;">SNS</td>
+<td style="text-align: left;">Ingestão com falha.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Unauthorized-API-Calls</strong></td>
+<td style="text-align: left;">CloudTrail</td>
+<td style="text-align: left;">&gt; 5 (5 min)</td>
+<td style="text-align: left;">SNS + GuardDuty</td>
+<td style="text-align: left;">Detecção de ataque.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Root-Account-Usage</strong></td>
+<td style="text-align: left;">CloudTrail</td>
+<td style="text-align: left;">&gt; 0</td>
+<td style="text-align: left;">SNS</td>
+<td style="text-align: left;">Alerta crítico.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="365-riscos-e-mitigacoes">3.6.5. Riscos e Mitigações<a class="headerlink" href="#365-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Alarmes não configurados</td>
+<td style="text-align: left;">Cobertura de 100% dos recursos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Notificações ignoradas</td>
+<td style="text-align: left;">Escalonamento para múltiplos canais.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Detecção tardia</td>
+<td style="text-align: left;">GuardDuty + Security Hub.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Falsos positivos</td>
+<td style="text-align: left;">Ajuste fino de thresholds.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-diagrama-de-dependencias-entre-pacotes">4. DIAGRAMA DE DEPENDÊNCIAS ENTRE PACOTES<a class="headerlink" href="#4-diagrama-de-dependencias-entre-pacotes" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>@startuml
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>title Dependências entre Pacotes de Segurança - SwiftTrack IoT
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>package &quot;Identity &amp; Access&quot; as IAM #E3F2FD
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>package &quot;Network Security&quot; as NetSec #FFF3E0
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>package &quot;Data Protection&quot; as DataProt #E8F5E9
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>package &quot;Secrets Management&quot; as Secrets #FCE4EC
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>package &quot;Audit &amp; Compliance&quot; as Audit #EDE7F6
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>package &quot;Monitoring &amp; Detection&quot; as Monitor #FFF8E1
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>IAM --&gt; DataProt : IAM define quem acessa chaves KMS
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>NetSec --&gt; IAM : Security Groups usam roles IAM
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>DataProt --&gt; Secrets : Chaves gerenciadas no Secrets Manager
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>Audit --&gt; IAM : CloudTrail registra ações IAM
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>Monitor --&gt; Audit : CloudWatch consome logs CloudTrail
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>Monitor --&gt; NetSec : GuardDuty analisa VPC Flow Logs
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>Monitor --&gt; DataProt : Detecta anomalias de acesso
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>@enduml
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>De</strong></th>
+<th style="text-align: left;"><strong>Para</strong></th>
+<th style="text-align: left;"><strong>Motivo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Identity &amp; Access</td>
+<td style="text-align: left;">Data Protection</td>
+<td style="text-align: left;">IAM define quem pode acessar chaves KMS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Network Security</td>
+<td style="text-align: left;">Identity &amp; Access</td>
+<td style="text-align: left;">Security Groups usam roles IAM.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Data Protection</td>
+<td style="text-align: left;">Secrets Management</td>
+<td style="text-align: left;">Chaves de criptografia são gerenciadas no Secrets Manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Audit &amp; Compliance</td>
+<td style="text-align: left;">Identity &amp; Access</td>
+<td style="text-align: left;">CloudTrail registra ações de usuários IAM.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Monitoring &amp; Detection</td>
+<td style="text-align: left;">Audit &amp; Compliance</td>
+<td style="text-align: left;">CloudWatch consome logs do CloudTrail.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Monitoring &amp; Detection</td>
+<td style="text-align: left;">Network Security</td>
+<td style="text-align: left;">GuardDuty analisa VPC Flow Logs.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Monitoring &amp; Detection</td>
+<td style="text-align: left;">Data Protection</td>
+<td style="text-align: left;">Detecta anomalias de acesso a dados.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-matriz-de-rastreamento-completa">5. MATRIZ DE RASTREAMENTO COMPLETA<a class="headerlink" href="#5-matriz-de-rastreamento-completa" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito (Doc. Suplementar)</strong></th>
+<th style="text-align: left;"><strong>Caso de Uso (Semana 3)</strong></th>
+<th style="text-align: left;"><strong>Pacote</strong></th>
+<th style="text-align: left;"><strong>Serviço AWS</strong></th>
+<th style="text-align: left;"><strong>Controle</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Criptografia em repouso</td>
+<td style="text-align: left;">UC-ARQ-007</td>
+<td style="text-align: left;">Data Protection</td>
+<td style="text-align: left;">KMS, RDS, S3, DynamoDB</td>
+<td style="text-align: left;">SSE-KMS</td>
+</tr>
+<tr>
+<td style="text-align: left;">Criptografia em trânsito</td>
+<td style="text-align: left;">UC-ARQ-004</td>
+<td style="text-align: left;">Data Protection</td>
+<td style="text-align: left;">ACM, ALB</td>
+<td style="text-align: left;">TLS 1.3</td>
+</tr>
+<tr>
+<td style="text-align: left;">MFA para admins</td>
+<td style="text-align: left;">UC-ARQ-002</td>
+<td style="text-align: left;">Identity &amp; Access</td>
+<td style="text-align: left;">IAM</td>
+<td style="text-align: left;">MFA</td>
+</tr>
+<tr>
+<td style="text-align: left;">RBAC</td>
+<td style="text-align: left;">UC-ARQ-002</td>
+<td style="text-align: left;">Identity &amp; Access</td>
+<td style="text-align: left;">IAM Groups</td>
+<td style="text-align: left;">Roles</td>
+</tr>
+<tr>
+<td style="text-align: left;">Isolamento de credenciais</td>
+<td style="text-align: left;">UC-AR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright ©️ 2026, Jonh Carvalho
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

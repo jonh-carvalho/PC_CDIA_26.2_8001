@@ -1,0 +1,2869 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jonh Carvalho">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../maps/">
+      
+      
+      <link rel="icon" href="../../assets/ibmec_icon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Casos de Uso Arquitetural - PC_CDIA_26.2_8001</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelo-de-documento-de-casos-de-uso-arquiteturais" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PC_CDIA_26.2_8001" class="md-header__button md-logo" aria-label="PC_CDIA_26.2_8001" data-md-component="logo">
+      
+  <img src="../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PC_CDIA_26.2_8001
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Casos de Uso Arquitetural
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="#193257" data-md-color-accent="#FAB90A"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="all" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jonh-carvalho/PC_CDIA_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Disciplina/aulas/" class="md-tabs__link">
+          
+  
+    
+  
+  Disciplina
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Iniciacao/" class="md-tabs__link">
+          
+  
+    
+  
+  Iniciação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Elaboração
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Disciplina/bibliografia/" class="md-tabs__link">
+        
+  
+    
+  
+  Bibliografia
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PC_CDIA_26.2_8001" class="md-nav__button md-logo" aria-label="PC_CDIA_26.2_8001" data-md-component="logo">
+      
+  <img src="../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    PC_CDIA_26.2_8001
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jonh-carvalho/PC_CDIA_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Disciplina
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Disciplina
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/aulas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/ambiente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ambiente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Iniciacao/desafios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desafios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Iniciacao/case_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Iniciacao/dv_template_preenchido/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão Preenchido
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Iniciacao/requisitos_suplementares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elaboração
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Elaboracao/casos_uso_arquiteturais/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso Arquitetural
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/Elaboracao/modelo_de_analise-pacotes_subsistemas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo de Análise - Segurança
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Roteiros
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Roteiros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/02%20-%20aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01- AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/04%20-%20ec2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 - EC2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/04%20-%20linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 - Linux Bash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/05%20-%20docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 - Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/05%20-%20nginxsite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 - Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/06%20-%20s3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 - S3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/roteiros/07%20-%20eb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07 - BE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Iniciacao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/dv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Elaboração
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Casos de Uso Arquitetural
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso Arquitetural
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-documento-de-casos-de-uso-arquiteturais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo de Documento de Casos de Uso Arquiteturais
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. INTRODUÇÃO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. INTRODUÇÃO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Propósito
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Escopo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-definicoes-e-siglas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Definições e Siglas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Referências
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-visao-geral-dos-casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. VISÃO GERAL DOS CASOS DE USO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. VISÃO GERAL DOS CASOS DE USO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-atores" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Atores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-diagrama-de-casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Diagrama de Casos de Uso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-matriz-de-rastreamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Matriz de Rastreamento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-diagramas-de-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. DIAGRAMAS DE ARQUITETURA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. DIAGRAMAS DE ARQUITETURA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-diagrama-de-componentes-visao-geral-da-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Diagrama de Componentes - Visão Geral da Arquitetura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-diagrama-de-sequencia-ingestao-de-telemetria" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Diagrama de Sequência - Ingestão de Telemetria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-diagrama-de-sequencia-deploy-automatizado-blue-green" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Diagrama de Sequência - Deploy Automatizado (Blue-Green)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-diagrama-de-atividades-configuracao-de-vpc-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Diagrama de Atividades - Configuração de VPC Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-diagrama-de-implantacao-visao-fisica" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Diagrama de Implantação - Visão Física
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-especificacao-dos-casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. ESPECIFICAÇÃO DOS CASOS DE USO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. ESPECIFICAÇÃO DOS CASOS DE USO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uc-arq-001-configurar-vpc-e-rede" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC-ARQ-001: CONFIGURAR VPC E REDE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-arq-002-configurar-seguranca-de-rede" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC-ARQ-002: CONFIGURAR SEGURANÇA DE REDE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-arq-003-configurar-vpc-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC-ARQ-003: CONFIGURAR VPC ENDPOINTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-arq-004-configurar-conectividade-entre-camadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC-ARQ-004: CONFIGURAR CONECTIVIDADE ENTRE CAMADAS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-arq-005-configurar-monitoramento" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC-ARQ-005: CONFIGURAR MONITORAMENTO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-arq-006-configurar-cicd-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      UC-ARQ-006: CONFIGURAR CI/CD PIPELINE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo de Análise - Segurança
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Disciplina/bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Casos de Uso Arquitetural</h1>
+
+<h2 id="modelo-de-documento-de-casos-de-uso-arquiteturais">Modelo de Documento de Casos de Uso Arquiteturais<a class="headerlink" href="#modelo-de-documento-de-casos-de-uso-arquiteturais" title="Permanent link">&para;</a></h2>
+<p><strong>Disciplina:</strong> Projeto de Cloud
+<strong>Projeto:</strong> [Nome do Projeto]<br />
+<strong>Data:</strong> xx/xx/2026<br />
+<strong>Status:</strong> xxxx  xxxxx xxxxxx</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>Informação do Documento</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Documento</strong></td>
+<td>Modelo de Casos de Uso Arquiteturais</td>
+</tr>
+<tr>
+<td><strong>Versão</strong></td>
+<td>1.0</td>
+</tr>
+<tr>
+<td><strong>Responsável</strong></td>
+<td>[Nome do Grupo]</td>
+</tr>
+<tr>
+<td><strong>Disciplina</strong></td>
+<td>Projeto de Cloud</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-introducao">1. INTRODUÇÃO<a class="headerlink" href="#1-introducao" title="Permanent link">&para;</a></h2>
+<h3 id="11-proposito">1.1. Propósito<a class="headerlink" href="#11-proposito" title="Permanent link">&para;</a></h3>
+<p>Este documento descreve os Casos de Uso Arquiteturais para a infraestrutura em nuvem AWS da plataforma <strong>[NOME DO PROJETO]</strong>. Os casos de uso arquiteturais focam em requisitos de infraestrutura, segurança, operações e governança, diferentemente dos casos de uso funcionais que descrevem interações de usuários finais com o sistema.</p>
+<p>Os casos de uso arquiteturais são derivados diretamente dos requisitos estabelecidos no:
+- <strong>Documento de Visão</strong> 
+- <strong>Documento de Requisitos Suplementares</strong> </p>
+<h3 id="12-escopo">1.2. Escopo<a class="headerlink" href="#12-escopo" title="Permanent link">&para;</a></h3>
+<p>Os casos de uso arquiteturais abrangem a configuração, operação e manutenção da infraestrutura AWS, incluindo:</p>
+<ul>
+<li>Rede (VPC, sub-redes, rotas, endpoints)</li>
+<li>Segurança (Security Groups, NACLs, IAM)</li>
+</ul>
+<p><strong>Em segundo momento</strong></p>
+<ul>
+<li>Conectividade entre camadas (ALB, EC2, RDS, Lambda)</li>
+<li>Integração com serviços gerenciados (DynamoDB, S3, Secrets Manager)</li>
+<li>Automação e deploy (CI/CD)</li>
+<li>Monitoramento e observabilidade</li>
+</ul>
+<h3 id="13-definicoes-e-siglas">1.3. Definições e Siglas<a class="headerlink" href="#13-definicoes-e-siglas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Sigla</strong></th>
+<th style="text-align: left;"><strong>Definição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>VPC</strong></td>
+<td style="text-align: left;">Virtual Private Cloud - Rede virtual privada na AWS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IGW</strong></td>
+<td style="text-align: left;">Internet Gateway - Gateway para comunicação com a Internet</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NAT</strong></td>
+<td style="text-align: left;">Network Address Translation - Tradução de endereços de rede</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ALB</strong></td>
+<td style="text-align: left;">Application Load Balancer - Balanceador de carga para aplicações</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SG</strong></td>
+<td style="text-align: left;">Security Group - Firewall a nível de instância</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NACL</strong></td>
+<td style="text-align: left;">Network Access Control List - Firewall a nível de sub-rede</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RDS</strong></td>
+<td style="text-align: left;">Relational Database Service - Banco de dados relacional gerenciado</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IAM</strong></td>
+<td style="text-align: left;">Identity and Access Management - Gerenciamento de identidade e acesso</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CI/CD</strong></td>
+<td style="text-align: left;">Continuous Integration / Continuous Deployment</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RPO</strong></td>
+<td style="text-align: left;">Recovery Point Objective - Objetivo de ponto de recuperação</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RTO</strong></td>
+<td style="text-align: left;">Recovery Time Objective - Objetivo de tempo de recuperação</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LGPD</strong></td>
+<td style="text-align: left;">Lei Geral de Proteção de Dados</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-referencias">1.4. Referências<a class="headerlink" href="#14-referencias" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Documento de Visão - [NOME DO PROJETO] (v1.0)</li>
+<li>Documento de Requisitos Suplementares - [NOME DO PROJETO] (v1.0)</li>
+<li>AWS Well-Architected Framework</li>
+<li>Amazon VPC Documentation</li>
+<li>Lei Geral de Proteção de Dados (LGPD)</li>
+</ul>
+<hr />
+<h2 id="2-visao-geral-dos-casos-de-uso">2. VISÃO GERAL DOS CASOS DE USO<a class="headerlink" href="#2-visao-geral-dos-casos-de-uso" title="Permanent link">&para;</a></h2>
+<h3 id="21-atores">2.1. Atores<a class="headerlink" href="#21-atores" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Ator</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Responsabilidades</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Administrador de Infraestrutura</strong></td>
+<td style="text-align: left;">Profissional responsável por configurar e gerenciar a infraestrutura AWS.</td>
+<td style="text-align: left;">Criar VPC, sub-redes, security groups, endpoints, NAT Gateways.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Engenheiro de DevOps</strong></td>
+<td style="text-align: left;">Profissional responsável por automação, CI/CD e operações.</td>
+<td style="text-align: left;">Configurar pipelines, deploys, rollbacks, monitoramento.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Arquiteto de Segurança</strong></td>
+<td style="text-align: left;">Profissional responsável por políticas de segurança e compliance.</td>
+<td style="text-align: left;">Definir políticas IAM, criptografia, auditoria, conformidade.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sistema AWS</strong></td>
+<td style="text-align: left;">Serviços gerenciados da AWS (DynamoDB, S3, Secrets Manager, etc.).</td>
+<td style="text-align: left;">Prover serviços, endpoints, logs, métricas.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-diagrama-de-casos-de-uso">2.2. Diagrama de Casos de Uso<a class="headerlink" href="#22-diagrama-de-casos-de-uso" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@startuml
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>left to right direction
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>actor &quot;Administrador de\nInfraestrutura&quot; as AdminInfra
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>actor &quot;Engenheiro de DevOps&quot; as DevOps
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>actor &quot;Arquiteto de Segurança&quot; as SecArch
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>actor &quot;Sistema AWS&quot; as AWSSystem
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>rectangle &quot;Infraestrutura AWS - [NOME DO PROJETO]&quot; {
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  usecase &quot;UC-ARQ-001\nConfigurar VPC e Rede&quot; as UC01
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  usecase &quot;UC-ARQ-002\nConfigurar Segurança de Rede&quot; as UC02
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  usecase &quot;UC-ARQ-003\nConfigurar VPC Endpoints&quot; as UC03
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  usecase &quot;UC-ARQ-004\nConfigurar Conectividade\nentre Camadas&quot; as UC04
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  usecase &quot;UC-ARQ-005\nConfigurar Monitoramento&quot; as UC05
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  usecase &quot;UC-ARQ-006\nConfigurar CI/CD Pipeline&quot; as UC06
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  usecase &quot;UC-ARQ-007\nDefinir Políticas de\nSegurança e Compliance&quot; as UC07
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>}
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>AdminInfra --&gt; UC01
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>AdminInfra --&gt; UC02
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>AdminInfra --&gt; UC03
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>AdminInfra --&gt; UC04
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>AdminInfra --&gt; UC05
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>DevOps --&gt; UC05
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>DevOps --&gt; UC06
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>SecArch --&gt; UC02
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>SecArch --&gt; UC07
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>UC01 ..&gt; AWSSystem : &lt;&lt;includes&gt;&gt;
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>UC02 ..&gt; AWSSystem : &lt;&lt;includes&gt;&gt;
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>UC03 ..&gt; AWSSystem : &lt;&lt;includes&gt;&gt;
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>UC04 ..&gt; AWSSystem : &lt;&lt;includes&gt;&gt;
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>UC05 ..&gt; AWSSystem : &lt;&lt;includes&gt;&gt;
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>UC06 ..&gt; AWSSystem : &lt;&lt;includes&gt;&gt;
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>UC07 ..&gt; AWSSystem : &lt;&lt;includes&gt;&gt;
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>@enduml
+</span></code></pre></div>
+<h3 id="23-matriz-de-rastreamento">2.3. Matriz de Rastreamento<a class="headerlink" href="#23-matriz-de-rastreamento" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Caso de Uso</strong></th>
+<th style="text-align: left;"><strong>Requisitos Suplementares</strong></th>
+<th style="text-align: left;"><strong>Documento de Visão</strong></th>
+<th style="text-align: left;"><strong>Serviços AWS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">UC-ARQ-001</td>
+<td style="text-align: left;">Confiabilidade (Multi-AZ), Custo</td>
+<td style="text-align: left;">Visão Geral da Solução</td>
+<td style="text-align: left;">VPC, Sub-redes, IGW, NAT, Route Tables</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-002</td>
+<td style="text-align: left;">Segurança (LGPD), Manutenibilidade</td>
+<td style="text-align: left;">Segurança e Privacidade</td>
+<td style="text-align: left;">Security Groups, NACLs, IAM</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-003</td>
+<td style="text-align: left;">Segurança (LGPD), Custo</td>
+<td style="text-align: left;">Arquitetura Híbrida</td>
+<td style="text-align: left;">VPC Endpoints (DynamoDB, S3, Secrets Manager)</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-004</td>
+<td style="text-align: left;">Desempenho (Latência), Disponibilidade</td>
+<td style="text-align: left;">API + Ingestão</td>
+<td style="text-align: left;">ALB, EC2, RDS, Lambda</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-005</td>
+<td style="text-align: left;">Manutenibilidade, Disponibilidade</td>
+<td style="text-align: left;">Monitoramento</td>
+<td style="text-align: left;">CloudWatch, Logs, Alarms</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-006</td>
+<td style="text-align: left;">Manutenibilidade (Deploy/Rollback)</td>
+<td style="text-align: left;">Automação</td>
+<td style="text-align: left;">CodePipeline, CodeBuild, CodeDeploy</td>
+</tr>
+<tr>
+<td style="text-align: left;">UC-ARQ-007</td>
+<td style="text-align: left;">Segurança (LGPD), Compliance</td>
+<td style="text-align: left;">Segurança e Privacidade</td>
+<td style="text-align: left;">IAM, KMS, Secrets Manager, CloudTrail</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-diagramas-de-arquitetura">3. DIAGRAMAS DE ARQUITETURA<a class="headerlink" href="#3-diagramas-de-arquitetura" title="Permanent link">&para;</a></h2>
+<h3 id="31-diagrama-de-componentes-visao-geral-da-arquitetura">3.1. Diagrama de Componentes - Visão Geral da Arquitetura<a class="headerlink" href="#31-diagrama-de-componentes-visao-geral-da-arquitetura" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@startuml
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v16.0/dist
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>!include AWSPuml/AWSCommon.puml
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>!include AWSPuml/NetworkingContentDelivery/AmazonVPC.puml
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>!include AWSPuml/NetworkingContentDelivery/AmazonRoute53.puml
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>!include AWSPuml/NetworkingContentDelivery/ElasticLoadBalancing.puml
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>!include AWSPuml/Compute/AmazonEC2.puml
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>!include AWSPuml/Database/AmazonRDS.puml
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>!include AWSPuml/Database/AmazonDynamoDB.puml
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>!include AWSPuml/Storage/AmazonS3.puml
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>!include AWSPuml/ApplicationIntegration/AmazonAPIGateway.puml
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>!include AWSPuml/Compute/AWSLambda.puml
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>!include AWSPuml/ManagementGovernance/AWSCloudWatch.puml
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>!include AWSPuml/DeveloperTools/AWSCodePipeline.puml
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>title Arquitetura de Componentes - [NOME DO PROJETO]
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>package &quot;AWS Cloud&quot; {
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  package &quot;VPC 10.0.0.0/16&quot; {
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    package &quot;Availability Zone A&quot; {
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>      package &quot;Subnet-Public-A\n10.0.1.0/24&quot; {
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        AmazonALB(albA, &quot;Application Load Balancer&quot;, &quot;ALB - A&quot;)
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        NATGateway(natA, &quot;NAT Gateway&quot;, &quot;NAT-A&quot;)
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>      }
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>      package &quot;Subnet-Private-A\n10.0.2.0/24&quot; {
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>        AmazonEC2(ec2A, &quot;API Instance&quot;, &quot;EC2 - A&quot;)
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>        AmazonRDS(rdsA, &quot;RDS Primary&quot;, &quot;PostgreSQL&quot;)
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>      }
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    }
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>    package &quot;Availability Zone B&quot; {
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>      package &quot;Subnet-Public-B\n10.0.3.0/24&quot; {
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>        AmazonALB(albB, &quot;Application Load Balancer&quot;, &quot;ALB - B&quot;)
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>        NATGateway(natB, &quot;NAT Gateway&quot;, &quot;NAT-B&quot;)
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>      }
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>      package &quot;Subnet-Private-B\n10.0.4.0/24&quot; {
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>        AmazonEC2(ec2B, &quot;API Instance&quot;, &quot;EC2 - B&quot;)
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>        AmazonRDS(rdsB, &quot;RDS Standby&quot;, &quot;PostgreSQL&quot;)
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>      }
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>    }
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>    package &quot;VPC Endpoints&quot; {
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>      AmazonDynamoDB(dynamoDB, &quot;DynamoDB&quot;, &quot;GPS Data&quot;)
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>      AmazonS3(s3, &quot;S3&quot;, &quot;Static Files&quot;)
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>      AWSSecretsManager(secrets, &quot;Secrets Manager&quot;, &quot;Credentials&quot;)
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>    }
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>    AmazonAPIGateway(apiGw, &quot;API Gateway&quot;, &quot;Ingestão&quot;)
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>    AWSLambda(lambda, &quot;Lambda&quot;, &quot;Processamento&quot;)
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>  }
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>  AmazonS3(s3cdn, &quot;S3 + CloudFront&quot;, &quot;CDN&quot;)
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>  AWSCloudWatch(cloudwatch, &quot;CloudWatch&quot;, &quot;Monitoramento&quot;)
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>  AWSCodePipeline(pipeline, &quot;CodePipeline&quot;, &quot;CI/CD&quot;)
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>  Cloudflare(client, &quot;Clientes/Operadores&quot;)
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>}
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>&#39; Conexões
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>client --&gt; albA
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>client --&gt; albB
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>
+</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>albA --&gt; ec2A
+</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>albB --&gt; ec2B
+</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>
+</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>ec2A --&gt; rdsA
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>ec2B --&gt; rdsB
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>ec2A --&gt; dynamoDB
+</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>ec2B --&gt; dynamoDB
+</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>
+</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>ec2A --&gt; s3
+</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>ec2B --&gt; s3
+</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>
+</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>ec2A --&gt; secrets
+</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>ec2B --&gt; secrets
+</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>
+</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>lambda --&gt; dynamoDB
+</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>lambda --&gt; s3
+</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>
+</span><span id="__span-1-80"><a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>apiGw --&gt; lambda
+</span><span id="__span-1-81"><a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>
+</span><span id="__span-1-82"><a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a>s3cdn &lt;-- s3
+</span><span id="__span-1-83"><a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>
+</span><span id="__span-1-84"><a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a>pipeline --&gt; ec2A
+</span><span id="__span-1-85"><a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a>pipeline --&gt; ec2B
+</span><span id="__span-1-86"><a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>
+</span><span id="__span-1-87"><a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a>ec2A --&gt; cloudwatch
+</span><span id="__span-1-88"><a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>ec2B --&gt; cloudwatch
+</span><span id="__span-1-89"><a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>lambda --&gt; cloudwatch
+</span><span id="__span-1-90"><a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>rdsA --&gt; cloudwatch
+</span><span id="__span-1-91"><a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>rdsB --&gt; cloudwatch
+</span><span id="__span-1-92"><a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a>
+</span><span id="__span-1-93"><a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>@enduml
+</span></code></pre></div>
+<h3 id="32-diagrama-de-sequencia-ingestao-de-telemetria">3.2. Diagrama de Sequência - Ingestão de Telemetria<a class="headerlink" href="#32-diagrama-de-sequencia-ingestao-de-telemetria" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>@startuml
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>title Fluxo de Ingestão de Telemetria - [NOME DO PROJETO]
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>actor &quot;Dispositivo IoT&quot; as IoT
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>participant &quot;API Gateway&quot; as APIGW
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>participant &quot;Lambda&quot; as Lambda
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>participant &quot;DynamoDB&quot; as DynamoDB
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>participant &quot;CloudWatch&quot; as CW
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>participant &quot;SNS&quot; as SNS
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>== Ingestão de Dados ==
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>IoT -&gt; APIGW: POST /telemetry\n{deviceId, lat, lng, speed, timestamp}
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>activate APIGW
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>APIGW -&gt; Lambda: Invoke Function\n(evento)
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>activate Lambda
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>Lambda -&gt; Lambda: Validar dados\n(payload)
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>Lambda -&gt; DynamoDB: PutItem(telemetry_data)
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>activate DynamoDB
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>DynamoDB --&gt; Lambda: Success
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>deactivate DynamoDB
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>Lambda -&gt; CW: PutMetricData\n(latency, count)
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>activate CW
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>CW --&gt; Lambda: Success
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>deactivate CW
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>alt Falha no Processamento
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>  Lambda -&gt; SNS: Publish(alert)
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>  activate SNS
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>  SNS --&gt; Lambda: Success
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>  deactivate SNS
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>  Lambda --&gt; APIGW: HTTP 500 (Error)
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>else Sucesso
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>  Lambda --&gt; APIGW: HTTP 201 (Created)
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>end
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>deactivate Lambda
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>APIGW --&gt; IoT: HTTP 201 (Created)
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>deactivate APIGW
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>== Decisão: Dados Anômalos ==
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>Lambda -&gt; SNS: Publish(anomaly_detected)\n(se aplicável)
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>activate SNS
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>SNS --&gt; Lambda: Success
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>deactivate SNS
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>
+</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>@enduml
+</span></code></pre></div>
+<h3 id="33-diagrama-de-sequencia-deploy-automatizado-blue-green">3.3. Diagrama de Sequência - Deploy Automatizado (Blue-Green)<a class="headerlink" href="#33-diagrama-de-sequencia-deploy-automatizado-blue-green" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>@startuml
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>title Pipeline CI/CD - Deploy Blue-Green - [NOME DO PROJETO]
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>actor &quot;DevOps&quot; as DevOps
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>participant &quot;GitHub&quot; as GH
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>participant &quot;CodePipeline&quot; as CP
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>participant &quot;CodeBuild&quot; as CB
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>participant &quot;ECR&quot; as ECR
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>participant &quot;ECS Blue&quot; as Blue
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>participant &quot;ECS Green&quot; as Green
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>participant &quot;ALB&quot; as ALB
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>== Pull Request Aprovado ==
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>DevOps -&gt; GH: Merge PR para main
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>activate GH
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>GH --&gt; CP: Webhook (push)
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>deactivate GH
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>== Pipeline Inicia ==
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>activate CP
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>CP -&gt; GH: Source (pull code)
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>GH --&gt; CP: Code retrieved
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>CP -&gt; CB: Build (CodeBuild)
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>activate CB
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>CB -&gt; CB: Install dependencies
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>CB -&gt; CB: Run tests
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>CB -&gt; ECR: Build &amp; Push Docker Image
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>activate ECR
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>ECR --&gt; CB: Image registered
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>deactivate ECR
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>CB --&gt; CP: Build success
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>deactivate CB
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>== Deploy Blue-Green ==
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>CP -&gt; Green: Deploy new version
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>activate Green
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>Green -&gt; Green: Start containers
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>Green -&gt; ALB: Health Check (new version)
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>activate ALB
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>ALB --&gt; Green: Healthy
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>deactivate ALB
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>Green --&gt; CP: Green deployed
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>deactivate Green
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>CP -&gt; DevOps: Aprovação manual necessária
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>DevOps -&gt; CP: Approve
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>CP -&gt; ALB: Switch traffic to Green
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>activate ALB
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>ALB -&gt; ALB: Update routing rules
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>ALB --&gt; CP: Traffic switched
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>deactivate ALB
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>== Rollback (se necessário) ==
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>alt Falha detectada
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>  CP -&gt; ALB: Switch traffic to Blue
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>  activate ALB
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>  ALB -&gt; ALB: Update routing rules (rollback)
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>  ALB --&gt; CP: Traffic switched (rollback)
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>  deactivate ALB
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>  CP -&gt; DevOps: Notify (rollback)
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>  activate DevOps
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>  DevOps --&gt; CP: Ack
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>  deactivate DevOps
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>end
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>CP --&gt; DevOps: Deploy complete
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>deactivate CP
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>@enduml
+</span></code></pre></div>
+<h3 id="34-diagrama-de-atividades-configuracao-de-vpc-endpoints">3.4. Diagrama de Atividades - Configuração de VPC Endpoints<a class="headerlink" href="#34-diagrama-de-atividades-configuracao-de-vpc-endpoints" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>@startuml
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>title Configuração de VPC Endpoints - [NOME DO PROJETO]
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>start
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>:Administrador acessa Console AWS;
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>:Identifica serviços que precisam\n de acesso privado da VPC;
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>if (Serviço suporta Gateway Endpoint?) then (Sim)
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  :Cria Gateway Endpoint;
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  note right
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    Serviços suportados:
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    - DynamoDB
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    - S3 (Gateway)
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>  end note
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>  :Associa à Route Table privada;
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  :Atualiza políticas de acesso;
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>else (Não)
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  :Cria Interface Endpoint;
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  note right
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    Serviços suportados:
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    - S3 (Interface)
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    - Secrets Manager
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    - Outros serviços
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>  end note
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>  :Seleciona sub-redes privadas;
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>  :Habilita Private DNS;
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>  :Associa Security Group;
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>endif
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>:Valida conectividade;
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>if (Conectividade OK?) then (Sim)
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>  :Documenta decisão no DAS;
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>  stop
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>else (Não)
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>  :Revisa configurações;
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>  :Ajusta políticas ou rotas;
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>  :Testa novamente;
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>  note right
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>    Verificar:
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>    - Route Tables
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>    - Security Groups
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>    - IAM Policies
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>    - DNS Resolution
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>  end note
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>  if (Teste OK?) then (Sim)
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>    :Documenta decisão no DAS;
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>    stop
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>  else (Não)
+</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>    :Escala para suporte AWS;
+</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>    stop
+</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>  endif
+</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>endif
+</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>
+</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>@enduml
+</span></code></pre></div>
+<h3 id="35-diagrama-de-implantacao-visao-fisica">3.5. Diagrama de Implantação - Visão Física<a class="headerlink" href="#35-diagrama-de-implantacao-visao-fisica" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>@startuml
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>title Diagrama de Implantação - [NOME DO PROJETO]
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>node &quot;AWS Region&quot; {
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  node &quot;VPC 10.0.0.0/16&quot; {
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    node &quot;Availability Zone A&quot; {
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>      artifact &quot;Subnet-Public-A\n10.0.1.0/24&quot; as PubA {
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        artifact &quot;ALB\n(Internet-facing)&quot; as ALBA
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        artifact &quot;NAT Gateway&quot; as NATa
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>      }
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>      artifact &quot;Subnet-Private-A\n10.0.2.0/24&quot; as PrivA {
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        artifact &quot;EC2 Instance\n(t2.medium)&quot; as EC2A {
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>          file &quot;Django REST Framework&quot; as DjangoA
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>          file &quot;Gunicorn&quot; as GunicornA
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>          file &quot;Nginx&quot; as NginxA
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>        }
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>        artifact &quot;RDS Instance\n(db.t3.medium)&quot; as RDSA {
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>          database &quot;PostgreSQL 14&quot; as PG1
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>        }
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>      }
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    }
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    node &quot;Availability Zone B&quot; {
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>      artifact &quot;Subnet-Public-B\n10.0.3.0/24&quot; as PubB {
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>        artifact &quot;ALB\n(Internet-facing)&quot; as ALBB
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>        artifact &quot;NAT Gateway&quot; as NATb
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>      }
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>      artifact &quot;Subnet-Private-B\n10.0.4.0/24&quot; as PrivB {
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>        artifact &quot;EC2 Instance\n(t2.medium)&quot; as EC2B {
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>          file &quot;Django REST Framework&quot; as DjangoB
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>          file &quot;Gunicorn&quot; as GunicornB
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>          file &quot;Nginx&quot; as NginxB
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>        }
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>        artifact &quot;RDS Standby\n(db.t3.medium)&quot; as RDSB {
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>          database &quot;PostgreSQL 14&quot; as PG2
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>        }
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>      }
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>    }
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>
+</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>    artifact &quot;VPC Endpoints&quot; as VPCE {
+</span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>      artifact &quot;DynamoDB Gateway&quot; as DynamoGW
+</span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a>      artifact &quot;S3 Interface&quot; as S3IF
+</span><span id="__span-5-42"><a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a>      artifact &quot;Secrets Manager Interface&quot; as SecretsIF
+</span><span id="__span-5-43"><a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>    }
+</span><span id="__span-5-44"><a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a>  }
+</span><span id="__span-5-45"><a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a>
+</span><span id="__span-5-46"><a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a>  artifact &quot;External Services&quot; {
+</span><span id="__span-5-47"><a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a>    artifact &quot;API Gateway&quot; as APIGW
+</span><span id="__span-5-48"><a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a>    artifact &quot;Lambda&quot; as Lambda
+</span><span id="__span-5-49"><a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a>    artifact &quot;S3 Bucket&quot; as S3
+</span><span id="__span-5-50"><a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a>    artifact &quot;CloudFront&quot; as CF
+</span><span id="__span-5-51"><a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a>  }
+</span><span id="__span-5-52"><a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a>
+</span><span id="__span-5-53"><a id="__codelineno-5-53" name="__codelineno-5-53" href="#__codelineno-5-53"></a>  artifact &quot;Management Services&quot; {
+</span><span id="__span-5-54"><a id="__codelineno-5-54" name="__codelineno-5-54" href="#__codelineno-5-54"></a>    artifact &quot;CloudWatch&quot; as CW
+</span><span id="__span-5-55"><a id="__codelineno-5-55" name="__codelineno-5-55" href="#__codelineno-5-55"></a>    artifact &quot;CodePipeline&quot; as CP
+</span><span id="__span-5-56"><a id="__codelineno-5-56" name="__codelineno-5-56" href="#__codelineno-5-56"></a>    artifact &quot;Secrets Manager&quot; as SM
+</span><span id="__span-5-57"><a id="__codelineno-5-57" name="__codelineno-5-57" href="#__codelineno-5-57"></a>  }
+</span><span id="__span-5-58"><a id="__codelineno-5-58" name="__codelineno-5-58" href="#__codelineno-5-58"></a>}
+</span><span id="__span-5-59"><a id="__codelineno-5-59" name="__codelineno-5-59" href="#__codelineno-5-59"></a>
+</span><span id="__span-5-60"><a id="__codelineno-5-60" name="__codelineno-5-60" href="#__codelineno-5-60"></a>&#39; Deployment relationships
+</span><span id="__span-5-61"><a id="__codelineno-5-61" name="__codelineno-5-61" href="#__codelineno-5-61"></a>ALBA --&gt; EC2A : &quot;Target Group&quot;
+</span><span id="__span-5-62"><a id="__codelineno-5-62" name="__codelineno-5-62" href="#__codelineno-5-62"></a>ALBB --&gt; EC2B : &quot;Target Group&quot;
+</span><span id="__span-5-63"><a id="__codelineno-5-63" name="__codelineno-5-63" href="#__codelineno-5-63"></a>
+</span><span id="__span-5-64"><a id="__codelineno-5-64" name="__codelineno-5-64" href="#__codelineno-5-64"></a>EC2A --&gt; RDSA : &quot;Port 5432&quot;
+</span><span id="__span-5-65"><a id="__codelineno-5-65" name="__codelineno-5-65" href="#__codelineno-5-65"></a>EC2B --&gt; RDSB : &quot;Port 5432&quot;
+</span><span id="__span-5-66"><a id="__codelineno-5-66" name="__codelineno-5-66" href="#__codelineno-5-66"></a>
+</span><span id="__span-5-67"><a id="__codelineno-5-67" name="__codelineno-5-67" href="#__codelineno-5-67"></a>RDSA --&gt; RDSB : &quot;Synchronous Replication&quot;
+</span><span id="__span-5-68"><a id="__codelineno-5-68" name="__codelineno-5-68" href="#__codelineno-5-68"></a>
+</span><span id="__span-5-69"><a id="__codelineno-5-69" name="__codelineno-5-69" href="#__codelineno-5-69"></a>EC2A --&gt; DynamoGW : &quot;Private&quot;
+</span><span id="__span-5-70"><a id="__codelineno-5-70" name="__codelineno-5-70" href="#__codelineno-5-70"></a>EC2B --&gt; DynamoGW : &quot;Private&quot;
+</span><span id="__span-5-71"><a id="__codelineno-5-71" name="__codelineno-5-71" href="#__codelineno-5-71"></a>
+</span><span id="__span-5-72"><a id="__codelineno-5-72" name="__codelineno-5-72" href="#__codelineno-5-72"></a>EC2A --&gt; S3IF : &quot;Private&quot;
+</span><span id="__span-5-73"><a id="__codelineno-5-73" name="__codelineno-5-73" href="#__codelineno-5-73"></a>EC2B --&gt; S3IF : &quot;Private&quot;
+</span><span id="__span-5-74"><a id="__codelineno-5-74" name="__codelineno-5-74" href="#__codelineno-5-74"></a>
+</span><span id="__span-5-75"><a id="__codelineno-5-75" name="__codelineno-5-75" href="#__codelineno-5-75"></a>EC2A --&gt; SecretsIF : &quot;Private&quot;
+</span><span id="__span-5-76"><a id="__codelineno-5-76" name="__codelineno-5-76" href="#__codelineno-5-76"></a>EC2B --&gt; SecretsIF : &quot;Private&quot;
+</span><span id="__span-5-77"><a id="__codelineno-5-77" name="__codelineno-5-77" href="#__codelineno-5-77"></a>
+</span><span id="__span-5-78"><a id="__codelineno-5-78" name="__codelineno-5-78" href="#__codelineno-5-78"></a>Lambda --&gt; DynamoGW : &quot;Private&quot;
+</span><span id="__span-5-79"><a id="__codelineno-5-79" name="__codelineno-5-79" href="#__codelineno-5-79"></a>Lambda --&gt; S3IF : &quot;Private&quot;
+</span><span id="__span-5-80"><a id="__codelineno-5-80" name="__codelineno-5-80" href="#__codelineno-5-80"></a>
+</span><span id="__span-5-81"><a id="__codelineno-5-81" name="__codelineno-5-81" href="#__codelineno-5-81"></a>APIGW --&gt; Lambda : &quot;Invoke&quot;
+</span><span id="__span-5-82"><a id="__codelineno-5-82" name="__codelineno-5-82" href="#__codelineno-5-82"></a>
+</span><span id="__span-5-83"><a id="__codelineno-5-83" name="__codelineno-5-83" href="#__codelineno-5-83"></a>S3 --&gt; CF : &quot;Origin&quot;
+</span><span id="__span-5-84"><a id="__codelineno-5-84" name="__codelineno-5-84" href="#__codelineno-5-84"></a>
+</span><span id="__span-5-85"><a id="__codelineno-5-85" name="__codelineno-5-85" href="#__codelineno-5-85"></a>EC2A --&gt; CW : &quot;Metrics/Logs&quot;
+</span><span id="__span-5-86"><a id="__codelineno-5-86" name="__codelineno-5-86" href="#__codelineno-5-86"></a>EC2B --&gt; CW : &quot;Metrics/Logs&quot;
+</span><span id="__span-5-87"><a id="__codelineno-5-87" name="__codelineno-5-87" href="#__codelineno-5-87"></a>Lambda --&gt; CW : &quot;Metrics/Logs&quot;
+</span><span id="__span-5-88"><a id="__codelineno-5-88" name="__codelineno-5-88" href="#__codelineno-5-88"></a>RDSA --&gt; CW : &quot;Metrics/Logs&quot;
+</span><span id="__span-5-89"><a id="__codelineno-5-89" name="__codelineno-5-89" href="#__codelineno-5-89"></a>RDSB --&gt; CW : &quot;Metrics/Logs&quot;
+</span><span id="__span-5-90"><a id="__codelineno-5-90" name="__codelineno-5-90" href="#__codelineno-5-90"></a>
+</span><span id="__span-5-91"><a id="__codelineno-5-91" name="__codelineno-5-91" href="#__codelineno-5-91"></a>CP --&gt; EC2A : &quot;Deploy&quot;
+</span><span id="__span-5-92"><a id="__codelineno-5-92" name="__codelineno-5-92" href="#__codelineno-5-92"></a>CP --&gt; EC2B : &quot;Deploy&quot;
+</span><span id="__span-5-93"><a id="__codelineno-5-93" name="__codelineno-5-93" href="#__codelineno-5-93"></a>
+</span><span id="__span-5-94"><a id="__codelineno-5-94" name="__codelineno-5-94" href="#__codelineno-5-94"></a>EC2A --&gt; SM : &quot;Get secret&quot;
+</span><span id="__span-5-95"><a id="__codelineno-5-95" name="__codelineno-5-95" href="#__codelineno-5-95"></a>EC2B --&gt; SM : &quot;Get secret&quot;
+</span><span id="__span-5-96"><a id="__codelineno-5-96" name="__codelineno-5-96" href="#__codelineno-5-96"></a>
+</span><span id="__span-5-97"><a id="__codelineno-5-97" name="__codelineno-5-97" href="#__codelineno-5-97"></a>@enduml
+</span></code></pre></div>
+<hr />
+<h2 id="4-especificacao-dos-casos-de-uso">4. ESPECIFICAÇÃO DOS CASOS DE USO<a class="headerlink" href="#4-especificacao-dos-casos-de-uso" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="uc-arq-001-configurar-vpc-e-rede">UC-ARQ-001: CONFIGURAR VPC E REDE<a class="headerlink" href="#uc-arq-001-configurar-vpc-e-rede" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-001</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar VPC e Rede [NOME DO PROJETO]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Em Desenvolvimento</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Administrador de Infraestrutura |
+| <strong>Ator Secundário</strong> | Sistema AWS |</p>
+<p>| <strong>Pré-condição</strong> | 1. Conta AWS ativa.<br>2. Permissões IAM para criar VPC, sub-redes, IGW, NAT Gateway, Route Tables.<br>3. Documento de Visão e Requisitos Suplementares definidos. |
+| <strong>Pós-condição</strong> | 1. VPC criada com CIDR definido.<br>2. Sub-redes públicas e privadas criadas em múltiplas AZs.<br>3. Internet Gateway anexado.<br>4. NAT Gateways configurados.<br>5. Route Tables configuradas. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Administrador acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Navega até o serviço VPC.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Cria VPC com CIDR definido no DAS e habilita DNS hostnames.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Cria sub-redes públicas (uma por AZ) com CIDRs definidos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Cria sub-redes privadas (uma por AZ) com CIDRs definidos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Cria e anexa Internet Gateway à VPC.</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Cria NAT Gateways (um por AZ) nas sub-redes públicas.</td>
+</tr>
+<tr>
+<td style="text-align: left;">8.</td>
+<td style="text-align: left;">Configura Route Table pública: CIDR_VPC → local, 0.0.0.0/0 → IGW.</td>
+</tr>
+<tr>
+<td style="text-align: left;">9.</td>
+<td style="text-align: left;">Configura Route Table privada: CIDR_VPC → local, 0.0.0.0/0 → NAT Gateway.</td>
+</tr>
+<tr>
+<td style="text-align: left;">10.</td>
+<td style="text-align: left;">Associa sub-redes públicas à Route Table pública.</td>
+</tr>
+<tr>
+<td style="text-align: left;">11.</td>
+<td style="text-align: left;">Associa sub-redes privadas à Route Table privada.</td>
+</tr>
+<tr>
+<td style="text-align: left;">12.</td>
+<td style="text-align: left;">Valida conectividade: instância pública → Internet, instância privada → NAT.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxos Alternativos</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Alt 1</td>
+<td style="text-align: left;">CIDR da VPC conflita com outra VPC → alterar CIDR.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 2</td>
+<td style="text-align: left;">Limite de VPCs por região atingido → solicitar aumento de quota.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 3</td>
+<td style="text-align: left;">Permissões IAM insuficientes → atualizar IAM policies.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 4</td>
+<td style="text-align: left;">NAT Gateway falha → verificar Elastic IP e configuração.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Desempenho</strong></td>
+<td style="text-align: left;">VPC criada e configurada em &lt; 15 min.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Disponibilidade</strong></td>
+<td style="text-align: left;">Multi-AZ com 2 AZs (redundância).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Sub-redes privadas sem rota direta para Internet.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Custo</strong></td>
+<td style="text-align: left;">NAT Gateway: conforme estimativa no DAS.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Riscos</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Endereçamento conflitante</td>
+<td style="text-align: left;">Planejar CIDR com folga (mínimo /16).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Custo elevado do NAT Gateway</td>
+<td style="text-align: left;">Avaliar NAT Instance se orçamento restrito.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Erro de roteamento</td>
+<td style="text-align: left;">Testar conectividade com <code>ping</code> ou <code>traceroute</code>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="uc-arq-002-configurar-seguranca-de-rede">UC-ARQ-002: CONFIGURAR SEGURANÇA DE REDE<a class="headerlink" href="#uc-arq-002-configurar-seguranca-de-rede" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-002</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar Segurança de Rede [NOME DO PROJETO]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Em Desenvolvimento</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Administrador de Infraestrutura |
+| <strong>Ator Secundário</strong> | Arquiteto de Segurança, Sistema AWS |</p>
+<p>| <strong>Pré-condição</strong> | 1. VPC e sub-redes criadas (UC-ARQ-001).<br>2. IAM configurado.<br>3. Requisitos de segurança definidos. |
+| <strong>Pós-condição</strong> | 1. Security Groups configurados para cada camada.<br>2. NACLs configuradas.<br>3. IAM roles definidas para serviços. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Administrador acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Navega até Security Groups.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Cria SG-ALB com regras de entrada: Portas 80, 443 (0.0.0.0/0).</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Cria SG-EC2-API com regras de entrada: Porta 8000 (origem: SG-ALB).</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Cria SG-RDS com regras de entrada: Porta 5432 (origem: SG-EC2-API).</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Cria SG-Lambda com regras de saída: DynamoDB, S3, Secrets Manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Cria NACLs para sub-redes públicas e privadas.</td>
+</tr>
+<tr>
+<td style="text-align: left;">8.</td>
+<td style="text-align: left;">Define IAM roles para EC2, Lambda e RDS (princípio menor privilégio).</td>
+</tr>
+<tr>
+<td style="text-align: left;">9.</td>
+<td style="text-align: left;">Documenta todas as regras no DAS.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxos Alternativos</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Alt 1</td>
+<td style="text-align: left;">Porta exposta acidentalmente → revisão das regras.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 2</td>
+<td style="text-align: left;">IAM role com permissões excessivas → revisar e ajustar.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 3</td>
+<td style="text-align: left;">NACL bloqueando tráfego legítimo → ajustar regras numeradas.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Princípio de menor privilégio implementado.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Criptografia em trânsito (TLS 1.3).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Compliance</strong></td>
+<td style="text-align: left;">Conformidade com LGPD e demais regulamentações.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Riscos</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Security Groups permissivos</td>
+<td style="text-align: left;">Revisão periódica das regras.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Acesso não autorizado</td>
+<td style="text-align: left;">MFA obrigatório para admins.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="uc-arq-003-configurar-vpc-endpoints">UC-ARQ-003: CONFIGURAR VPC ENDPOINTS<a class="headerlink" href="#uc-arq-003-configurar-vpc-endpoints" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-003</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar VPC Endpoints [NOME DO PROJETO]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Em Desenvolvimento</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Administrador de Infraestrutura |
+| <strong>Ator Secundário</strong> | Sistema AWS |</p>
+<p>| <strong>Pré-condição</strong> | 1. VPC e sub-redes privadas criadas (UC-ARQ-001).<br>2. IAM configurado.<br>3. Serviços AWS identificados (DynamoDB, S3, Secrets Manager). |
+| <strong>Pós-condição</strong> | 1. Endpoints configurados para serviços necessários.<br>2. Políticas de endpoint restritivas aplicadas.<br>3. Conectividade validada. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Administrador acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Navega até VPC Endpoints.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Para serviços compatíveis (DynamoDB, S3), cria Gateway Endpoint.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Associa às sub-redes privadas e Route Tables.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Para serviços não compatíveis (Secrets Manager), cria Interface Endpoint.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Seleciona sub-redes privadas e habilita Private DNS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Aplica políticas de endpoint para restringir acesso.</td>
+</tr>
+<tr>
+<td style="text-align: left;">8.</td>
+<td style="text-align: left;">Valida conectividade de cada serviço.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxos Alternativos</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Alt 1</td>
+<td style="text-align: left;">Serviço não suporta Gateway Endpoint → usar Interface Endpoint.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 2</td>
+<td style="text-align: left;">Política de endpoint bloqueia acesso → revisar e ajustar.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alt 3</td>
+<td style="text-align: left;">Endpoint não aparece na VPC → verificar região e disponibilidade.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Tráfego não sai da VPC.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Custo</strong></td>
+<td style="text-align: left;">Conforme estimativa no DAS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Desempenho</strong></td>
+<td style="text-align: left;">Latência reduzida vs acesso via Internet.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Riscos</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Custo elevado</td>
+<td style="text-align: left;">Usar Gateway Endpoint para serviços suportados.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Políticas restritivas</td>
+<td style="text-align: left;">Testar com usuários específicos antes de aplicar.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="uc-arq-004-configurar-conectividade-entre-camadas">UC-ARQ-004: CONFIGURAR CONECTIVIDADE ENTRE CAMADAS<a class="headerlink" href="#uc-arq-004-configurar-conectividade-entre-camadas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-004</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar Conectividade entre Camadas [NOME DO PROJETO]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Em Desenvolvimento</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Administrador de Infraestrutura |
+| <strong>Ator Secundário</strong> | Engenheiro de DevOps |</p>
+<p>| <strong>Pré-condição</strong> | 1. VPC e sub-redes criadas (UC-ARQ-001).<br>2. Security Groups configurados (UC-ARQ-002).<br>3. VPC Endpoints configurados (UC-ARQ-003). |
+| <strong>Pós-condição</strong> | 1. Application Load Balancer (ALB) configurado.<br>2. EC2 (API) configurada e comunicando com ALB.<br>3. RDS acessível apenas pela EC2.<br>4. Lambda acessando serviços via endpoints. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Administrador acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Configura Application Load Balancer (ALB) na sub-rede pública.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Configura listener: porta 443 (HTTPS) → porta 8000 (EC2).</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Configura Target Group com EC2-API.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Cria Launch Template para EC2-API com User Data.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Configura Auto Scaling Group com mínimo 2 instâncias (Multi-AZ).</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Configura RDS em Multi-AZ com Security Group restrito.</td>
+</tr>
+<tr>
+<td style="text-align: left;">8.</td>
+<td style="text-align: left;">Configura Lambda com VPC e VPC Endpoints.</td>
+</tr>
+<tr>
+<td style="text-align: left;">9.</td>
+<td style="text-align: left;">Testa fluxo completo: ALB → EC2 → RDS.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Disponibilidade</strong></td>
+<td style="text-align: left;">Conforme SLO definido (ex: 99,95%).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Desempenho</strong></td>
+<td style="text-align: left;">Latência conforme SLO definido.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: left;">Comunicação entre camadas via rede privada.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Riscos</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ALB como ponto único de falha</td>
+<td style="text-align: left;">ALB é gerenciado e altamente disponível.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Auto Scaling mal configurado</td>
+<td style="text-align: left;">Definir CloudWatch alarms para escalonamento.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="uc-arq-005-configurar-monitoramento">UC-ARQ-005: CONFIGURAR MONITORAMENTO<a class="headerlink" href="#uc-arq-005-configurar-monitoramento" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-005</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar Monitoramento [NOME DO PROJETO]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Em Desenvolvimento</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Administrador de Infraestrutura |
+| <strong>Ator Secundário</strong> | Engenheiro de DevOps |</p>
+<p>| <strong>Pré-condição</strong> | 1. VPC e recursos configurados.<br>2. Requisitos de monitoramento definidos. |
+| <strong>Pós-condição</strong> | 1. CloudWatch dashboards configurados.<br>2. Alarmes definidos.<br>3. Logs centralizados. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Administrador acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Navega até CloudWatch.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Cria Dashboard com métricas principais.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.</td>
+<td style="text-align: left;">Configura alarmes conforme SLOs definidos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.</td>
+<td style="text-align: left;">Configura CloudWatch Logs para todos os serviços.</td>
+</tr>
+<tr>
+<td style="text-align: left;">6.</td>
+<td style="text-align: left;">Define métricas customizadas para o negócio.</td>
+</tr>
+<tr>
+<td style="text-align: left;">7.</td>
+<td style="text-align: left;">Configura notificações (email, Slack, SMS).</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisitos Não-Funcionais</strong></th>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Observabilidade</strong></td>
+<td style="text-align: left;">100% de cobertura de logs.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Resposta a incidentes</strong></td>
+<td style="text-align: left;">Conforme MTTR definido.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="uc-arq-006-configurar-cicd-pipeline">UC-ARQ-006: CONFIGURAR CI/CD PIPELINE<a class="headerlink" href="#uc-arq-006-configurar-cicd-pipeline" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Elemento</strong></th>
+<th style="text-align: left;"><strong>Especificação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identificador</strong></td>
+<td style="text-align: left;">UC-ARQ-006</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nome</strong></td>
+<td style="text-align: left;">Configurar CI/CD Pipeline [NOME DO PROJETO]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Em Desenvolvimento</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>Ator Principal</strong> | Engenheiro de DevOps |
+| <strong>Ator Secundário</strong> | Sistema AWS |</p>
+<p>| <strong>Pré-condição</strong> | 1. Código da API no repositório.<br>2. EC2 e RDS configurados. |
+| <strong>Pós-condição</strong> | 1. Pipeline automatizado funcionando.<br>2. Deploy conforme SLO definido.<br>3. Rollback automatizado. |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo Principal</strong></th>
+<th style="text-align: left;"><strong>Passos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.</td>
+<td style="text-align: left;">Engenheiro acessa o Console AWS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.</td>
+<td style="text-align: left;">Configura CodePipeline com Source, Build, Deploy.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.</td>
+<td style="text-align: left;">Config</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright ©️ 2026, Jonh Carvalho
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

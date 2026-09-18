@@ -6,6 +6,10 @@
   --md-primary-bg-color: #fab90a;
 }
 
+h1 { 
+  display: none;
+}
+
 .md-header__topic[data-md-component="header-topic"] {
   display: none;
 }
@@ -248,3 +252,4 @@ hr {
     grid-template-columns: 1fr;
   }
 }
+
