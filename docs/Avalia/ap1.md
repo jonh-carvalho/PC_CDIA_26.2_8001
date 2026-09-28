@@ -1,3 +1,5 @@
+
+
 # AP1
 
 ## Objetivo 
@@ -9,7 +11,10 @@ Desenvolvimento dos Documentos propostos: Documento de Visão e Requisitos Suple
 ### Entrega
 
 - Repositório Github - Código-fonte do projeto atualizado, incluindo as novas classes e as APIs relacionadas professor adicionado como colaborador.
-- **Não é necessário a presença do Grupo no Lab 205**, se até o início da aula o projeto já estiver atualizado e o deploy realizado. O envio deve ser feito adicionando o professor ao repositório, e no readme do projeto deve conter o link da API publicada. 
+<span style="color: red">
+- **Não é necessário a presença do Grupo no Lab 205, se até o início da aula o projeto já estiver atualizado e o deploy realizado. O envio deve ser feito adicionando o professor ao repositório, e no readme do projeto deve conter o link da API publicada.** 
+</span>
+
 - Retire o app e a classe produtos
 - Crie um app conforme o Tema que conterá as duas classes desenvolvidas
 - Readme atualizado. 
@@ -40,3 +45,4 @@ Você possui um projeto Django Rest com uma classe `Produto`. Seu objetivo é cr
 - APIs funcionando conforme esperado
 - Deploy realizado com sucesso na AWS Elastic Beanstalk usando `app.zip`
 - Documentação clara das etapas realizadas
+
