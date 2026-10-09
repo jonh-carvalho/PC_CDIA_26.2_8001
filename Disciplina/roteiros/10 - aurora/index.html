@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../07%20-%20eb/">
+      
+      
+        <link rel="next" href="../10%20-%20docker_rds/">
       
       
       <link rel="icon" href="../../../assets/ibmec_icon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Criação de MySQL no AWS Aurora - PC_CDIA_26.2_8001</title>
+        <title>10 - Aurora RDS - PC_CDIA_26.2_8001</title>
       
     
     
@@ -108,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Criação de MySQL no AWS Aurora
+              10 - Aurora RDS
             
           </span>
         </div>
@@ -244,10 +248,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../aulas/" class="md-tabs__link">
           
   
@@ -417,8 +423,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -439,12 +447,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -458,7 +466,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Disciplina
@@ -743,8 +751,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -762,16 +772,20 @@
       
         
       
+        
+      
+        
+      
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -785,7 +799,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Roteiros
@@ -930,6 +944,183 @@
   
   <span class="md-ellipsis">
     07 - BE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    10 - Aurora RDS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    10 - Aurora RDS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#criacao-de-mysql-no-aws-aurora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criação de MySQL no AWS Aurora
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criação de MySQL no AWS Aurora">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-criar-cluster-aurora" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Criar Cluster Aurora
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-aguardar-disponibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Aguardar Disponibilidade
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-conectar-ao-banco-por-onde" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Conectar ao Banco (por onde?)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Conectar ao Banco (por onde?)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-aws-cloudshell-mais-facil-sem-instalar-nada" class="md-nav__link">
+    <span class="md-ellipsis">
+      I. AWS CloudShell (mais fácil, sem instalar nada)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I. AWS CloudShell (mais fácil, sem instalar nada)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-criar-tabela" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Criar Tabela
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-operacoes-basicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Operações Básicas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ii-ec2-na-mesma-vpc-do-aurora-recomendado-para-laboratorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      II. EC2 na mesma VPC do Aurora (recomendado para laboratório)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iii-seu-computador-local-se-liberar-acesso-no-security-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      III. Seu computador local (se liberar acesso no Security Group)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10%20-%20docker_rds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 - Docker RDS
   </span>
   
 
@@ -1331,8 +1522,10 @@
   
 
 
-<h1 id="criacao-de-mysql-no-aws-aurora">Criação de MySQL no AWS Aurora<a class="headerlink" href="#criacao-de-mysql-no-aws-aurora" title="Permanent link">&para;</a></h1>
-<h2 id="1-criar-cluster-aurora">1. Criar Cluster Aurora<a class="headerlink" href="#1-criar-cluster-aurora" title="Permanent link">&para;</a></h2>
+  <h1>10 - Aurora RDS</h1>
+
+<h2 id="criacao-de-mysql-no-aws-aurora">Criação de MySQL no AWS Aurora<a class="headerlink" href="#criacao-de-mysql-no-aws-aurora" title="Permanent link">&para;</a></h2>
+<h3 id="1-criar-cluster-aurora">1. Criar Cluster Aurora<a class="headerlink" href="#1-criar-cluster-aurora" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Acesse o console AWS RDS</li>
 <li>Clique em "Create database"</li>
@@ -1346,16 +1539,14 @@
 </li>
 <li>Clique em "Create database"</li>
 </ol>
-<h2 id="2-aguardar-disponibilidade">2. Aguardar Disponibilidade<a class="headerlink" href="#2-aguardar-disponibilidade" title="Permanent link">&para;</a></h2>
+<h3 id="2-aguardar-disponibilidade">2. Aguardar Disponibilidade<a class="headerlink" href="#2-aguardar-disponibilidade" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Espere o status mudar para "Available" (5-10 minutos)</li>
 <li>Copie o <strong>endpoint</strong> da instância</li>
 </ul>
-<h2 id="3-conectar-ao-banco-por-onde">3. Conectar ao Banco (por onde?)<a class="headerlink" href="#3-conectar-ao-banco-por-onde" title="Permanent link">&para;</a></h2>
+<h3 id="3-conectar-ao-banco-por-onde">3. Conectar ao Banco (por onde?)<a class="headerlink" href="#3-conectar-ao-banco-por-onde" title="Permanent link">&para;</a></h3>
 <p>Você pode conectar de <strong>3 lugares</strong>:</p>
-<ol>
-<li><strong>AWS CloudShell</strong> (mais fácil, sem instalar nada)</li>
-</ol>
+<h4 id="i-aws-cloudshell-mais-facil-sem-instalar-nada">I. <strong>AWS CloudShell</strong> (mais fácil, sem instalar nada)<a class="headerlink" href="#i-aws-cloudshell-mais-facil-sem-instalar-nada" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p>Antes de conectar, no <strong>Security Group</strong> do Aurora, libere a porta <strong>3306</strong> para a origem correta (EC2, CloudShell ou seu IP).</p>
 </blockquote>
@@ -1368,7 +1559,7 @@
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Amazon Linux</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>mariadb105
 </span></code></pre></div>
-<h2 id="4-criar-tabela">4. Criar Tabela<a class="headerlink" href="#4-criar-tabela" title="Permanent link">&para;</a></h2>
+<h5 id="4-criar-tabela">4. Criar Tabela<a class="headerlink" href="#4-criar-tabela" title="Permanent link">&para;</a></h5>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">meubanco</span><span class="p">;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">USE</span><span class="w"> </span><span class="n">meubanco</span><span class="p">;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
@@ -1378,7 +1569,7 @@
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">);</span>
 </span></code></pre></div>
-<h2 id="5-operacoes-basicas">5. Operações Básicas<a class="headerlink" href="#5-operacoes-basicas" title="Permanent link">&para;</a></h2>
+<h5 id="5-operacoes-basicas">5. Operações Básicas<a class="headerlink" href="#5-operacoes-basicas" title="Permanent link">&para;</a></h5>
 <p><strong>Inserir dados:</strong>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">usuarios</span><span class="w"> </span><span class="p">(</span><span class="n">nome</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;João&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;joao@email.com&#39;</span><span class="p">);</span>
 </span></code></pre></div></p>
@@ -1391,9 +1582,8 @@
 <p><strong>Deletar:</strong>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">usuarios</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
 </span></code></pre></div></p>
-<ol>
-<li><strong>EC2 na mesma VPC</strong> do Aurora (recomendado para laboratório)</li>
-</ol>
+<hr />
+<h4 id="ii-ec2-na-mesma-vpc-do-aurora-recomendado-para-laboratorio">II. <strong>EC2 na mesma VPC</strong> do Aurora (recomendado para laboratório)<a class="headerlink" href="#ii-ec2-na-mesma-vpc-do-aurora-recomendado-para-laboratorio" title="Permanent link">&para;</a></h4>
 <p><strong>Passo a passo (via EC2):</strong>
    1. Acesse a instância:
       <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ssh<span class="w"> </span>-i<span class="w"> </span>sua-chave.pem<span class="w"> </span>ec2-user@IP_PUBLICO_DA_EC2
@@ -1420,9 +1610,7 @@
 <blockquote>
 <p>Se falhar, valide o Security Group: porta <strong>3306</strong> liberada da EC2 para o Aurora.</p>
 </blockquote>
-<ol>
-<li><strong>Seu computador local</strong> (se liberar acesso no Security Group)</li>
-</ol>
+<h4 id="iii-seu-computador-local-se-liberar-acesso-no-security-group">III. <strong>Seu computador local</strong> (se liberar acesso no Security Group)<a class="headerlink" href="#iii-seu-computador-local-se-liberar-acesso-no-security-group" title="Permanent link">&para;</a></h4>
 <p><strong>Passo a passo (via computador local):</strong>
    1. Instale o cliente MySQL:
       <div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Amazon Linux</span>
