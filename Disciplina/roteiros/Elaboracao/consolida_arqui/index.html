@@ -1,0 +1,3403 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jonh Carvalho">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/ibmec_icon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>CONSOLIDAÇÃO DA ARQUITETURA - PC_CDIA_26.2_8001</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#consolidacao-da-arquitetura" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="PC_CDIA_26.2_8001" class="md-header__button md-logo" aria-label="PC_CDIA_26.2_8001" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PC_CDIA_26.2_8001
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CONSOLIDAÇÃO DA ARQUITETURA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="#193257" data-md-color-accent="#FAB90A"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="all" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jonh-carvalho/PC_CDIA_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../aulas/" class="md-tabs__link">
+          
+  
+    
+  
+  Disciplina
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Iniciacao/" class="md-tabs__link">
+          
+  
+    
+  
+  Iniciação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Elaboracao/" class="md-tabs__link">
+          
+  
+    
+  
+  Elaboração
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Avalia/ap1/" class="md-tabs__link">
+          
+  
+    
+  
+  Avaliações
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../bibliografia/" class="md-tabs__link">
+        
+  
+    
+  
+  Bibliografia
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="PC_CDIA_26.2_8001" class="md-nav__button md-logo" aria-label="PC_CDIA_26.2_8001" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    PC_CDIA_26.2_8001
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jonh-carvalho/PC_CDIA_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Disciplina
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Disciplina
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aulas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ambiente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ambiente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/desafios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desafios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/case_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/dv_template_preenchido/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão Preenchido
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/requisitos_suplementares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elaboração
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../casos_uso_arquiteturais/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso Arquitetural
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelo_de_analise-pacotes_subsistemas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo de Análise - Segurança
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Roteiros
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Roteiros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02%20-%20aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01- AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04%20-%20ec2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 - EC2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04%20-%20linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 - Linux Bash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05%20-%20docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 - Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05%20-%20nginxsite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 - Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06%20-%20s3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 - S3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07%20-%20eb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07 - BE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10%20-%20aurora/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 - Aurora RDS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10%20-%20docker_rds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 - Docker RDS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Iniciacao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/dv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Elaboracao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Elaboração
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Elaboracao/cua/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso Arquitetural
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Elaboracao/maps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo de Análise - Segurança
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Avaliações
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Avaliações
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            AP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Avalia/ap1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AP1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="consolidacao-da-arquitetura">CONSOLIDAÇÃO DA ARQUITETURA<a class="headerlink" href="#consolidacao-da-arquitetura" title="Permanent link">&para;</a></h1>
+<p><strong>Modelo de Design (Diagramas de Sequência/Comunicação)</strong></p>
+<p><strong>SwiftTrack IoT — Plataforma de Telemetria e Gestão Logística</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Informação do Documento</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Projeto</strong></td>
+<td style="text-align: left;">SwiftTrack IoT - Plataforma de Telemetria e Gestão Logística</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Documento</strong></td>
+<td style="text-align: left;">Modelo de Design (Diagramas de Sequência/Comunicação) - Consolidação da Arquitetura</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Em Desenvolvimento</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Responsável</strong></td>
+<td style="text-align: left;">[Nome do Grupo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Disciplina</strong></td>
+<td style="text-align: left;">Projeto de Cloud - Semana 7</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fase RUP/UP</strong></td>
+<td style="text-align: left;">Elaboration</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-introducao">1. INTRODUÇÃO<a class="headerlink" href="#1-introducao" title="Permanent link">&para;</a></h2>
+<h3 id="11-proposito">1.1. Propósito<a class="headerlink" href="#11-proposito" title="Permanent link">&para;</a></h3>
+<p>Este documento apresenta o <strong>Modelo de Design (Diagramas de Sequência/Comunicação)</strong> para a consolidação da arquitetura da plataforma <strong>SwiftTrack IoT</strong> na AWS. O modelo demonstra as <strong>interações entre os componentes</strong> em fluxos críticos do sistema, validando a coerência da arquitetura projetada nas semanas anteriores (VPC, Segurança, RDS, EC2) e servindo como base para a implementação.</p>
+<p>O modelo é derivado diretamente dos seguintes artefatos:
+- <strong>Documento de Visão</strong> (Semana 1) - Seção "Recursos do Produto (Arquitetura AWS)"
+- <strong>Documento de Requisitos Suplementares</strong> (Semana 2) - Seções "Desempenho" e "Disponibilidade"
+- <strong>Modelo de Casos de Uso Arquiteturais</strong> (Semana 3) - UC-ARQ-001 a UC-ARQ-007
+- <strong>Modelo de Análise (Pacotes/Subsistemas)</strong> (Semana 4) - Pacotes de Segurança
+- <strong>Modelo de Análise (Classes) - RDS</strong> (Semana 5) - <code>DatabaseInstance</code>, <code>ReadReplica</code>, <code>BackupPolicy</code>
+- <strong>Modelo de Análise (Classes) - EC2</strong> (Semana 6) - <code>ComputeInstance</code>, <code>AutoScalingGroup</code>, <code>LoadBalancer</code></p>
+<h3 id="12-escopo">1.2. Escopo<a class="headerlink" href="#12-escopo" title="Permanent link">&para;</a></h3>
+<p>O modelo abrange os <strong>fluxos críticos</strong> da SwiftTrack IoT, demonstrando as interações entre os componentes:
+- <strong>Fluxo 1:</strong> Ingestão de Telemetria (Serverless) - IoT → API Gateway → Lambda → DynamoDB
+- <strong>Fluxo 2:</strong> Requisição Administrativa (IaaS) - Operador → ALB → EC2 → RDS
+- <strong>Fluxo 3:</strong> Autenticação - Usuário → API Gateway → Cognito → IAM → EC2
+- <strong>Fluxo 4:</strong> Deploy Automatizado (CI/CD) - GitHub → CodePipeline → CodeBuild → EC2/ECS
+- <strong>Fluxo 5:</strong> Failover do RDS (Multi-AZ) - RDS Primary → RDS Standby → DNS → API
+- <strong>Fluxo 6:</strong> Upload de Comprovante (S3) - Motorista → API → S3 → CloudFront → Cliente</p>
+<p><strong>Fora do escopo:</strong> Fluxos de Big Data (EMR, Redshift), que serão tratados em disciplinas posteriores.</p>
+<h3 id="13-definicoes-e-siglas">1.3. Definições e Siglas<a class="headerlink" href="#13-definicoes-e-siglas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Sigla</strong></th>
+<th style="text-align: left;"><strong>Definição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>UML</strong></td>
+<td style="text-align: left;">Unified Modeling Language</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ALB</strong></td>
+<td style="text-align: left;">Application Load Balancer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ASG</strong></td>
+<td style="text-align: left;">Auto Scaling Group</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EC2</strong></td>
+<td style="text-align: left;">Elastic Compute Cloud</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RDS</strong></td>
+<td style="text-align: left;">Relational Database Service</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S3</strong></td>
+<td style="text-align: left;">Simple Storage Service</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CDN</strong></td>
+<td style="text-align: left;">Content Delivery Network</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>JWT</strong></td>
+<td style="text-align: left;">JSON Web Token</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MFA</strong></td>
+<td style="text-align: left;">Multi-Factor Authentication</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS</strong></td>
+<td style="text-align: left;">Transactions Per Second</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RPO</strong></td>
+<td style="text-align: left;">Recovery Point Objective</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RTO</strong></td>
+<td style="text-align: left;">Recovery Time Objective</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SLA</strong></td>
+<td style="text-align: left;">Service Level Agreement</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LGPD</strong></td>
+<td style="text-align: left;">Lei Geral de Proteção de Dados</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-referencias">1.4. Referências<a class="headerlink" href="#14-referencias" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Documento de Visão - SwiftTrack IoT (v1.0)</li>
+<li>Documento de Requisitos Suplementares - SwiftTrack IoT (v1.0)</li>
+<li>Modelo de Casos de Uso Arquiteturais - SwiftTrack IoT (v1.0)</li>
+<li>Modelo de Análise (Pacotes/Subsistemas) - SwiftTrack IoT (v1.0)</li>
+<li>Modelo de Análise (Classes) - RDS - SwiftTrack IoT (v1.0)</li>
+<li>Modelo de Análise (Classes) - EC2 - SwiftTrack IoT (v1.0)</li>
+<li>UML Distilled (Martin Fowler)</li>
+<li>AWS Well-Architected Framework - Operational Excellence Pillar</li>
+</ul>
+<hr />
+<h2 id="2-visao-geral-dos-fluxos-criticos">2. VISÃO GERAL DOS FLUXOS CRÍTICOS<a class="headerlink" href="#2-visao-geral-dos-fluxos-criticos" title="Permanent link">&para;</a></h2>
+<h3 id="21-mapa-de-fluxos">2.1. Mapa de Fluxos<a class="headerlink" href="#21-mapa-de-fluxos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Ator</strong></th>
+<th style="text-align: left;"><strong>Componentes Principais</strong></th>
+<th style="text-align: left;"><strong>Prioridade</strong></th>
+<th style="text-align: left;"><strong>Requisitos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Fluxo 1</strong></td>
+<td style="text-align: left;">Ingestão de Telemetria</td>
+<td style="text-align: left;">Motorista (IoT)</td>
+<td style="text-align: left;">API Gateway, Lambda, DynamoDB, CloudWatch, SNS</td>
+<td style="text-align: left;">Crítica</td>
+<td style="text-align: left;">5.000 TPS, &lt; 80ms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fluxo 2</strong></td>
+<td style="text-align: left;">Requisição Administrativa</td>
+<td style="text-align: left;">Operador</td>
+<td style="text-align: left;">Route 53, ALB, EC2, RDS, Redis, CloudWatch</td>
+<td style="text-align: left;">Crítica</td>
+<td style="text-align: left;">1.000 TPS, &lt; 200ms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fluxo 3</strong></td>
+<td style="text-align: left;">Autenticação</td>
+<td style="text-align: left;">Usuário</td>
+<td style="text-align: left;">API Gateway, Cognito, IAM, EC2, RDS</td>
+<td style="text-align: left;">Alta</td>
+<td style="text-align: left;">MFA, tokens 1h</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fluxo 4</strong></td>
+<td style="text-align: left;">Deploy Automatizado</td>
+<td style="text-align: left;">DevOps</td>
+<td style="text-align: left;">GitHub, CodePipeline, CodeBuild, ECR, ECS, ALB</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">&lt; 10min, rollback &lt; 5min</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fluxo 5</strong></td>
+<td style="text-align: left;">Failover do RDS</td>
+<td style="text-align: left;">Sistema AWS</td>
+<td style="text-align: left;">RDS Primary, RDS Standby, Route 53, CloudWatch, SNS</td>
+<td style="text-align: left;">Alta</td>
+<td style="text-align: left;">RPO 15min, RTO 1h</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fluxo 6</strong></td>
+<td style="text-align: left;">Upload de Comprovante</td>
+<td style="text-align: left;">Motorista</td>
+<td style="text-align: left;">API, S3, CloudFront, KMS</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">&lt; 2s, criptografia</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-diagrama-de-contexto-geral">2.2. Diagrama de Contexto Geral<a class="headerlink" href="#22-diagrama-de-contexto-geral" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@startuml
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>title Diagrama de Contexto Geral - SwiftTrack IoT
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>skinparam componentBackgroundColor #E3F2FD
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>skinparam actorBackgroundColor #FFF3E0
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>actor &quot;Motorista\n(IoT)&quot; as IoT
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>actor &quot;Operador&quot; as Operador
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>actor &quot;Usuário&quot; as User
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>actor &quot;DevOps&quot; as DevOps
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>rectangle &quot;SwiftTrack IoT - AWS&quot; {
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  component &quot;API Gateway&quot; as APIGW
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  component &quot;Lambda&quot; as Lambda
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  component &quot;DynamoDB&quot; as DynamoDB
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  component &quot;ALB&quot; as ALB
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  component &quot;EC2 (Django)&quot; as EC2
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>  component &quot;RDS PostgreSQL&quot; as RDS
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>  component &quot;ElastiCache (Redis)&quot; as Redis
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>  component &quot;S3 + CloudFront&quot; as S3
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>  component &quot;Cognito&quot; as Cognito
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>  component &quot;CodePipeline&quot; as CP
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>  component &quot;CloudWatch&quot; as CW
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>}
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>IoT --&gt; APIGW : Telemetria
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>Operador --&gt; ALB : Dashboard
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>User --&gt; APIGW : Autenticação
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>DevOps --&gt; CP : Deploy
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>APIGW --&gt; Lambda
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>Lambda --&gt; DynamoDB
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>Lambda --&gt; CW
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>ALB --&gt; EC2
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>EC2 --&gt; RDS
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>EC2 --&gt; Redis
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>EC2 --&gt; S3
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>EC2 --&gt; Cognito
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>EC2 --&gt; CW
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>CP --&gt; EC2 : Deploy
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>RDS --&gt; CW : Métricas
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>@enduml
+</span></code></pre></div>
+<hr />
+<h2 id="3-especificacao-dos-fluxos">3. ESPECIFICAÇÃO DOS FLUXOS<a class="headerlink" href="#3-especificacao-dos-fluxos" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="31-fluxo-1-ingestao-de-telemetria-serverless">3.1. FLUXO 1: INGESTÃO DE TELEMETRIA (SERVERLESS)<a class="headerlink" href="#31-fluxo-1-ingestao-de-telemetria-serverless" title="Permanent link">&para;</a></h3>
+<h4 id="311-descricao">3.1.1. Descrição<a class="headerlink" href="#311-descricao" title="Permanent link">&para;</a></h4>
+<p>O motorista (dispositivo IoT) envia dados de telemetria (GPS, velocidade, status) para a plataforma SwiftTrack. A ingestão é feita de forma <strong>serverless</strong> (API Gateway + Lambda), garantindo escalabilidade automática e baixo custo.</p>
+<h4 id="312-requisitos-atendidos">3.1.2. Requisitos Atendidos<a class="headerlink" href="#312-requisitos-atendidos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Fonte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Throughput</td>
+<td style="text-align: left;">5.000 eventos/segundo</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Latência</td>
+<td style="text-align: left;">p95 &lt; 80ms</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Disponibilidade</td>
+<td style="text-align: left;">99,9%</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Custo por evento</td>
+<td style="text-align: left;">&lt; US$ 0,001</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+</tbody>
+</table>
+<h4 id="313-diagrama-de-sequencia">3.1.3. Diagrama de Sequência<a class="headerlink" href="#313-diagrama-de-sequencia" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@startuml
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>title Fluxo 1: Ingestão de Telemetria - SwiftTrack IoT
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>actor &quot;Dispositivo IoT&quot; as IoT
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>participant &quot;API Gateway&quot; as APIGW
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>participant &quot;Lambda&quot; as Lambda
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>participant &quot;DynamoDB&quot; as DynamoDB
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>participant &quot;CloudWatch&quot; as CW
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>participant &quot;SNS&quot; as SNS
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>== Ingestão de Dados ==
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>IoT -&gt; APIGW: POST /telemetry\n{deviceId, lat, lng, speed, timestamp}
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>activate APIGW
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>APIGW -&gt; APIGW: Validar API Key\n+ Rate Limiting
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>APIGW -&gt; Lambda: Invoke Function\n(evento)
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>activate Lambda
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>Lambda -&gt; Lambda: Validar payload\n(deviceId, lat, lng)
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>Lambda -&gt; Lambda: Enriquecer dados\n(timestamp, region)
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>Lambda -&gt; DynamoDB: PutItem(telemetry_data)
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>activate DynamoDB
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>DynamoDB --&gt; Lambda: Success
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>deactivate DynamoDB
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>Lambda -&gt; CW: PutMetricData\n(latency, count, errors)
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>activate CW
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>CW --&gt; Lambda: Success
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>deactivate CW
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>alt Falha no Processamento
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>  Lambda -&gt; SNS: Publish(alert)
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>  activate SNS
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>  SNS --&gt; Lambda: Success
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>  deactivate SNS
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>  Lambda --&gt; APIGW: HTTP 500 (Error)
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>else Sucesso
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>  Lambda --&gt; APIGW: HTTP 201 (Created)
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>end
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>deactivate Lambda
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>APIGW --&gt; IoT: HTTP 201 (Created)
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>deactivate APIGW
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>== Decisão: Dados Anômalos ==
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>opt Velocidade &gt; 120 km/h
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>  Lambda -&gt; SNS: Publish(anomaly_detected)
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>  activate SNS
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>  SNS --&gt; Lambda: Success
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>  deactivate SNS
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>end
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>@enduml
+</span></code></pre></div>
+<h4 id="314-diagrama-de-comunicacao">3.1.4. Diagrama de Comunicação<a class="headerlink" href="#314-diagrama-de-comunicacao" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>@startuml
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>title Fluxo 1: Comunicação - Ingestão de Telemetria
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>skinparam objectBackgroundColor #E3F2FD
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>object &quot;IoT&quot; as IoT
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>object &quot;API Gateway&quot; as APIGW
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>object &quot;Lambda&quot; as Lambda
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>object &quot;DynamoDB&quot; as DynamoDB
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>object &quot;CloudWatch&quot; as CW
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>object &quot;SNS&quot; as SNS
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>IoT -right-&gt; APIGW : 1: POST /telemetry
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>APIGW -right-&gt; Lambda : 2: Invoke
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>Lambda -right-&gt; DynamoDB : 3: PutItem
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>Lambda -down-&gt; CW : 4: PutMetricData
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>Lambda -down-&gt; SNS : 5: Publish (alt)
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>Lambda -left-&gt; APIGW : 6: HTTP 201
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>APIGW -left-&gt; IoT : 7: HTTP 201
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>@enduml
+</span></code></pre></div>
+<h4 id="315-tabela-de-mensagens">3.1.5. Tabela de Mensagens<a class="headerlink" href="#315-tabela-de-mensagens" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>#</strong></th>
+<th style="text-align: left;"><strong>De</strong></th>
+<th style="text-align: left;"><strong>Para</strong></th>
+<th style="text-align: left;"><strong>Mensagem</strong></th>
+<th style="text-align: left;"><strong>Protocolo</strong></th>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">IoT</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">POST /telemetry</td>
+<td style="text-align: left;">HTTPS</td>
+<td style="text-align: left;">5.000 TPS</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">Lambda</td>
+<td style="text-align: left;">Invoke Function</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">&lt; 80ms</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Lambda</td>
+<td style="text-align: left;">DynamoDB</td>
+<td style="text-align: left;">PutItem</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Lambda</td>
+<td style="text-align: left;">CloudWatch</td>
+<td style="text-align: left;">PutMetricData</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Lambda</td>
+<td style="text-align: left;">SNS</td>
+<td style="text-align: left;">Publish (alt)</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Lambda</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">HTTP 201</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">IoT</td>
+<td style="text-align: left;">HTTP 201</td>
+<td style="text-align: left;">HTTPS</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h4 id="316-riscos-e-mitigacoes">3.1.6. Riscos e Mitigações<a class="headerlink" href="#316-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Probabilidade</strong></th>
+<th style="text-align: left;"><strong>Impacto</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Cold start do Lambda</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Médio</td>
+<td style="text-align: left;">Provisioned Concurrency.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Timeout do Lambda (15 min)</td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Processamento em lotes.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Throttling do API Gateway</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Aumentar quota, caching.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Falha na escrita do DynamoDB</td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Retry com backoff exponencial.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="32-fluxo-2-requisicao-administrativa-iaas">3.2. FLUXO 2: REQUISIÇÃO ADMINISTRATIVA (IaaS)<a class="headerlink" href="#32-fluxo-2-requisicao-administrativa-iaas" title="Permanent link">&para;</a></h3>
+<h4 id="321-descricao">3.2.1. Descrição<a class="headerlink" href="#321-descricao" title="Permanent link">&para;</a></h4>
+<p>O operador acessa o dashboard administrativo da SwiftTrack via HTTPS. A requisição é distribuída pelo ALB para as instâncias EC2 (Django), que consultam o RDS (PostgreSQL) e retornam a resposta.</p>
+<h4 id="322-requisitos-atendidos">3.2.2. Requisitos Atendidos<a class="headerlink" href="#322-requisitos-atendidos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Fonte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Latência</td>
+<td style="text-align: left;">p95 &lt; 200ms</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Disponibilidade</td>
+<td style="text-align: left;">99,95%</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">TPS</td>
+<td style="text-align: left;">1.000 (pico)</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Criptografia</td>
+<td style="text-align: left;">TLS 1.3</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+</tbody>
+</table>
+<h4 id="323-diagrama-de-sequencia">3.2.3. Diagrama de Sequência<a class="headerlink" href="#323-diagrama-de-sequencia" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>@startuml
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>title Fluxo 2: Requisição Administrativa - SwiftTrack IoT
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>actor &quot;Operador&quot; as User
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>participant &quot;Route 53&quot; as DNS
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>participant &quot;ALB&quot; as ALB
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>participant &quot;EC2 (Django)&quot; as EC2
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>participant &quot;RDS (PostgreSQL)&quot; as RDS
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>participant &quot;ElastiCache (Redis)&quot; as Redis
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>participant &quot;CloudWatch&quot; as CW
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>== Resolução DNS ==
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>User -&gt; DNS: Resolver swifttrack.com
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>activate DNS
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>DNS --&gt; User: IP do ALB
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>deactivate DNS
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>== Requisição HTTPS ==
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>User -&gt; ALB: GET /api/dashboard/\n+ JWT Token
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>activate ALB
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>ALB -&gt; ALB: Terminar SSL/TLS\n(TLS 1.3)
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>ALB -&gt; ALB: Validar token JWT
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>ALB -&gt; EC2: HTTP GET /dashboard/\n(porta 8000)
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>activate EC2
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>== Verificação de Cache ==
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>EC2 -&gt; Redis: GET dashboard:user123
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>activate Redis
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>alt Cache Hit
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>  Redis --&gt; EC2: Dados em cache
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>else Cache Miss
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>  Redis --&gt; EC2: null
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>  EC2 -&gt; RDS: SELECT * FROM dashboard\nWHERE user_id = 123
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>  activate RDS
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>  RDS --&gt; EC2: Resultado da query
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>  deactivate RDS
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>  EC2 -&gt; Redis: SET dashboard:user123\n(dados, TTL 300s)
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>  Redis --&gt; EC2: OK
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>end
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>deactivate Redis
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>== Resposta ==
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>EC2 -&gt; CW: PutMetricData\n(latency, status)
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>activate CW
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>CW --&gt; EC2: Success
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>deactivate CW
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>EC2 --&gt; ALB: HTTP 200 OK\n(JSON)
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>deactivate EC2
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>ALB --&gt; User: HTTP 200 OK\n(JSON)
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>deactivate ALB
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>@enduml
+</span></code></pre></div>
+<h4 id="324-diagrama-de-comunicacao">3.2.4. Diagrama de Comunicação<a class="headerlink" href="#324-diagrama-de-comunicacao" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>@startuml
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>title Fluxo 2: Comunicação - Requisição Administrativa
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>skinparam objectBackgroundColor #E3F2FD
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>object &quot;Operador&quot; as User
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>object &quot;Route 53&quot; as DNS
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>object &quot;ALB&quot; as ALB
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>object &quot;EC2 (Django)&quot; as EC2
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>object &quot;RDS&quot; as RDS
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>object &quot;Redis&quot; as Redis
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>object &quot;CloudWatch&quot; as CW
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>User -right-&gt; DNS : 1: Resolver DNS
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>DNS -left-&gt; User : 2: IP do ALB
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>User -right-&gt; ALB : 3: HTTPS GET
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>ALB -right-&gt; EC2 : 4: HTTP GET
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>EC2 -right-&gt; Redis : 5: GET (cache)
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>Redis -left-&gt; EC2 : 6: Cache Hit/Miss
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>EC2 -right-&gt; RDS : 7: SELECT (alt)
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>RDS -left-&gt; EC2 : 8: Resultado
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>EC2 -left-&gt; ALB : 9: HTTP 200
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>ALB -left-&gt; User : 10: HTTP 200
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>EC2 -down-&gt; CW : 11: PutMetricData
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>@enduml
+</span></code></pre></div>
+<h4 id="325-tabela-de-mensagens">3.2.5. Tabela de Mensagens<a class="headerlink" href="#325-tabela-de-mensagens" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>#</strong></th>
+<th style="text-align: left;"><strong>De</strong></th>
+<th style="text-align: left;"><strong>Para</strong></th>
+<th style="text-align: left;"><strong>Mensagem</strong></th>
+<th style="text-align: left;"><strong>Protocolo</strong></th>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Operador</td>
+<td style="text-align: left;">Route 53</td>
+<td style="text-align: left;">Resolver DNS</td>
+<td style="text-align: left;">DNS</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Route 53</td>
+<td style="text-align: left;">Operador</td>
+<td style="text-align: left;">IP do ALB</td>
+<td style="text-align: left;">DNS</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Operador</td>
+<td style="text-align: left;">ALB</td>
+<td style="text-align: left;">HTTPS GET</td>
+<td style="text-align: left;">HTTPS</td>
+<td style="text-align: left;">TLS 1.3</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">ALB</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">HTTP GET</td>
+<td style="text-align: left;">HTTP</td>
+<td style="text-align: left;">&lt; 200ms</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">Redis</td>
+<td style="text-align: left;">GET (cache)</td>
+<td style="text-align: left;">Redis</td>
+<td style="text-align: left;">&lt; 5ms</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Redis</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">Cache Hit/Miss</td>
+<td style="text-align: left;">Redis</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">RDS</td>
+<td style="text-align: left;">SELECT (alt)</td>
+<td style="text-align: left;">SQL</td>
+<td style="text-align: left;">&lt; 30ms</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">RDS</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">Resultado</td>
+<td style="text-align: left;">SQL</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">ALB</td>
+<td style="text-align: left;">HTTP 200</td>
+<td style="text-align: left;">HTTP</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">ALB</td>
+<td style="text-align: left;">Operador</td>
+<td style="text-align: left;">HTTP 200</td>
+<td style="text-align: left;">HTTPS</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">CloudWatch</td>
+<td style="text-align: left;">PutMetricData</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h4 id="326-riscos-e-mitigacoes">3.2.6. Riscos e Mitigações<a class="headerlink" href="#326-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Probabilidade</strong></th>
+<th style="text-align: left;"><strong>Impacto</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Cache miss frequente</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Médio</td>
+<td style="text-align: left;">Aumentar TTL, pré-aquecer cache.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gargalo no RDS</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Read Replicas, connection pooling.</td>
+</tr>
+<tr>
+<td style="text-align: left;">ALB como ponto único</td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">ALB é gerenciado (Multi-AZ).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Token JWT expirado</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Baixo</td>
+<td style="text-align: left;">Refresh token.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33-fluxo-3-autenticacao">3.3. FLUXO 3: AUTENTICAÇÃO<a class="headerlink" href="#33-fluxo-3-autenticacao" title="Permanent link">&para;</a></h3>
+<h4 id="331-descricao">3.3.1. Descrição<a class="headerlink" href="#331-descricao" title="Permanent link">&para;</a></h4>
+<p>O usuário faz login na plataforma SwiftTrack. A autenticação é feita via <strong>Amazon Cognito</strong>, que valida as credenciais, aplica MFA (para admins) e gera um token JWT.</p>
+<h4 id="332-requisitos-atendidos">3.3.2. Requisitos Atendidos<a class="headerlink" href="#332-requisitos-atendidos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Fonte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Autenticação</td>
+<td style="text-align: left;">MFA para admins</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tokens</td>
+<td style="text-align: left;">Expiram em 1 hora</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Senhas</td>
+<td style="text-align: left;">Complexidade mínima</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Conformidade</td>
+<td style="text-align: left;">LGPD</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+</tbody>
+</table>
+<h4 id="333-diagrama-de-sequencia">3.3.3. Diagrama de Sequência<a class="headerlink" href="#333-diagrama-de-sequencia" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>@startuml
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>title Fluxo 3: Autenticação - SwiftTrack IoT
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>actor &quot;Usuário&quot; as User
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>participant &quot;API Gateway&quot; as APIGW
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>participant &quot;Cognito&quot; as Cognito
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>participant &quot;IAM&quot; as IAM
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>participant &quot;EC2 (Django)&quot; as EC2
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>participant &quot;RDS&quot; as RDS
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>== Login ==
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>User -&gt; APIGW: POST /auth/login\n{email, password}
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>activate APIGW
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>APIGW -&gt; Cognito: Authenticate\n(email, password)
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>activate Cognito
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>alt Credenciais Válidas
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>  Cognito -&gt; Cognito: Verificar MFA\n(se admin)
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  Cognito -&gt; IAM: Assume Role\n(Admin/User)
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>  activate IAM
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>  IAM --&gt; Cognito: Temporary Credentials
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>  deactivate IAM
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>  Cognito -&gt; Cognito: Gerar Token JWT\n(expira em 1h)
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>  Cognito --&gt; APIGW: Token JWT
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>  APIGW -&gt; EC2: Validar Token\n(middleware Django)
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>  activate EC2
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>  EC2 -&gt; RDS: SELECT * FROM users\nWHERE email = ?
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>  activate RDS
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>  RDS --&gt; EC2: Dados do usuário
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>  deactivate RDS
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>  EC2 --&gt; APIGW: Usuário autenticado
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>  deactivate EC2
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>  APIGW --&gt; User: HTTP 200 OK\n{token, user}
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>else Credenciais Inválidas
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>  Cognito --&gt; APIGW: HTTP 401 Unauthorized
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>  APIGW --&gt; User: HTTP 401 Unauthorized
+</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>end
+</span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>
+</span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a>deactivate Cognito
+</span><span id="__span-5-42"><a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a>deactivate APIGW
+</span><span id="__span-5-43"><a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>
+</span><span id="__span-5-44"><a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a>@enduml
+</span></code></pre></div>
+<h4 id="334-diagrama-de-comunicacao">3.3.4. Diagrama de Comunicação<a class="headerlink" href="#334-diagrama-de-comunicacao" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>@startuml
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>title Fluxo 3: Comunicação - Autenticação
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>skinparam objectBackgroundColor #E3F2FD
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>object &quot;Usuário&quot; as User
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>object &quot;API Gateway&quot; as APIGW
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>object &quot;Cognito&quot; as Cognito
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>object &quot;IAM&quot; as IAM
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>object &quot;EC2&quot; as EC2
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>object &quot;RDS&quot; as RDS
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>User -right-&gt; APIGW : 1: POST /login
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>APIGW -right-&gt; Cognito : 2: Authenticate
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>Cognito -right-&gt; IAM : 3: Assume Role
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>IAM -left-&gt; Cognito : 4: Credentials
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>Cognito -left-&gt; APIGW : 5: Token JWT
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>APIGW -right-&gt; EC2 : 6: Validar Token
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>EC2 -right-&gt; RDS : 7: SELECT user
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>RDS -left-&gt; EC2 : 8: Dados
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>EC2 -left-&gt; APIGW : 9: Autenticado
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>APIGW -left-&gt; User : 10: HTTP 200
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>@enduml
+</span></code></pre></div>
+<h4 id="335-tabela-de-mensagens">3.3.5. Tabela de Mensagens<a class="headerlink" href="#335-tabela-de-mensagens" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>#</strong></th>
+<th style="text-align: left;"><strong>De</strong></th>
+<th style="text-align: left;"><strong>Para</strong></th>
+<th style="text-align: left;"><strong>Mensagem</strong></th>
+<th style="text-align: left;"><strong>Protocolo</strong></th>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Usuário</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">POST /auth/login</td>
+<td style="text-align: left;">HTTPS</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">Cognito</td>
+<td style="text-align: left;">Authenticate</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Cognito</td>
+<td style="text-align: left;">IAM</td>
+<td style="text-align: left;">Assume Role</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">MFA</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">IAM</td>
+<td style="text-align: left;">Cognito</td>
+<td style="text-align: left;">Credentials</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Cognito</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">Token JWT</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1h</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">Validar Token</td>
+<td style="text-align: left;">HTTP</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">RDS</td>
+<td style="text-align: left;">SELECT user</td>
+<td style="text-align: left;">SQL</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">RDS</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">Dados</td>
+<td style="text-align: left;">SQL</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">Autenticado</td>
+<td style="text-align: left;">HTTP</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">Usuário</td>
+<td style="text-align: left;">HTTP 200</td>
+<td style="text-align: left;">HTTPS</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h4 id="336-riscos-e-mitigacoes">3.3.6. Riscos e Mitigações<a class="headerlink" href="#336-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Probabilidade</strong></th>
+<th style="text-align: left;"><strong>Impacto</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Cognito indisponível</td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Cognito é gerenciado (Multi-AZ).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Token expirado</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Baixo</td>
+<td style="text-align: left;">Refresh token.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ataque de força bruta</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Rate limiting + MFA.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vazamento de credenciais</td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Crítico</td>
+<td style="text-align: left;">MFA + monitoramento.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="34-fluxo-4-deploy-automatizado-cicd">3.4. FLUXO 4: DEPLOY AUTOMATIZADO (CI/CD)<a class="headerlink" href="#34-fluxo-4-deploy-automatizado-cicd" title="Permanent link">&para;</a></h3>
+<h4 id="341-descricao">3.4.1. Descrição<a class="headerlink" href="#341-descricao" title="Permanent link">&para;</a></h4>
+<p>O engenheiro de DevOps faz push do código para o GitHub. O CodePipeline detecta a mudança, dispara o CodeBuild (build + testes) e faz o deploy no EC2/ECS via CodeDeploy (Blue-Green).</p>
+<h4 id="342-requisitos-atendidos">3.4.2. Requisitos Atendidos<a class="headerlink" href="#342-requisitos-atendidos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Fonte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Tempo de deploy</td>
+<td style="text-align: left;">&lt; 10 minutos</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tempo de rollback</td>
+<td style="text-align: left;">&lt; 5 minutos</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Zero downtime</td>
+<td style="text-align: left;">Sim</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Automação</td>
+<td style="text-align: left;">100%</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+</tbody>
+</table>
+<h4 id="343-diagrama-de-sequencia">3.4.3. Diagrama de Sequência<a class="headerlink" href="#343-diagrama-de-sequencia" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>@startuml
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>title Fluxo 4: Deploy Automatizado - SwiftTrack IoT
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>actor &quot;DevOps&quot; as DevOps
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>participant &quot;GitHub&quot; as GH
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>participant &quot;CodePipeline&quot; as CP
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>participant &quot;CodeBuild&quot; as CB
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>participant &quot;ECR&quot; as ECR
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>participant &quot;ECS Blue&quot; as Blue
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>participant &quot;ECS Green&quot; as Green
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>participant &quot;ALB&quot; as ALB
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>participant &quot;CloudWatch&quot; as CW
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>== Push no GitHub ==
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>DevOps -&gt; GH: git push origin main
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>activate GH
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>GH --&gt; CP: Webhook (push)
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>deactivate GH
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>== Pipeline Inicia ==
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>activate CP
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>CP -&gt; GH: Source (pull code)
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>GH --&gt; CP: Code retrieved
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>CP -&gt; CB: Build (CodeBuild)
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>activate CB
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>CB -&gt; CB: Install dependencies
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>CB -&gt; CB: Run tests
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>CB -&gt; ECR: Build &amp; Push Docker Image
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>activate ECR
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>ECR --&gt; CB: Image registered
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>deactivate ECR
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>CB --&gt; CP: Build success
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>deactivate CB
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>== Deploy Blue-Green ==
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>CP -&gt; Green: Deploy new version
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>activate Green
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>Green -&gt; Green: Start containers
+</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>Green -&gt; ALB: Health Check (new version)
+</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>activate ALB
+</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>ALB --&gt; Green: Healthy
+</span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>deactivate ALB
+</span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>Green --&gt; CP: Green deployed
+</span><span id="__span-7-45"><a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a>deactivate Green
+</span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a>
+</span><span id="__span-7-47"><a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a>CP -&gt; DevOps: Aprovação manual necessária
+</span><span id="__span-7-48"><a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a>DevOps -&gt; CP: Approve
+</span><span id="__span-7-49"><a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a>
+</span><span id="__span-7-50"><a id="__codelineno-7-50" name="__codelineno-7-50" href="#__codelineno-7-50"></a>CP -&gt; ALB: Switch traffic to Green
+</span><span id="__span-7-51"><a id="__codelineno-7-51" name="__codelineno-7-51" href="#__codelineno-7-51"></a>activate ALB
+</span><span id="__span-7-52"><a id="__codelineno-7-52" name="__codelineno-7-52" href="#__codelineno-7-52"></a>ALB -&gt; ALB: Update routing rules
+</span><span id="__span-7-53"><a id="__codelineno-7-53" name="__codelineno-7-53" href="#__codelineno-7-53"></a>ALB --&gt; CP: Traffic switched
+</span><span id="__span-7-54"><a id="__codelineno-7-54" name="__codelineno-7-54" href="#__codelineno-7-54"></a>deactivate ALB
+</span><span id="__span-7-55"><a id="__codelineno-7-55" name="__codelineno-7-55" href="#__codelineno-7-55"></a>
+</span><span id="__span-7-56"><a id="__codelineno-7-56" name="__codelineno-7-56" href="#__codelineno-7-56"></a>CP -&gt; CW: PutMetricData\n(deploy_success)
+</span><span id="__span-7-57"><a id="__codelineno-7-57" name="__codelineno-7-57" href="#__codelineno-7-57"></a>activate CW
+</span><span id="__span-7-58"><a id="__codelineno-7-58" name="__codelineno-7-58" href="#__codelineno-7-58"></a>CW --&gt; CP: Success
+</span><span id="__span-7-59"><a id="__codelineno-7-59" name="__codelineno-7-59" href="#__codelineno-7-59"></a>deactivate CW
+</span><span id="__span-7-60"><a id="__codelineno-7-60" name="__codelineno-7-60" href="#__codelineno-7-60"></a>
+</span><span id="__span-7-61"><a id="__codelineno-7-61" name="__codelineno-7-61" href="#__codelineno-7-61"></a>CP --&gt; DevOps: Deploy complete
+</span><span id="__span-7-62"><a id="__codelineno-7-62" name="__codelineno-7-62" href="#__codelineno-7-62"></a>deactivate CP
+</span><span id="__span-7-63"><a id="__codelineno-7-63" name="__codelineno-7-63" href="#__codelineno-7-63"></a>
+</span><span id="__span-7-64"><a id="__codelineno-7-64" name="__codelineno-7-64" href="#__codelineno-7-64"></a>@enduml
+</span></code></pre></div>
+<h4 id="344-diagrama-de-comunicacao">3.4.4. Diagrama de Comunicação<a class="headerlink" href="#344-diagrama-de-comunicacao" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>@startuml
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>title Fluxo 4: Comunicação - Deploy Automatizado
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>skinparam objectBackgroundColor #E3F2FD
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>object &quot;DevOps&quot; as DevOps
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>object &quot;GitHub&quot; as GH
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>object &quot;CodePipeline&quot; as CP
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>object &quot;CodeBuild&quot; as CB
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>object &quot;ECR&quot; as ECR
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>object &quot;ECS Green&quot; as Green
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>object &quot;ALB&quot; as ALB
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>DevOps -right-&gt; GH : 1: Push
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>GH -right-&gt; CP : 2: Webhook
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>CP -right-&gt; CB : 3: Build
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>CB -right-&gt; ECR : 4: Push Image
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>CP -right-&gt; Green : 5: Deploy
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>Green -right-&gt; ALB : 6: Health Check
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>ALB -left-&gt; CP : 7: Healthy
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>DevOps -down-&gt; CP : 8: Approve
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>CP -left-&gt; ALB : 9: Switch traffic
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>@enduml
+</span></code></pre></div>
+<h4 id="345-tabela-de-mensagens">3.4.5. Tabela de Mensagens<a class="headerlink" href="#345-tabela-de-mensagens" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>#</strong></th>
+<th style="text-align: left;"><strong>De</strong></th>
+<th style="text-align: left;"><strong>Para</strong></th>
+<th style="text-align: left;"><strong>Mensagem</strong></th>
+<th style="text-align: left;"><strong>Protocolo</strong></th>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">DevOps</td>
+<td style="text-align: left;">GitHub</td>
+<td style="text-align: left;">git push</td>
+<td style="text-align: left;">HTTPS</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">GitHub</td>
+<td style="text-align: left;">CodePipeline</td>
+<td style="text-align: left;">Webhook</td>
+<td style="text-align: left;">HTTPS</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">CodePipeline</td>
+<td style="text-align: left;">CodeBuild</td>
+<td style="text-align: left;">Build</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">&lt; 10min</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">CodeBuild</td>
+<td style="text-align: left;">ECR</td>
+<td style="text-align: left;">Push Image</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">CodePipeline</td>
+<td style="text-align: left;">ECS Green</td>
+<td style="text-align: left;">Deploy</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">ECS Green</td>
+<td style="text-align: left;">ALB</td>
+<td style="text-align: left;">Health Check</td>
+<td style="text-align: left;">HTTP</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">ALB</td>
+<td style="text-align: left;">CodePipeline</td>
+<td style="text-align: left;">Healthy</td>
+<td style="text-align: left;">HTTP</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">DevOps</td>
+<td style="text-align: left;">CodePipeline</td>
+<td style="text-align: left;">Approve</td>
+<td style="text-align: left;">Console</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">CodePipeline</td>
+<td style="text-align: left;">ALB</td>
+<td style="text-align: left;">Switch traffic</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h4 id="346-riscos-e-mitigacoes">3.4.6. Riscos e Mitigações<a class="headerlink" href="#346-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Probabilidade</strong></th>
+<th style="text-align: left;"><strong>Impacto</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Build falha</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Médio</td>
+<td style="text-align: left;">Testes automatizados.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Deploy falha</td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Rollback automático.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Downtime no switch</td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Blue-Green (zero downtime).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Custo do CI/CD</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Baixo</td>
+<td style="text-align: left;">Monitorar uso do CodeBuild.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="35-fluxo-5-failover-do-rds-multi-az">3.5. FLUXO 5: FAILOVER DO RDS (MULTI-AZ)<a class="headerlink" href="#35-fluxo-5-failover-do-rds-multi-az" title="Permanent link">&para;</a></h3>
+<h4 id="351-descricao">3.5.1. Descrição<a class="headerlink" href="#351-descricao" title="Permanent link">&para;</a></h4>
+<p>Em caso de falha na AZ primária do RDS, o AWS detecta automaticamente e promove a instância standby (em outra AZ) a primária, atualizando o endpoint DNS.</p>
+<h4 id="352-requisitos-atendidos">3.5.2. Requisitos Atendidos<a class="headerlink" href="#352-requisitos-atendidos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Fonte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">RPO</td>
+<td style="text-align: left;">15 minutos</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">RTO</td>
+<td style="text-align: left;">1 hora</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Disponibilidade</td>
+<td style="text-align: left;">99,95%</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+</tbody>
+</table>
+<h4 id="353-diagrama-de-sequencia">3.5.3. Diagrama de Sequência<a class="headerlink" href="#353-diagrama-de-sequencia" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>@startuml
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>title Fluxo 5: Failover do RDS (Multi-AZ) - SwiftTrack IoT
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>actor &quot;API Django&quot; as API
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>participant &quot;RDS Primary\n(AZ us-east-1a)&quot; as Primary
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>participant &quot;RDS Standby\n(AZ us-east-1b)&quot; as Standby
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>participant &quot;Route 53\n(DNS)&quot; as DNS
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>participant &quot;CloudWatch&quot; as CW
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>participant &quot;SNS&quot; as SNS
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>== Operação Normal ==
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>API -&gt; Primary: Conexão (porta 5432)
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>activate Primary
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>Primary --&gt; API: Dados
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>deactivate Primary
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>== Falha na AZ Primária ==
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>Primary -&gt; Primary: Falha detectada\n(perda de conexão)
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>activate Primary
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>Primary -&gt; CW: Métrica (DatabaseConnections = 0)
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>deactivate Primary
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>CW -&gt; CW: Alarme disparado\n(&gt; 1 min)
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>CW -&gt; SNS: Publicar alerta
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>activate SNS
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>SNS --&gt; CW: Confirmação
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>deactivate SNS
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>== Failover Automático ==
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>CW -&gt; Standby: Promover a primária
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>activate Standby
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>Standby -&gt; Standby: Assumir o papel de primária
+</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>Standby -&gt; DNS: Atualizar endpoint
+</span><span id="__span-9-34"><a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>activate DNS
+</span><span id="__span-9-35"><a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>DNS --&gt; Standby: Endpoint atualizado
+</span><span id="__span-9-36"><a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>deactivate DNS
+</span><span id="__span-9-37"><a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>Standby --&gt; CW: Failover concluído
+</span><span id="__span-9-38"><a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>deactivate Standby
+</span><span id="__span-9-39"><a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a>
+</span><span id="__span-9-40"><a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a>== Retomada da API ==
+</span><span id="__span-9-41"><a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a>API -&gt; DNS: Resolver endpoint
+</span><span id="__span-9-42"><a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a>activate DNS
+</span><span id="__span-9-43"><a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a>DNS --&gt; API: Novo endpoint (Standby)
+</span><span id="__span-9-44"><a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a>deactivate DNS
+</span><span id="__span-9-45"><a id="__codelineno-9-45" name="__codelineno-9-45" href="#__codelineno-9-45"></a>
+</span><span id="__span-9-46"><a id="__codelineno-9-46" name="__codelineno-9-46" href="#__codelineno-9-46"></a>API -&gt; Standby: Conexão (porta 5432)
+</span><span id="__span-9-47"><a id="__codelineno-9-47" name="__codelineno-9-47" href="#__codelineno-9-47"></a>activate Standby
+</span><span id="__span-9-48"><a id="__codelineno-9-48" name="__codelineno-9-48" href="#__codelineno-9-48"></a>Standby --&gt; API: Dados
+</span><span id="__span-9-49"><a id="__codelineno-9-49" name="__codelineno-9-49" href="#__codelineno-9-49"></a>deactivate Standby
+</span><span id="__span-9-50"><a id="__codelineno-9-50" name="__codelineno-9-50" href="#__codelineno-9-50"></a>
+</span><span id="__span-9-51"><a id="__codelineno-9-51" name="__codelineno-9-51" href="#__codelineno-9-51"></a>== Notificação ==
+</span><span id="__span-9-52"><a id="__codelineno-9-52" name="__codelineno-9-52" href="#__codelineno-9-52"></a>CW -&gt; SNS: Notificar equipe\n(failover concluído)
+</span><span id="__span-9-53"><a id="__codelineno-9-53" name="__codelineno-9-53" href="#__codelineno-9-53"></a>activate SNS
+</span><span id="__span-9-54"><a id="__codelineno-9-54" name="__codelineno-9-54" href="#__codelineno-9-54"></a>SNS --&gt; CW: Confirmação
+</span><span id="__span-9-55"><a id="__codelineno-9-55" name="__codelineno-9-55" href="#__codelineno-9-55"></a>deactivate SNS
+</span><span id="__span-9-56"><a id="__codelineno-9-56" name="__codelineno-9-56" href="#__codelineno-9-56"></a>
+</span><span id="__span-9-57"><a id="__codelineno-9-57" name="__codelineno-9-57" href="#__codelineno-9-57"></a>@enduml
+</span></code></pre></div>
+<h4 id="354-diagrama-de-comunicacao">3.5.4. Diagrama de Comunicação<a class="headerlink" href="#354-diagrama-de-comunicacao" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>@startuml
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>title Fluxo 5: Comunicação - Failover do RDS
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>skinparam objectBackgroundColor #E3F2FD
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>object &quot;API Django&quot; as API
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>object &quot;RDS Primary&quot; as Primary
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>object &quot;RDS Standby&quot; as Standby
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>object &quot;Route 53&quot; as DNS
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>object &quot;CloudWatch&quot; as CW
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>object &quot;SNS&quot; as SNS
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>API -right-&gt; Primary : 1: Conexão
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>Primary -down-&gt; CW : 2: Métrica (falha)
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>CW -down-&gt; SNS : 3: Alerta
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>CW -right-&gt; Standby : 4: Promover
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>Standby -right-&gt; DNS : 5: Atualizar endpoint
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>API -right-&gt; DNS : 6: Resolver
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>DNS -left-&gt; API : 7: Novo endpoint
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>API -right-&gt; Standby : 8: Conexão
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>CW -down-&gt; SNS : 9: Notificar equipe
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>@enduml
+</span></code></pre></div>
+<h4 id="355-tabela-de-mensagens">3.5.5. Tabela de Mensagens<a class="headerlink" href="#355-tabela-de-mensagens" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>#</strong></th>
+<th style="text-align: left;"><strong>De</strong></th>
+<th style="text-align: left;"><strong>Para</strong></th>
+<th style="text-align: left;"><strong>Mensagem</strong></th>
+<th style="text-align: left;"><strong>Protocolo</strong></th>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">API</td>
+<td style="text-align: left;">RDS Primary</td>
+<td style="text-align: left;">Conexão</td>
+<td style="text-align: left;">TCP/5432</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">RDS Primary</td>
+<td style="text-align: left;">CloudWatch</td>
+<td style="text-align: left;">Métrica (falha)</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">CloudWatch</td>
+<td style="text-align: left;">SNS</td>
+<td style="text-align: left;">Alerta</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">CloudWatch</td>
+<td style="text-align: left;">RDS Standby</td>
+<td style="text-align: left;">Promover</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">RTO 1h</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">RDS Standby</td>
+<td style="text-align: left;">Route 53</td>
+<td style="text-align: left;">Atualizar endpoint</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">API</td>
+<td style="text-align: left;">Route 53</td>
+<td style="text-align: left;">Resolver</td>
+<td style="text-align: left;">DNS</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Route 53</td>
+<td style="text-align: left;">API</td>
+<td style="text-align: left;">Novo endpoint</td>
+<td style="text-align: left;">DNS</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">API</td>
+<td style="text-align: left;">RDS Standby</td>
+<td style="text-align: left;">Conexão</td>
+<td style="text-align: left;">TCP/5432</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">CloudWatch</td>
+<td style="text-align: left;">SNS</td>
+<td style="text-align: left;">Notificar</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h4 id="356-riscos-e-mitigacoes">3.5.6. Riscos e Mitigações<a class="headerlink" href="#356-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Probabilidade</strong></th>
+<th style="text-align: left;"><strong>Impacto</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Falha em ambas as AZs</td>
+<td style="text-align: left;">Muito Baixa</td>
+<td style="text-align: left;">Crítico</td>
+<td style="text-align: left;">Multi-AZ + backups.</td>
+</tr>
+<tr>
+<td style="text-align: left;">DNS não atualiza</td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">TTL curto (60s).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Perda de dados</td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Crítico</td>
+<td style="text-align: left;">Replicação síncrona.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Downtime prolongado</td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Testes regulares de failover.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="36-fluxo-6-upload-de-comprovante-s3">3.6. FLUXO 6: UPLOAD DE COMPROVANTE (S3)<a class="headerlink" href="#36-fluxo-6-upload-de-comprovante-s3" title="Permanent link">&para;</a></h3>
+<h4 id="361-descricao">3.6.1. Descrição<a class="headerlink" href="#361-descricao" title="Permanent link">&para;</a></h4>
+<p>O motorista envia uma foto do comprovante de entrega. A imagem é armazenada no S3 (criptografada com KMS) e distribuída via CloudFront.</p>
+<h4 id="362-requisitos-atendidos">3.6.2. Requisitos Atendidos<a class="headerlink" href="#362-requisitos-atendidos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Fonte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Latência</td>
+<td style="text-align: left;">&lt; 2s</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Criptografia</td>
+<td style="text-align: left;">AES-256</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;">Conformidade</td>
+<td style="text-align: left;">LGPD</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+</tbody>
+</table>
+<h4 id="363-diagrama-de-sequencia">3.6.3. Diagrama de Sequência<a class="headerlink" href="#363-diagrama-de-sequencia" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>@startuml
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>title Fluxo 6: Upload de Comprovante - SwiftTrack IoT
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>actor &quot;Motorista&quot; as Driver
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>participant &quot;API Gateway&quot; as APIGW
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>participant &quot;Lambda&quot; as Lambda
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>participant &quot;S3&quot; as S3
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>participant &quot;KMS&quot; as KMS
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>participant &quot;CloudFront&quot; as CF
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>participant &quot;Cliente&quot; as Client
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>== Upload da Foto ==
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>Driver -&gt; APIGW: POST /upload\n{file, deliveryId}
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>activate APIGW
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>APIGW -&gt; Lambda: Invoke Function\n(evento)
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>activate Lambda
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>Lambda -&gt; Lambda: Validar arquivo\n(tipo, tamanho)
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>Lambda -&gt; KMS: GenerateDataKey
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>activate KMS
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>KMS --&gt; Lambda: Data Key
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>deactivate KMS
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>Lambda -&gt; S3: PutObject\n(encrypted)
+</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>activate S3
+</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>S3 --&gt; Lambda: Success
+</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>deactivate S3
+</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>
+</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>Lambda -&gt; APIGW: HTTP 201\n{s3Url}
+</span><span id="__span-11-31"><a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>deactivate Lambda
+</span><span id="__span-11-32"><a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>APIGW --&gt; Driver: HTTP 201
+</span><span id="__span-11-33"><a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>deactivate APIGW
+</span><span id="__span-11-34"><a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>
+</span><span id="__span-11-35"><a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>== Acesso ao Comprovante ==
+</span><span id="__span-11-36"><a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>Client -&gt; CF: GET /comprovante/123
+</span><span id="__span-11-37"><a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>activate CF
+</span><span id="__span-11-38"><a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>CF -&gt; S3: GetObject
+</span><span id="__span-11-39"><a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>activate S3
+</span><span id="__span-11-40"><a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>S3 --&gt; CF: Imagem
+</span><span id="__span-11-41"><a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>deactivate S3
+</span><span id="__span-11-42"><a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>CF --&gt; Client: Imagem (cache)
+</span><span id="__span-11-43"><a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>deactivate CF
+</span><span id="__span-11-44"><a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>
+</span><span id="__span-11-45"><a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>@enduml
+</span></code></pre></div>
+<h4 id="364-diagrama-de-comunicacao">3.6.4. Diagrama de Comunicação<a class="headerlink" href="#364-diagrama-de-comunicacao" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>@startuml
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>title Fluxo 6: Comunicação - Upload de Comprovante
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>skinparam objectBackgroundColor #E3F2FD
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>object &quot;Motorista&quot; as Driver
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>object &quot;API Gateway&quot; as APIGW
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>object &quot;Lambda&quot; as Lambda
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>object &quot;S3&quot; as S3
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>object &quot;KMS&quot; as KMS
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>object &quot;CloudFront&quot; as CF
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>object &quot;Cliente&quot; as Client
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>Driver -right-&gt; APIGW : 1: POST /upload
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>APIGW -right-&gt; Lambda : 2: Invoke
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>Lambda -right-&gt; KMS : 3: GenerateDataKey
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>KMS -left-&gt; Lambda : 4: Data Key
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>Lambda -right-&gt; S3 : 5: PutObject
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>Client -down-&gt; CF : 6: GET
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>CF -right-&gt; S3 : 7: GetObject
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>S3 -left-&gt; CF : 8: Imagem
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>CF -left-&gt; Client : 9: Imagem
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>@enduml
+</span></code></pre></div>
+<h4 id="365-tabela-de-mensagens">3.6.5. Tabela de Mensagens<a class="headerlink" href="#365-tabela-de-mensagens" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>#</strong></th>
+<th style="text-align: left;"><strong>De</strong></th>
+<th style="text-align: left;"><strong>Para</strong></th>
+<th style="text-align: left;"><strong>Mensagem</strong></th>
+<th style="text-align: left;"><strong>Protocolo</strong></th>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Motorista</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">POST /upload</td>
+<td style="text-align: left;">HTTPS</td>
+<td style="text-align: left;">&lt; 2s</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">API Gateway</td>
+<td style="text-align: left;">Lambda</td>
+<td style="text-align: left;">Invoke</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Lambda</td>
+<td style="text-align: left;">KMS</td>
+<td style="text-align: left;">GenerateDataKey</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">AES-256</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">KMS</td>
+<td style="text-align: left;">Lambda</td>
+<td style="text-align: left;">Data Key</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Lambda</td>
+<td style="text-align: left;">S3</td>
+<td style="text-align: left;">PutObject</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Cliente</td>
+<td style="text-align: left;">CloudFront</td>
+<td style="text-align: left;">GET</td>
+<td style="text-align: left;">HTTPS</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">CloudFront</td>
+<td style="text-align: left;">S3</td>
+<td style="text-align: left;">GetObject</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">S3</td>
+<td style="text-align: left;">CloudFront</td>
+<td style="text-align: left;">Imagem</td>
+<td style="text-align: left;">AWS SDK</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">CloudFront</td>
+<td style="text-align: left;">Cliente</td>
+<td style="text-align: left;">Imagem</td>
+<td style="text-align: left;">HTTPS</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h4 id="366-riscos-e-mitigacoes">3.6.6. Riscos e Mitigações<a class="headerlink" href="#366-riscos-e-mitigacoes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Probabilidade</strong></th>
+<th style="text-align: left;"><strong>Impacto</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Arquivo malicioso</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Validação de tipo + antivírus.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vazamento de dados</td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Crítico</td>
+<td style="text-align: left;">Criptografia KMS + bucket policy.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Custo de armazenamento</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Médio</td>
+<td style="text-align: left;">Lifecycle para S3 Glacier.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Latência no upload</td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Médio</td>
+<td style="text-align: left;">Multipart upload + CDN.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-diagrama-de-classes-consolidado">4. DIAGRAMA DE CLASSES CONSOLIDADO<a class="headerlink" href="#4-diagrama-de-classes-consolidado" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>@startuml
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>title Modelo de Design Consolidado - SwiftTrack IoT
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>skinparam classBackgroundColor #F5F5F5
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>package &quot;Rede&quot; {
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>  class &quot;VPC&quot; as VPC {
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    - cidr: 10.0.0.0/16
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    - subnets: List&lt;Subnet&gt;
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>  }
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>  class &quot;Subnet&quot; as Subnet {
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    - cidr: String
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>    - type: Public/Private
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    - az: String
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>  }
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>  VPC &quot;1&quot; -- &quot;*&quot; Subnet
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>}
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>package &quot;Computação&quot; {
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>  class &quot;ComputeInstance&quot; as EC2 {
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>    - instanceType: t3.medium
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>    - ami: Ubuntu 22.04
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>  }
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>  class &quot;AutoScalingGroup&quot; as ASG {
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>    - min: 2
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>    - max: 10
+</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>  }
+</span><span id="__span-13-28"><a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>  class &quot;LoadBalancer&quot; as ALB {
+</span><span id="__span-13-29"><a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>    - type: Application
+</span><span id="__span-13-30"><a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>  }
+</span><span id="__span-13-31"><a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>  ASG &quot;1&quot; -- &quot;*&quot; EC2
+</span><span id="__span-13-32"><a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a>  ALB &quot;1&quot; -- &quot;*&quot; EC2
+</span><span id="__span-13-33"><a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a>}
+</span><span id="__span-13-34"><a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a>
+</span><span id="__span-13-35"><a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a>package &quot;Banco de Dados&quot; {
+</span><span id="__span-13-36"><a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a>  class &quot;DatabaseInstance&quot; as RDS {
+</span><span id="__span-13-37"><a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a>    - instanceClass: db.t3.medium
+</span><span id="__span-13-38"><a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a>    - multiAZ: true
+</span><span id="__span-13-39"><a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a>  }
+</span><span id="__span-13-40"><a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a>  class &quot;ReadReplica&quot; as RR {
+</span><span id="__span-13-41"><a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a>    - instanceClass: db.t3.small
+</span><span id="__span-13-42"><a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a>  }
+</span><span id="__span-13-43"><a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a>  RDS &quot;1&quot; -- &quot;*&quot; RR
+</span><span id="__span-13-44"><a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a>}
+</span><span id="__span-13-45"><a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a>
+</span><span id="__span-13-46"><a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a>package &quot;Segurança&quot; {
+</span><span id="__span-13-47"><a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a>  class &quot;SecurityGroup&quot; as SG
+</span><span id="__span-13-48"><a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a>  class &quot;IAMRole&quot; as IAM
+</span><span id="__span-13-49"><a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a>  class &quot;KMSKey&quot; as KMS
+</span><span id="__span-13-50"><a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a>}
+</span><span id="__span-13-51"><a id="__codelineno-13-51" name="__codelineno-13-51" href="#__codelineno-13-51"></a>
+</span><span id="__span-13-52"><a id="__codelineno-13-52" name="__codelineno-13-52" href="#__codelineno-13-52"></a>package &quot;Armazenamento&quot; {
+</span><span id="__span-13-53"><a id="__codelineno-13-53" name="__codelineno-13-53" href="#__codelineno-13-53"></a>  class &quot;StorageBucket&quot; as S3
+</span><span id="__span-13-54"><a id="__codelineno-13-54" name="__codelineno-13-54" href="#__codelineno-13-54"></a>  class &quot;CloudFront&quot; as CF
+</span><span id="__span-13-55"><a id="__codelineno-13-55" name="__codelineno-13-55" href="#__codelineno-13-55"></a>  S3 &quot;1&quot; -- &quot;1&quot; CF
+</span><span id="__span-13-56"><a id="__codelineno-13-56" name="__codelineno-13-56" href="#__codelineno-13-56"></a>}
+</span><span id="__span-13-57"><a id="__codelineno-13-57" name="__codelineno-13-57" href="#__codelineno-13-57"></a>
+</span><span id="__span-13-58"><a id="__codelineno-13-58" name="__codelineno-13-58" href="#__codelineno-13-58"></a>EC2 --&gt; RDS : usa
+</span><span id="__span-13-59"><a id="__codelineno-13-59" name="__codelineno-13-59" href="#__codelineno-13-59"></a>EC2 --&gt; S3 : usa
+</span><span id="__span-13-60"><a id="__codelineno-13-60" name="__codelineno-13-60" href="#__codelineno-13-60"></a>EC2 --&gt; SG : protegido
+</span><span id="__span-13-61"><a id="__codelineno-13-61" name="__codelineno-13-61" href="#__codelineno-13-61"></a>EC2 --&gt; IAM : assume
+</span><span id="__span-13-62"><a id="__codelineno-13-62" name="__codelineno-13-62" href="#__codelineno-13-62"></a>ALB --&gt; SG : protegido
+</span><span id="__span-13-63"><a id="__codelineno-13-63" name="__codelineno-13-63" href="#__codelineno-13-63"></a>RDS --&gt; SG : protegido
+</span><span id="__span-13-64"><a id="__codelineno-13-64" name="__codelineno-13-64" href="#__codelineno-13-64"></a>RDS --&gt; KMS : criptografado
+</span><span id="__span-13-65"><a id="__codelineno-13-65" name="__codelineno-13-65" href="#__codelineno-13-65"></a>S3 --&gt; KMS : criptografado
+</span><span id="__span-13-66"><a id="__codelineno-13-66" name="__codelineno-13-66" href="#__codelineno-13-66"></a>
+</span><span id="__span-13-67"><a id="__codelineno-13-67" name="__codelineno-13-67" href="#__codelineno-13-67"></a>@enduml
+</span></code></pre></div>
+<hr />
+<h2 id="5-matriz-de-rastreamento-consolidada">5. MATRIZ DE RASTREAMENTO CONSOLIDADA<a class="headerlink" href="#5-matriz-de-rastreamento-consolidada" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fluxo</strong></th>
+<th style="text-align: left;"><strong>Requisito (Doc. Suplementar)</strong></th>
+<th style="text-align: left;"><strong>Caso de Uso (Semana 3)</strong></th>
+<th style="text-align: left;"><strong>Pacote (Semana 4)</strong></th>
+<th style="text-align: left;"><strong>Classe (Semana 5/6)</strong></th>
+<th style="text-align: left;"><strong>Serviços AWS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Fluxo 1</td>
+<td style="text-align: left;">5.000 TPS, &lt; 80ms</td>
+<td style="text-align: left;">UC-ARQ-004</td>
+<td style="text-align: left;">Network Security</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">API Gateway, Lambda, DynamoDB</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fluxo 2</td>
+<td style="text-align: left;">1.000 TPS, &lt; 200ms</td>
+<td style="text-align: left;">UC-ARQ-004</td>
+<td style="text-align: left;">Network Security</td>
+<td style="text-align: left;"><code>ComputeInstance</code>, <code>DatabaseInstance</code></td>
+<td style="text-align: left;">ALB, EC2, RDS, Redis</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fluxo 3</td>
+<td style="text-align: left;">MFA, tokens 1h</td>
+<td style="text-align: left;">UC-ARQ-002</td>
+<td style="text-align: left;">Identity &amp; Access</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Cognito, IAM, EC2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fluxo 4</td>
+<td style="text-align: left;">&lt; 10min, &lt; 5min</td>
+<td style="text-align: left;">UC-ARQ-006</td>
+<td style="text-align: left;">Audit &amp; Compliance</td>
+<td style="text-align: left;"><code>LaunchTemplate</code>, <code>AutoScalingGroup</code></td>
+<td style="text-align: left;">CodePipeline, CodeBuild, ECS</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fluxo 5</td>
+<td style="text-align: left;">RPO 15min, RTO 1h</td>
+<td style="text-align: left;">UC-ARQ-004</td>
+<td style="text-align: left;">Data Protection</td>
+<td style="text-align: left;"><code>DatabaseInstance</code>, <code>BackupPolicy</code></td>
+<td style="text-align: left;">RDS Multi-AZ, Route 53</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fluxo 6</td>
+<td style="text-align: left;">&lt; 2s, AES-256</td>
+<td style="text-align: left;">UC-ARQ-003</td>
+<td style="text-align: left;">Data Protection</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">S3, CloudFront, KMS</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-consideracoes-finais">6. CONSIDERAÇÕES FINAIS<a class="headerlink" href="#6-consideracoes-finais" title="Permanent link">&para;</a></h2>
+<h3 id="61-licoes-aprendidas">6.1. Lições Aprendidas<a class="headerlink" href="#61-licoes-aprendidas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Os <strong>diagramas de sequência</strong> demonstram a ordem cronológica das mensagens entre componentes.</li>
+<li>Os <strong>diagramas de comunicação</strong> complementam a visão estrutural das interações.</li>
+<li>Os <strong>fluxos críticos</strong> (ingestão, administrativo, autenticação, deploy) cobrem os principais cenários da SwiftTrack.</li>
+<li>A <strong>consolidação da arquitetura</strong> valida a coerência entre todos os artefatos produzidos.</li>
+<li>O <strong>CloudWatch</strong> aparece em todos os fluxos como componente transversal de monitoramento.</li>
+</ul>
+<h3 id="62-proximos-passos">6.2. Próximos Passos<a class="headerlink" href="#62-proximos-passos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Semana 8:</strong> Consolidação Final do Modelo de Design e Revisão do DAS.</li>
+<li><strong>Semana 9:</strong> Estratégias de Deploy (Blue-Green, Canary, Rolling) e CI/CD.</li>
+<li><strong>Semana 10:</strong> Introdução a Containers (Docker) e Orquestração (ECS/EKS).</li>
+</ul>
+<hr />
+<h2 id="7-aprovacoes">7. APROVAÇÕES<a class="headerlink" href="#7-aprovacoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Função</strong></th>
+<th style="text-align: left;"><strong>Nome</strong></th>
+<th style="text-align: left;"><strong>Data</strong></th>
+<th style="text-align: left;"><strong>Assinatura</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Arquiteto de Soluções</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Arquiteto de Design</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Professor Responsável</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Coordenador do Curso</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-historico-de-versoes">8. HISTÓRICO DE VERSÕES<a class="headerlink" href="#8-historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Versão</strong></th>
+<th style="text-align: left;"><strong>Data</strong></th>
+<th style="text-align: left;"><strong>Autor</strong></th>
+<th style="text-align: left;"><strong>Descrição das Alterações</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0.1</td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+<td style="text-align: left;">[Nome do Grupo]</td>
+<td style="text-align: left;">Criação inicial do documento.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.0</td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+<td style="text-align: left;">[Nome do Grupo]</td>
+<td style="text-align: left;">Versão completa com todos os fluxos.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>FIM DO DOCUMENTO</strong></p>
+<hr />
+<h2 id="instrucoes-de-preenchimento">INSTRUÇÕES DE PREENCHIMENTO<a class="headerlink" href="#instrucoes-de-preenchimento" title="Permanent link">&para;</a></h2>
+<h3 id="como-utilizar-este-modelo">Como Utilizar Este Modelo<a class="headerlink" href="#como-utilizar-este-modelo" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Substitua os placeholders</strong> <code>[NOME DO PROJETO]</code>, <code>[DD/MM/AAAA]</code>, <code>[Nome do Grupo]</code> pelas informações do seu projeto.</li>
+<li><strong>Adapte os fluxos</strong> conforme as necessidades específicas do seu projeto (nem todos terão 6 fluxos).</li>
+<li><strong>Preencha as tabelas de mensagens</strong> com os detalhes do seu caso.</li>
+<li><strong>Utilize os diagramas PlantUML</strong> como base, adaptando os participantes e mensagens.</li>
+<li><strong>Documente os riscos</strong> e mitigações para cada fluxo.</li>
+<li><strong>Valide a consistência</strong> com os artefatos das semanas anteriores.</li>
+</ol>
+<h3 id="criterios-de-avaliacao">Critérios de Avaliação<a class="headerlink" href="#criterios-de-avaliacao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Critério</strong></th>
+<th style="text-align: left;"><strong>Peso</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Completude dos Fluxos</strong></td>
+<td style="text-align: left;">25%</td>
+<td style="text-align: left;">Todos os fluxos críticos estão modelados?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Diagramas PlantUML</strong></td>
+<td style="text-align: left;">20%</td>
+<td style="text-align: left;">Os diagramas estão corretos e completos?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tabelas de Mensagens</strong></td>
+<td style="text-align: left;">20%</td>
+<td style="text-align: left;">As mensagens estão detalhadas e corretas?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Justificativas Técnicas</strong></td>
+<td style="text-align: left;">20%</td>
+<td style="text-align: left;">As decisões são bem fundamentadas?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Riscos e Mitigações</strong></td>
+<td style="text-align: left;">15%</td>
+<td style="text-align: left;">Os riscos estão identificados e mitigados?</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright ©️ 2026, Jonh Carvalho
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3898 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jonh Carvalho">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/ibmec_icon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>MODELO DE ANÁLISE (CLASSES DE ANÁLISE) - PC_CDIA_26.2_8001</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelo-de-analise-classes-de-analise" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="PC_CDIA_26.2_8001" class="md-header__button md-logo" aria-label="PC_CDIA_26.2_8001" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PC_CDIA_26.2_8001
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MODELO DE ANÁLISE (CLASSES DE ANÁLISE)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="#FAB90A" data-md-color-accent="#193257"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="#193257" data-md-color-accent="#FAB90A"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="all" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jonh-carvalho/PC_CDIA_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../aulas/" class="md-tabs__link">
+          
+  
+    
+  
+  Disciplina
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Iniciacao/" class="md-tabs__link">
+          
+  
+    
+  
+  Iniciação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Elaboracao/" class="md-tabs__link">
+          
+  
+    
+  
+  Elaboração
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Avalia/ap1/" class="md-tabs__link">
+          
+  
+    
+  
+  Avaliações
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../bibliografia/" class="md-tabs__link">
+        
+  
+    
+  
+  Bibliografia
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="PC_CDIA_26.2_8001" class="md-nav__button md-logo" aria-label="PC_CDIA_26.2_8001" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    PC_CDIA_26.2_8001
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jonh-carvalho/PC_CDIA_26.2_8001" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Disciplina
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Disciplina
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aulas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ambiente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ambiente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/desafios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desafios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/case_template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/dv_template_preenchido/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão Preenchido
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Iniciacao/requisitos_suplementares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elaboração
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../casos_uso_arquiteturais/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso Arquitetural
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelo_de_analise-pacotes_subsistemas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo de Análise - Segurança
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Roteiros
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Roteiros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02%20-%20aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01- AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04%20-%20ec2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 - EC2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04%20-%20linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 - Linux Bash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05%20-%20docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 - Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05%20-%20nginxsite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 - Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06%20-%20s3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 - S3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07%20-%20eb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07 - BE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10%20-%20aurora/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 - Aurora RDS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10%20-%20docker_rds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 - Docker RDS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Iniciacao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Iniciação
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/dv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos Suplementares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Elaboracao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Elaboração
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Elaboracao/cua/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso Arquitetural
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Elaboracao/maps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo de Análise - Segurança
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Avaliações
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Avaliações
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            AP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Avalia/ap1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AP1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="modelo-de-analise-classes-de-analise">MODELO DE ANÁLISE (CLASSES DE ANÁLISE)<a class="headerlink" href="#modelo-de-analise-classes-de-analise" title="Permanent link">&para;</a></h1>
+<h2 id="dimensionamento-de-computacao-ec2">DIMENSIONAMENTO DE COMPUTAÇÃO (EC2)<a class="headerlink" href="#dimensionamento-de-computacao-ec2" title="Permanent link">&para;</a></h2>
+<h2 id="swifttrack-iot-plataforma-de-telemetria-e-gestao-logistica">SWIFTTRACK IOT - PLATAFORMA DE TELEMETRIA E GESTÃO LOGÍSTICA<a class="headerlink" href="#swifttrack-iot-plataforma-de-telemetria-e-gestao-logistica" title="Permanent link">&para;</a></h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Informação do Documento</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Projeto</strong></td>
+<td style="text-align: left;">SwiftTrack IoT - Plataforma de Telemetria e Gestão Logística</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Documento</strong></td>
+<td style="text-align: left;">Modelo de Análise (Classes de Análise) - Dimensionamento de Computação (EC2)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Versão</strong></td>
+<td style="text-align: left;">1.0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Em Desenvolvimento</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Responsável</strong></td>
+<td style="text-align: left;">[Nome do Grupo]</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Disciplina</strong></td>
+<td style="text-align: left;">Projeto de Cloud - Semana 6</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fase RUP/UP</strong></td>
+<td style="text-align: left;">Elaboration</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-introducao">1. INTRODUÇÃO<a class="headerlink" href="#1-introducao" title="Permanent link">&para;</a></h2>
+<h3 id="11-proposito">1.1. Propósito<a class="headerlink" href="#11-proposito" title="Permanent link">&para;</a></h3>
+<p>Este documento apresenta o <strong>Modelo de Análise (Classes de Análise)</strong> para o dimensionamento da camada de computação <strong>Amazon EC2</strong> da plataforma <strong>SwiftTrack IoT</strong> na AWS. O modelo descreve as classes de análise responsáveis pelo processamento da API administrativa (Django REST Framework), suas responsabilidades, atributos e relacionamentos, além das decisões de dimensionamento baseadas nos requisitos não-funcionais.</p>
+<p>O modelo é derivado diretamente dos seguintes artefatos:
+- <strong>Documento de Visão</strong> (Semana 1) - Seção "Recursos do Produto (Arquitetura AWS)"
+- <strong>Documento de Requisitos Suplementares</strong> (Semana 2) - Seções "Desempenho" e "Disponibilidade"
+- <strong>Modelo de Casos de Uso Arquiteturais</strong> (Semana 3) - UC-ARQ-004 (Conectividade entre Camadas)
+- <strong>Modelo de Análise (Pacotes/Subsistemas)</strong> (Semana 4) - Pacote "Network Security"
+- <strong>Modelo de Análise (Classes) - RDS</strong> (Semana 5) - Integração com banco de dados</p>
+<h3 id="12-escopo">1.2. Escopo<a class="headerlink" href="#12-escopo" title="Permanent link">&para;</a></h3>
+<p>O modelo abrange o dimensionamento da camada de computação EC2, incluindo:
+- <strong>Instância de computação</strong> (<code>ComputeInstance</code>) para a API Django
+- <strong>Auto Scaling Group</strong> (<code>AutoScalingGroup</code>) para escalabilidade automática
+- <strong>Application Load Balancer</strong> (<code>LoadBalancer</code>) para distribuição de carga
+- <strong>Target Group</strong> (<code>TargetGroup</code>) para registro de instâncias
+- <strong>Launch Template</strong> (<code>LaunchTemplate</code>) para padronização de instâncias
+- <strong>Políticas de Escalonamento</strong> (<code>ScalingPolicy</code>) para escala horizontal
+- <strong>Cálculos de dimensionamento</strong> (vCPU, memória, número de instâncias)
+- <strong>Estimativa de custo</strong> e comparação com alternativas</p>
+<p><strong>Fora do escopo:</strong> Instâncias EC2 para o NAT Gateway (tratadas na Semana 3), Lambda (serverless, tratado em documento separado) e RDS (tratado na Semana 5).</p>
+<h3 id="13-definicoes-e-siglas">1.3. Definições e Siglas<a class="headerlink" href="#13-definicoes-e-siglas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Sigla</strong></th>
+<th style="text-align: left;"><strong>Definição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>EC2</strong></td>
+<td style="text-align: left;">Elastic Compute Cloud</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ALB</strong></td>
+<td style="text-align: left;">Application Load Balancer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ASG</strong></td>
+<td style="text-align: left;">Auto Scaling Group</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>AMI</strong></td>
+<td style="text-align: left;">Amazon Machine Image</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EBS</strong></td>
+<td style="text-align: left;">Elastic Block Store</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS</strong></td>
+<td style="text-align: left;">Transactions Per Second</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Multi-AZ</strong></td>
+<td style="text-align: left;">Múltiplas Zonas de Disponibilidade</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SLA</strong></td>
+<td style="text-align: left;">Service Level Agreement</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RPO</strong></td>
+<td style="text-align: left;">Recovery Point Objective</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RTO</strong></td>
+<td style="text-align: left;">Recovery Time Objective</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LGPD</strong></td>
+<td style="text-align: left;">Lei Geral de Proteção de Dados</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SG</strong></td>
+<td style="text-align: left;">Security Group</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-referencias">1.4. Referências<a class="headerlink" href="#14-referencias" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Documento de Visão - SwiftTrack IoT (v1.0)</li>
+<li>Documento de Requisitos Suplementares - SwiftTrack IoT (v1.0)</li>
+<li>Modelo de Casos de Uso Arquiteturais - SwiftTrack IoT (v1.0)</li>
+<li>Modelo de Análise (Pacotes/Subsistemas) - SwiftTrack IoT (v1.0)</li>
+<li>Modelo de Análise (Classes) - RDS - SwiftTrack IoT (v1.0)</li>
+<li>AWS EC2 Documentation</li>
+<li>AWS Auto Scaling Documentation</li>
+<li>AWS Well-Architected Framework - Performance Efficiency Pillar</li>
+<li>AWS EC2 Pricing</li>
+</ul>
+<hr />
+<h2 id="2-visao-geral-do-dimensionamento">2. VISÃO GERAL DO DIMENSIONAMENTO<a class="headerlink" href="#2-visao-geral-do-dimensionamento" title="Permanent link">&para;</a></h2>
+<h3 id="21-requisitos-que-impactam-o-dimensionamento">2.1. Requisitos que Impactam o Dimensionamento<a class="headerlink" href="#21-requisitos-que-impactam-o-dimensionamento" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito</strong></th>
+<th style="text-align: left;"><strong>Valor</strong></th>
+<th style="text-align: left;"><strong>Fonte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Usuários ativos</strong></td>
+<td style="text-align: left;">10.000 motoristas</td>
+<td style="text-align: left;">Documento de Visão</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Requisições por segundo (pico)</strong></td>
+<td style="text-align: left;">1.000 TPS</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Latência máxima (API)</strong></td>
+<td style="text-align: left;">200ms</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CPU por requisição</strong></td>
+<td style="text-align: left;">~0,5ms</td>
+<td style="text-align: left;">Estimativa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Memória por requisição</strong></td>
+<td style="text-align: left;">~50 MB</td>
+<td style="text-align: left;">Estimativa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conexões simultâneas</strong></td>
+<td style="text-align: left;">500</td>
+<td style="text-align: left;">Estimativa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SLA de disponibilidade</strong></td>
+<td style="text-align: left;">99,95%</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Picos de demanda</strong></td>
+<td style="text-align: left;">Black Friday (10x)</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RPO</strong></td>
+<td style="text-align: left;">15 minutos</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RTO</strong></td>
+<td style="text-align: left;">1 hora</td>
+<td style="text-align: left;">Requisitos Suplementares</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Orçamento total do projeto</strong></td>
+<td style="text-align: left;">US$ 1.500/mês</td>
+<td style="text-align: left;">Documento de Visão</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Orçamento alocado para EC2</strong></td>
+<td style="text-align: left;">US$ 400/mês</td>
+<td style="text-align: left;">Estimativa (27% do total)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-arquitetura-de-computacao">2.2. Arquitetura de Computação<a class="headerlink" href="#22-arquitetura-de-computacao" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@startuml
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>title Arquitetura de Computação - SwiftTrack IoT
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>skinparam nodeBackgroundColor #F5F5F5
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>skinparam componentBackgroundColor #E3F2FD
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>node &quot;AWS Region us-east-1&quot; {
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  node &quot;VPC 10.0.0.0/16&quot; {
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    node &quot;AZ us-east-1a&quot; {
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      node &quot;Subnet-Public-A\n10.0.1.0/24&quot; {
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        component &quot;Application\nLoad Balancer&quot; as ALB_A
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      }
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>      node &quot;Subnet-Private-A\n10.0.3.0/24&quot; {
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        component &quot;EC2 API\n(t3.medium)&quot; as EC2_A {
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>          file &quot;Django + Gunicorn&quot;
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>          file &quot;Nginx&quot;
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>          file &quot;30 GB gp3&quot;
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        }
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      }
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    }
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    node &quot;AZ us-east-1b&quot; {
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>      node &quot;Subnet-Public-B\n10.0.2.0/24&quot; {
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        component &quot;Application\nLoad Balancer&quot; as ALB_B
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>      }
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>      node &quot;Subnet-Private-B\n10.0.4.0/24&quot; {
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        component &quot;EC2 API\n(t3.medium)&quot; as EC2_B {
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>          file &quot;Django + Gunicorn&quot;
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>          file &quot;Nginx&quot;
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>          file &quot;30 GB gp3&quot;
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        }
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>      }
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    }
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    node &quot;Auto Scaling Group&quot; {
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>      component &quot;Min: 2 | Max: 10\nDesired: 2&quot; as ASG
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    }
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    node &quot;Launch Template&quot; {
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>      file &quot;AMI: Ubuntu 22.04&quot;
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>      file &quot;Instance: t3.medium&quot;
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>      file &quot;SG: SG-EC2-API&quot;
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>      file &quot;IAM: EC2-API-Role&quot;
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    }
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    node &quot;Target Group&quot; {
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>      file &quot;Protocol: HTTP&quot;
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>      file &quot;Port: 8000&quot;
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>      file &quot;Health Check: /health/&quot;
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    }
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>  }
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>}
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>ALB_A --&gt; EC2_A : Target Group
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>ALB_B --&gt; EC2_B : Target Group
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>ASG --&gt; EC2_A : gerencia
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>ASG --&gt; EC2_B : gerencia
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>@enduml
+</span></code></pre></div>
+<h3 id="23-matriz-de-rastreamento">2.3. Matriz de Rastreamento<a class="headerlink" href="#23-matriz-de-rastreamento" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requisito (Doc. Suplementar)</strong></th>
+<th style="text-align: left;"><strong>Pacote (Semana 4)</strong></th>
+<th style="text-align: left;"><strong>Classe de Análise</strong></th>
+<th style="text-align: left;"><strong>Serviço AWS</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">TPS 1.000 (pico)</td>
+<td style="text-align: left;">Network Security</td>
+<td style="text-align: left;"><code>ComputeInstance</code></td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;"><code>t3.medium</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Latência &lt; 200ms</td>
+<td style="text-align: left;">Network Security</td>
+<td style="text-align: left;"><code>ComputeInstance</code></td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">Instância dimensionada</td>
+</tr>
+<tr>
+<td style="text-align: left;">Disponibilidade 99,95%</td>
+<td style="text-align: left;">Network Security</td>
+<td style="text-align: left;"><code>AutoScalingGroup</code></td>
+<td style="text-align: left;">EC2 ASG</td>
+<td style="text-align: left;">Multi-AZ, min 2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Escalabilidade (10x)</td>
+<td style="text-align: left;">Network Security</td>
+<td style="text-align: left;"><code>ScalingPolicy</code></td>
+<td style="text-align: left;">EC2 ASG</td>
+<td style="text-align: left;">CPU &gt; 70%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Distribuição de carga</td>
+<td style="text-align: left;">Network Security</td>
+<td style="text-align: left;"><code>LoadBalancer</code></td>
+<td style="text-align: left;">ALB</td>
+<td style="text-align: left;">HTTPS</td>
+</tr>
+<tr>
+<td style="text-align: left;">Deploy automatizado</td>
+<td style="text-align: left;">Audit &amp; Compliance</td>
+<td style="text-align: left;"><code>LaunchTemplate</code></td>
+<td style="text-align: left;">EC2</td>
+<td style="text-align: left;">User Data</td>
+</tr>
+<tr>
+<td style="text-align: left;">Criptografia em trânsito</td>
+<td style="text-align: left;">Data Protection</td>
+<td style="text-align: left;"><code>LoadBalancer</code></td>
+<td style="text-align: left;">ACM</td>
+<td style="text-align: left;">TLS 1.3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-especificacao-das-classes-de-analise">3. ESPECIFICAÇÃO DAS CLASSES DE ANÁLISE<a class="headerlink" href="#3-especificacao-das-classes-de-analise" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="31-classe-computeinstance">3.1. CLASSE: COMPUTEINSTANCE<a class="headerlink" href="#31-classe-computeinstance" title="Permanent link">&para;</a></h3>
+<h4 id="311-responsabilidade">3.1.1. Responsabilidade<a class="headerlink" href="#311-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Representar a instância EC2 que executa a API administrativa Django REST Framework da SwiftTrack, gerenciando sua configuração, disponibilidade, performance e segurança.</p>
+<h4 id="312-atributos">3.1.2. Atributos<a class="headerlink" href="#312-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor (SwiftTrack)</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>instanceType</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>t3.medium</code></td>
+<td style="text-align: left;">2 vCPU, 4 GB RAM, suporta 500 TPS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ami</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Ubuntu 22.04 LTS</td>
+<td style="text-align: left;">Estável, suporte de longo prazo (LTS).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>vpcId</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>vpc-xxxxxxxx</code></td>
+<td style="text-align: left;">VPC da SwiftTrack (10.0.0.0/16).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>subnetId</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>subnet-priv-a</code> (AZ A)</td>
+<td style="text-align: left;">Sub-rede privada (Multi-AZ).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>securityGroup</code></td>
+<td style="text-align: left;">SecurityGroup</td>
+<td style="text-align: left;"><code>SG-EC2-API</code></td>
+<td style="text-align: left;">Porta 8000 (origem SG-ALB).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>iamRole</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>EC2-API-Role</code></td>
+<td style="text-align: left;">Acesso a S3, Secrets, DynamoDB.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ebsVolume</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">30 GB gp3</td>
+<td style="text-align: left;">Sistema operacional + dependências.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>userData</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Script de instalação</td>
+<td style="text-align: left;">Instala Django, Gunicorn, Nginx.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>privateIp</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>10.0.3.x</code></td>
+<td style="text-align: left;">IP privado na sub-rede.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>publicIp</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>false</code></td>
+<td style="text-align: left;">Sem IP público (acesso via ALB).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>monitoring</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">CloudWatch detalhado (1 min).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ebsOptimized</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Melhor performance de I/O.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>terminationProtection</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>false</code></td>
+<td style="text-align: left;">ASG gerencia terminação.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>detailedMonitoring</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Métricas a cada 1 minuto.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="313-responsabilidades-metodos">3.1.3. Responsabilidades (Métodos)<a class="headerlink" href="#313-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>start()</code></td>
+<td style="text-align: left;">Inicia a instância EC2.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>stop()</code></td>
+<td style="text-align: left;">Para a instância EC2.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>terminate()</code></td>
+<td style="text-align: left;">Termina a instância EC2.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getMetrics()</code></td>
+<td style="text-align: left;">Retorna métricas de performance (CPU, memória, rede).</td>
+<td style="text-align: left;"><code>Metrics</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>applyUserData()</code></td>
+<td style="text-align: left;">Executa o script de inicialização.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>attachToTargetGroup(group)</code></td>
+<td style="text-align: left;">Registra a instância em um target group.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getPrivateIp()</code></td>
+<td style="text-align: left;">Retorna o IP privado da instância.</td>
+<td style="text-align: left;"><code>String</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="314-relacionamentos">3.1.4. Relacionamentos<a class="headerlink" href="#314-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ComputeInstance</code> → <code>AutoScalingGroup</code></td>
+<td style="text-align: left;">1..* : 1</td>
+<td style="text-align: left;">Cada instância pertence a exatamente um ASG.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ComputeInstance</code> → <code>LaunchTemplate</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">Cada instância é criada a partir de um launch template.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ComputeInstance</code> → <code>SecurityGroup</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">Cada instância é protegida por exatamente um SG.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ComputeInstance</code> → <code>TargetGroup</code></td>
+<td style="text-align: left;">1..* : 1</td>
+<td style="text-align: left;">Cada instância é registrada em um target group.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="315-justificativa-do-dimensionamento">3.1.5. Justificativa do Dimensionamento<a class="headerlink" href="#315-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>TPS (pico)</strong></td>
+<td style="text-align: left;">1.000 TPS</td>
+<td style="text-align: left;">1.000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CPU por requisição</strong></td>
+<td style="text-align: left;">~0,5ms</td>
+<td style="text-align: left;">0,5ms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CPU total</strong></td>
+<td style="text-align: left;">1.000 × 0,5ms</td>
+<td style="text-align: left;">500ms/s = 0,5 vCPU</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>vCPU com margem</strong></td>
+<td style="text-align: left;">0,5 × 4 (segurança)</td>
+<td style="text-align: left;">2 vCPU</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Memória por requisição</strong></td>
+<td style="text-align: left;">~50 MB</td>
+<td style="text-align: left;">50 MB</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conexões simultâneas</strong></td>
+<td style="text-align: left;">500</td>
+<td style="text-align: left;">500</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Memória total</strong></td>
+<td style="text-align: left;">500 × 50 MB</td>
+<td style="text-align: left;">25 GB (com pooling: ~4 GB)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Instância escolhida</strong></td>
+<td style="text-align: left;">2 vCPU, 4 GB RAM</td>
+<td style="text-align: left;"><code>t3.medium</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS por instância</strong></td>
+<td style="text-align: left;">~500 TPS (t3.medium)</td>
+<td style="text-align: left;">500</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Número de instâncias (base)</strong></td>
+<td style="text-align: left;">1.000 / 500</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Número de instâncias (pico)</strong></td>
+<td style="text-align: left;">2 × 10 (Black Friday)</td>
+<td style="text-align: left;">20 (limitado a 10)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="316-estimativa-de-custo">3.1.6. Estimativa de Custo<a class="headerlink" href="#316-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal (us-east-1)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>EC2 (2 × t3.medium)</strong></td>
+<td style="text-align: left;">On-Demand, Multi-AZ</td>
+<td style="text-align: left;">$60,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EBS (2 × 30 GB gp3)</strong></td>
+<td style="text-align: left;">30 GB por instância</td>
+<td style="text-align: left;">$4,80</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data Transfer</strong></td>
+<td style="text-align: left;">~100 GB/mês</td>
+<td style="text-align: left;">$9,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal ComputeInstance</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>$73,80</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="32-classe-autoscalinggroup">3.2. CLASSE: AUTOSCALINGGROUP<a class="headerlink" href="#32-classe-autoscalinggroup" title="Permanent link">&para;</a></h3>
+<h4 id="321-responsabilidade">3.2.1. Responsabilidade<a class="headerlink" href="#321-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Gerenciar automaticamente o número de instâncias EC2 com base na demanda, garantindo disponibilidade, performance e otimização de custos.</p>
+<h4 id="322-atributos">3.2.2. Atributos<a class="headerlink" href="#322-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor (SwiftTrack)</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>swifttrack-asg</code></td>
+<td style="text-align: left;">Nome do Auto Scaling Group.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>minSize</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Alta disponibilidade (Multi-AZ).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maxSize</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Limite orçamentário para picos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>desiredCapacity</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Capacidade base.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheckType</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>ELB</code></td>
+<td style="text-align: left;">Verifica saúde via Load Balancer.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheckGracePeriod</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">300s</td>
+<td style="text-align: left;">Tempo para a instância inicializar.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>defaultCooldown</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">300s</td>
+<td style="text-align: left;">Evitar flapping.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>availabilityZones</code></td>
+<td style="text-align: left;">List<String></td>
+<td style="text-align: left;"><code>us-east-1a</code>, <code>us-east-1b</code></td>
+<td style="text-align: left;">Multi-AZ.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>launchTemplate</code></td>
+<td style="text-align: left;">LaunchTemplate</td>
+<td style="text-align: left;"><code>swifttrack-lt</code></td>
+<td style="text-align: left;">Template de lançamento.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>targetGroupArns</code></td>
+<td style="text-align: left;">List<String></td>
+<td style="text-align: left;"><code>arn:aws:elasticloadbalancing:...</code></td>
+<td style="text-align: left;">Target group do ALB.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scalingPolicies</code></td>
+<td style="text-align: left;">List<ScalingPolicy></td>
+<td style="text-align: left;">2 políticas</td>
+<td style="text-align: left;">Scale out e scale in.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>terminationPolicies</code></td>
+<td style="text-align: left;">List<String></td>
+<td style="text-align: left;"><code>OldestInstance</code></td>
+<td style="text-align: left;">Terminar a instância mais antiga.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="323-responsabilidades-metodos">3.2.3. Responsabilidades (Métodos)<a class="headerlink" href="#323-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>scaleOut()</code></td>
+<td style="text-align: left;">Adiciona instâncias (até maxSize).</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scaleIn()</code></td>
+<td style="text-align: left;">Remove instâncias (até minSize).</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>updateDesiredCapacity(capacity)</code></td>
+<td style="text-align: left;">Atualiza a capacidade desejada.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getInstances()</code></td>
+<td style="text-align: left;">Retorna a lista de instâncias ativas.</td>
+<td style="text-align: left;"><code>List&lt;ComputeInstance&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>attachToTargetGroup(group)</code></td>
+<td style="text-align: left;">Registra o ASG no target group.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>applyScalingPolicy(policy)</code></td>
+<td style="text-align: left;">Aplica uma política de escalonamento.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getHealthStatus()</code></td>
+<td style="text-align: left;">Retorna o status de saúde do ASG.</td>
+<td style="text-align: left;"><code>HealthStatus</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="324-relacionamentos">3.2.4. Relacionamentos<a class="headerlink" href="#324-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>AutoScalingGroup</code> → <code>ComputeInstance</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">Um ASG contém uma ou mais instâncias.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>AutoScalingGroup</code> → <code>LaunchTemplate</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">Cada ASG usa exatamente um launch template.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>AutoScalingGroup</code> → <code>ScalingPolicy</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">Cada ASG tem uma ou mais políticas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>AutoScalingGroup</code> → <code>TargetGroup</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">Cada ASG é registrado em um target group.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="325-justificativa-do-dimensionamento">3.2.5. Justificativa do Dimensionamento<a class="headerlink" href="#325-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Capacidade base</strong></td>
+<td style="text-align: left;">2 instâncias (Multi-AZ)</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Capacidade de pico</strong></td>
+<td style="text-align: left;">10 instâncias (limite orçamentário)</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS por instância</strong></td>
+<td style="text-align: left;">500 TPS</td>
+<td style="text-align: left;">500</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS total (base)</strong></td>
+<td style="text-align: left;">2 × 500</td>
+<td style="text-align: left;">1.000 TPS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS total (pico)</strong></td>
+<td style="text-align: left;">10 × 500</td>
+<td style="text-align: left;">5.000 TPS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tempo de scale out</strong></td>
+<td style="text-align: left;">~3 minutos</td>
+<td style="text-align: left;">180s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tempo de scale in</strong></td>
+<td style="text-align: left;">~5 minutos</td>
+<td style="text-align: left;">300s</td>
+</tr>
+</tbody>
+</table>
+<h4 id="326-estimativa-de-custo">3.2.6. Estimativa de Custo<a class="headerlink" href="#326-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Auto Scaling Group</strong></td>
+<td style="text-align: left;">2 instâncias base</td>
+<td style="text-align: left;">$60,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Picos (média)</strong></td>
+<td style="text-align: left;">+2 instâncias (10% do tempo)</td>
+<td style="text-align: left;">$12,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal AutoScalingGroup</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>$72,00</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33-classe-loadbalancer">3.3. CLASSE: LOADBALANCER<a class="headerlink" href="#33-classe-loadbalancer" title="Permanent link">&para;</a></h3>
+<h4 id="331-responsabilidade">3.3.1. Responsabilidade<a class="headerlink" href="#331-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Distribuir o tráfego de entrada entre as instâncias EC2 da API, garantindo alta disponibilidade, balanceamento de carga e terminação SSL.</p>
+<h4 id="332-atributos">3.3.2. Atributos<a class="headerlink" href="#332-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor (SwiftTrack)</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>swifttrack-alb</code></td>
+<td style="text-align: left;">Nome do Load Balancer.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>type</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>Application</code> (ALB)</td>
+<td style="text-align: left;">Roteamento L7, HTTPS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scheme</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>internet-facing</code></td>
+<td style="text-align: left;">Acessível pela Internet.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>securityGroup</code></td>
+<td style="text-align: left;">SecurityGroup</td>
+<td style="text-align: left;"><code>SG-ALB</code></td>
+<td style="text-align: left;">Portas 80, 443.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>subnets</code></td>
+<td style="text-align: left;">List<String></td>
+<td style="text-align: left;"><code>subnet-pub-a</code>, <code>subnet-pub-b</code></td>
+<td style="text-align: left;">Multi-AZ.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>listeners</code></td>
+<td style="text-align: left;">List<Listener></td>
+<td style="text-align: left;">443 (HTTPS) → 8000 (EC2)</td>
+<td style="text-align: left;">Redireciona tráfego.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>certificate</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>arn:aws:acm:...</code></td>
+<td style="text-align: left;">Certificado SSL/TLS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>idleTimeout</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">60s</td>
+<td style="text-align: left;">Timeout de conexão.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>deletionProtection</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Evitar exclusão acidental.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>accessLogs</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Logs de acesso para auditoria.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dnsName</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>swifttrack-alb-xxx.us-east-1.elb.amazonaws.com</code></td>
+<td style="text-align: left;">Endpoint público.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="333-responsabilidades-metodos">3.3.3. Responsabilidades (Métodos)<a class="headerlink" href="#333-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>addListener(listener)</code></td>
+<td style="text-align: left;">Adiciona um listener (porta/protocolo).</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>removeListener(listener)</code></td>
+<td style="text-align: left;">Remove um listener.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getDnsName()</code></td>
+<td style="text-align: left;">Retorna o DNS name do ALB.</td>
+<td style="text-align: left;"><code>String</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheck()</code></td>
+<td style="text-align: left;">Verifica a saúde das instâncias.</td>
+<td style="text-align: left;"><code>HealthStatus</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>terminateSsl()</code></td>
+<td style="text-align: left;">Termina conexões SSL/TLS.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>redirectHttpToHttps()</code></td>
+<td style="text-align: left;">Redireciona HTTP para HTTPS.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="334-relacionamentos">3.3.4. Relacionamentos<a class="headerlink" href="#334-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>LoadBalancer</code> → <code>TargetGroup</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">Um ALB pode ter um ou mais target groups.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LoadBalancer</code> → <code>SecurityGroup</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">Cada ALB é protegido por exatamente um SG.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="335-justificativa-do-dimensionamento">3.3.5. Justificativa do Dimensionamento<a class="headerlink" href="#335-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Tráfego de entrada</strong></td>
+<td style="text-align: left;">1.000 TPS (pico)</td>
+<td style="text-align: left;">1.000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Capacidade do ALB</strong></td>
+<td style="text-align: left;">100.000 TPS</td>
+<td style="text-align: left;">Suficiente</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Latência adicional</strong></td>
+<td style="text-align: left;">~5ms</td>
+<td style="text-align: left;">Aceitável</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Custo do ALB</strong></td>
+<td style="text-align: left;">~$22/mês</td>
+<td style="text-align: left;">Incluído no orçamento</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Certificado SSL</strong></td>
+<td style="text-align: left;">ACM (gratuito)</td>
+<td style="text-align: left;">$0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="336-estimativa-de-custo">3.3.6. Estimativa de Custo<a class="headerlink" href="#336-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Application Load Balancer</strong></td>
+<td style="text-align: left;">1 ALB, Multi-AZ</td>
+<td style="text-align: left;">$22,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LCU (Load Balancer Capacity Units)</strong></td>
+<td style="text-align: left;">~100 GB/mês</td>
+<td style="text-align: left;">$5,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Certificado SSL (ACM)</strong></td>
+<td style="text-align: left;">Gratuito</td>
+<td style="text-align: left;">$0,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal LoadBalancer</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>$27,00</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="34-classe-targetgroup">3.4. CLASSE: TARGETGROUP<a class="headerlink" href="#34-classe-targetgroup" title="Permanent link">&para;</a></h3>
+<h4 id="341-responsabilidade">3.4.1. Responsabilidade<a class="headerlink" href="#341-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Agrupar instâncias EC2 para o Load Balancer, gerenciando o registro, desregistro e health check das instâncias.</p>
+<h4 id="342-atributos">3.4.2. Atributos<a class="headerlink" href="#342-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor (SwiftTrack)</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>swifttrack-tg</code></td>
+<td style="text-align: left;">Nome do Target Group.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>protocol</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>HTTP</code></td>
+<td style="text-align: left;">API Django (Gunicorn).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>port</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">8000</td>
+<td style="text-align: left;">Porta do Gunicorn.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>vpcId</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>vpc-xxxxxxxx</code></td>
+<td style="text-align: left;">VPC da SwiftTrack.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheckPath</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>/health/</code></td>
+<td style="text-align: left;">Endpoint de health check.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheckInterval</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">30s</td>
+<td style="text-align: left;">Frequência de verificação.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheckTimeout</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">5s</td>
+<td style="text-align: left;">Timeout da verificação.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthyThreshold</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Verificações para considerar saudável.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>unhealthyThreshold</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Verificações para considerar não saudável.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>stickiness</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>false</code></td>
+<td style="text-align: left;">Sem necessidade de sessão.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>deregistrationDelay</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">30s</td>
+<td style="text-align: left;">Tempo para drenar conexões.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="343-responsabilidades-metodos">3.4.3. Responsabilidades (Métodos)<a class="headerlink" href="#343-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>registerInstance(instance)</code></td>
+<td style="text-align: left;">Registra uma instância EC2.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>deregisterInstance(instance)</code></td>
+<td style="text-align: left;">Remove uma instância EC2.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>healthCheck()</code></td>
+<td style="text-align: left;">Verifica a saúde das instâncias.</td>
+<td style="text-align: left;"><code>HealthStatus</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getHealthyInstances()</code></td>
+<td style="text-align: left;">Retorna instâncias saudáveis.</td>
+<td style="text-align: left;"><code>List&lt;ComputeInstance&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getUnhealthyInstances()</code></td>
+<td style="text-align: left;">Retorna instâncias não saudáveis.</td>
+<td style="text-align: left;"><code>List&lt;ComputeInstance&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="344-relacionamentos">3.4.4. Relacionamentos<a class="headerlink" href="#344-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>TargetGroup</code> → <code>ComputeInstance</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">Um target group registra uma ou mais instâncias.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>TargetGroup</code> → <code>LoadBalancer</code></td>
+<td style="text-align: left;">1 : 1</td>
+<td style="text-align: left;">Cada target group é associado a um ALB.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="345-justificativa-do-dimensionamento">3.4.5. Justificativa do Dimensionamento<a class="headerlink" href="#345-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Health Check</strong></td>
+<td style="text-align: left;"><code>/health/</code> a cada 30s</td>
+<td style="text-align: left;">30s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Timeout</strong></td>
+<td style="text-align: left;">5s</td>
+<td style="text-align: left;">5s</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Healthy Threshold</strong></td>
+<td style="text-align: left;">2 verificações</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Unhealthy Threshold</strong></td>
+<td style="text-align: left;">3 verificações</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Deregistration Delay</strong></td>
+<td style="text-align: left;">30s</td>
+<td style="text-align: left;">30s</td>
+</tr>
+</tbody>
+</table>
+<h4 id="346-estimativa-de-custo">3.4.6. Estimativa de Custo<a class="headerlink" href="#346-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Target Group</strong></td>
+<td style="text-align: left;">HTTP/8000</td>
+<td style="text-align: left;">$0,00 (gratuito)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal TargetGroup</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>$0,00</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="35-classe-launchtemplate">3.5. CLASSE: LAUNCHTEMPLATE<a class="headerlink" href="#35-classe-launchtemplate" title="Permanent link">&para;</a></h3>
+<h4 id="351-responsabilidade">3.5.1. Responsabilidade<a class="headerlink" href="#351-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Definir a configuração padronizada para o lançamento de instâncias EC2, incluindo AMI, tipo de instância, security groups, IAM role e user data.</p>
+<h4 id="352-atributos">3.5.2. Atributos<a class="headerlink" href="#352-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor (SwiftTrack)</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>swifttrack-lt</code></td>
+<td style="text-align: left;">Nome do Launch Template.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ami</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>ami-xxxxxxxx</code> (Ubuntu 22.04)</td>
+<td style="text-align: left;">Estável, LTS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>instanceType</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>t3.medium</code></td>
+<td style="text-align: left;">2 vCPU, 4 GB RAM.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>securityGroups</code></td>
+<td style="text-align: left;">List<String></td>
+<td style="text-align: left;"><code>SG-EC2-API</code></td>
+<td style="text-align: left;">Porta 8000.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>iamRole</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>EC2-API-Role</code></td>
+<td style="text-align: left;">Acesso a S3, Secrets, DynamoDB.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>userData</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Script de instalação</td>
+<td style="text-align: left;">Instala Django, Gunicorn, Nginx.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ebsOptimized</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">Melhor performance de I/O.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>monitoring</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">CloudWatch detalhado.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>keyName</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>swifttrack-key</code></td>
+<td style="text-align: left;">Chave SSH (para emergências).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>blockDeviceMappings</code></td>
+<td style="text-align: left;">List<Mapping></td>
+<td style="text-align: left;">30 GB gp3</td>
+<td style="text-align: left;">Volume do sistema operacional.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>metadataOptions</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>IMDSv2</code></td>
+<td style="text-align: left;">Segurança de metadados.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="353-responsabilidades-metodos">3.5.3. Responsabilidades (Métodos)<a class="headerlink" href="#353-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>createVersion()</code></td>
+<td style="text-align: left;">Cria uma nova versão do template.</td>
+<td style="text-align: left;"><code>LaunchTemplateVersion</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getLatestVersion()</code></td>
+<td style="text-align: left;">Retorna a versão mais recente.</td>
+<td style="text-align: left;"><code>LaunchTemplateVersion</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>setDefaultVersion(version)</code></td>
+<td style="text-align: left;">Define a versão padrão.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>validateConfiguration()</code></td>
+<td style="text-align: left;">Valida a configuração do template.</td>
+<td style="text-align: left;"><code>Boolean</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="354-relacionamentos">3.5.4. Relacionamentos<a class="headerlink" href="#354-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>LaunchTemplate</code> → <code>AutoScalingGroup</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">Um launch template pode ser usado por um ou mais ASGs.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>LaunchTemplate</code> → <code>ComputeInstance</code></td>
+<td style="text-align: left;">1 : 1..*</td>
+<td style="text-align: left;">Um launch template cria uma ou mais instâncias.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="355-justificativa-do-dimensionamento">3.5.5. Justificativa do Dimensionamento<a class="headerlink" href="#355-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>AMI</strong></td>
+<td style="text-align: left;">Ubuntu 22.04 LTS</td>
+<td style="text-align: left;">Estável, suporte até 2027.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Instance Type</strong></td>
+<td style="text-align: left;">t3.medium</td>
+<td style="text-align: left;">2 vCPU, 4 GB RAM.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Security Group</strong></td>
+<td style="text-align: left;">SG-EC2-API</td>
+<td style="text-align: left;">Porta 8000 (origem SG-ALB).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IAM Role</strong></td>
+<td style="text-align: left;">EC2-API-Role</td>
+<td style="text-align: left;">Acesso a S3, Secrets, DynamoDB.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>User Data</strong></td>
+<td style="text-align: left;">Script de instalação</td>
+<td style="text-align: left;">Automatizar setup.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EBS</strong></td>
+<td style="text-align: left;">30 GB gp3</td>
+<td style="text-align: left;">SO + dependências.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="356-estimativa-de-custo">3.5.6. Estimativa de Custo<a class="headerlink" href="#356-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Launch Template</strong></td>
+<td style="text-align: left;">Configuração</td>
+<td style="text-align: left;">$0,00 (gratuito)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal LaunchTemplate</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>$0,00</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="36-classe-scalingpolicy">3.6. CLASSE: SCALINGPOLICY<a class="headerlink" href="#36-classe-scalingpolicy" title="Permanent link">&para;</a></h3>
+<h4 id="361-responsabilidade">3.6.1. Responsabilidade<a class="headerlink" href="#361-responsabilidade" title="Permanent link">&para;</a></h4>
+<p>Definir as regras de escalonamento automático do Auto Scaling Group, com base em métricas de performance (CPU, memória, rede).</p>
+<h4 id="362-atributos">3.6.2. Atributos<a class="headerlink" href="#362-atributos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Atributo</strong></th>
+<th style="text-align: left;"><strong>Tipo</strong></th>
+<th style="text-align: left;"><strong>Valor (SwiftTrack)</strong></th>
+<th style="text-align: left;"><strong>Justificativa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>swifttrack-scale-out</code></td>
+<td style="text-align: left;">Nome da política.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>metric</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>CPUUtilization</code></td>
+<td style="text-align: left;">Métrica principal.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>threshold</code></td>
+<td style="text-align: left;">Double</td>
+<td style="text-align: left;">70% (out), 30% (in)</td>
+<td style="text-align: left;">Escalar/reduzir.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>adjustmentType</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>ChangeInCapacity</code></td>
+<td style="text-align: left;">Adicionar/remover instâncias.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>adjustmentValue</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">+1 (out), -1 (in)</td>
+<td style="text-align: left;">Incremento gradual.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cooldown</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">300s</td>
+<td style="text-align: left;">Evitar flapping.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>evaluationPeriods</code></td>
+<td style="text-align: left;">Integer</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Períodos de avaliação.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>statistic</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>Average</code></td>
+<td style="text-align: left;">Média das métricas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>namespace</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>AWS/EC2</code></td>
+<td style="text-align: left;">Namespace do CloudWatch.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="363-responsabilidades-metodos">3.6.3. Responsabilidades (Métodos)<a class="headerlink" href="#363-responsabilidades-metodos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Responsabilidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+<th style="text-align: left;"><strong>Retorno</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>execute()</code></td>
+<td style="text-align: left;">Executa a política de escalonamento.</td>
+<td style="text-align: left;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>validate()</code></td>
+<td style="text-align: left;">Valida a configuração da política.</td>
+<td style="text-align: left;"><code>Boolean</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>getMetricValue()</code></td>
+<td style="text-align: left;">Retorna o valor atual da métrica.</td>
+<td style="text-align: left;"><code>Double</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="364-relacionamentos">3.6.4. Relacionamentos<a class="headerlink" href="#364-relacionamentos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Relacionamento</strong></th>
+<th style="text-align: left;"><strong>Multiplicidade</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ScalingPolicy</code> → <code>AutoScalingGroup</code></td>
+<td style="text-align: left;">1..* : 1</td>
+<td style="text-align: left;">Cada política pertence a um ASG.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="365-justificativa-do-dimensionamento">3.6.5. Justificativa do Dimensionamento<a class="headerlink" href="#365-justificativa-do-dimensionamento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Métrica</strong></td>
+<td style="text-align: left;">CPUUtilization</td>
+<td style="text-align: left;">70% (out), 30% (in)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Período de avaliação</strong></td>
+<td style="text-align: left;">2 períodos de 5 min</td>
+<td style="text-align: left;">10 min</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cooldown</strong></td>
+<td style="text-align: left;">300s</td>
+<td style="text-align: left;">5 min</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ajuste</strong></td>
+<td style="text-align: left;">+1 instância</td>
+<td style="text-align: left;">+1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS por instância</strong></td>
+<td style="text-align: left;">500 TPS</td>
+<td style="text-align: left;">500</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Capacidade de pico</strong></td>
+<td style="text-align: left;">10 instâncias × 500 TPS</td>
+<td style="text-align: left;">5.000 TPS</td>
+</tr>
+</tbody>
+</table>
+<h4 id="366-estimativa-de-custo">3.6.6. Estimativa de Custo<a class="headerlink" href="#366-estimativa-de-custo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Scaling Policy</strong></td>
+<td style="text-align: left;">2 políticas</td>
+<td style="text-align: left;">$0,00 (gratuito)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal ScalingPolicy</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>$0,00</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-diagrama-de-classes-plantuml">4. DIAGRAMA DE CLASSES (PLANTUML)<a class="headerlink" href="#4-diagrama-de-classes-plantuml" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@startuml
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>title Modelo de Análise (Classes) - Computação SwiftTrack IoT
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>skinparam classAttributeIconSize 0
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>skinparam classBackgroundColor #F5F5F5
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>package &quot;Computação&quot; {
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  class &quot;ComputeInstance&quot; as CI {
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    - instanceType: t3.medium
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    - ami: Ubuntu 22.04 LTS
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    - vpcId: vpc-xxxxxxxx
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    - subnetId: subnet-priv-a
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    - securityGroup: SG-EC2-API
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    - iamRole: EC2-API-Role
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    - ebsVolume: 30 GB gp3
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    - userData: Script de instalação
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    - privateIp: 10.0.3.x
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    - publicIp: false
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    - monitoring: true
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    - ebsOptimized: true
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    - detailedMonitoring: true
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    + start(): void
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    + stop(): void
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    + terminate(): void
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    + getMetrics(): Metrics
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>    + applyUserData(): void
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>    + attachToTargetGroup(group): void
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    + getPrivateIp(): String
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>  }
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>  class &quot;AutoScalingGroup&quot; as ASG {
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>    - name: swifttrack-asg
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>    - minSize: 2
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>    - maxSize: 10
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>    - desiredCapacity: 2
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>    - healthCheckType: ELB
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>    - healthCheckGracePeriod: 300
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>    - defaultCooldown: 300
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>    - availabilityZones: [us-east-1a, us-east-1b]
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>    - terminationPolicies: [OldestInstance]
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>    + scaleOut(): void
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>    + scaleIn(): void
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>    + updateDesiredCapacity(capacity): void
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>    + getInstances(): List&lt;ComputeInstance&gt;
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>    + attachToTargetGroup(group): void
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>    + applyScalingPolicy(policy): void
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>    + getHealthStatus(): HealthStatus
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>  }
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>  class &quot;LoadBalancer&quot; as LB {
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>    - name: swifttrack-alb
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>    - type: Application
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>    - scheme: internet-facing
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>    - securityGroup: SG-ALB
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>    - subnets: [subnet-pub-a, subnet-pub-b]
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>    - listeners: [443 -&gt; 8000]
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>    - certificate: arn:aws:acm:...
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>    - idleTimeout: 60
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>    - deletionProtection: true
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>    - accessLogs: true
+</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>    - dnsName: swifttrack-alb-xxx.elb.amazonaws.com
+</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>    + addListener(listener): void
+</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>    + removeListener(listener): void
+</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>    + getDnsName(): String
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>    + healthCheck(): HealthStatus
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>    + terminateSsl(): void
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>    + redirectHttpToHttps(): void
+</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>  }
+</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>
+</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>  class &quot;TargetGroup&quot; as TG {
+</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>    - name: swifttrack-tg
+</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>    - protocol: HTTP
+</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>    - port: 8000
+</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>    - vpcId: vpc-xxxxxxxx
+</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>    - healthCheckPath: /health/
+</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>    - healthCheckInterval: 30
+</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>    - healthCheckTimeout: 5
+</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>    - healthyThreshold: 2
+</span><span id="__span-1-80"><a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>    - unhealthyThreshold: 3
+</span><span id="__span-1-81"><a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>    - stickiness: false
+</span><span id="__span-1-82"><a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a>    - deregistrationDelay: 30
+</span><span id="__span-1-83"><a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>    + registerInstance(instance): void
+</span><span id="__span-1-84"><a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a>    + deregisterInstance(instance): void
+</span><span id="__span-1-85"><a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a>    + healthCheck(): HealthStatus
+</span><span id="__span-1-86"><a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>    + getHealthyInstances(): List&lt;ComputeInstance&gt;
+</span><span id="__span-1-87"><a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a>    + getUnhealthyInstances(): List&lt;ComputeInstance&gt;
+</span><span id="__span-1-88"><a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>  }
+</span><span id="__span-1-89"><a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>
+</span><span id="__span-1-90"><a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>  class &quot;LaunchTemplate&quot; as LT {
+</span><span id="__span-1-91"><a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>    - name: swifttrack-lt
+</span><span id="__span-1-92"><a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a>    - ami: ami-xxxxxxxx (Ubuntu 22.04)
+</span><span id="__span-1-93"><a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>    - instanceType: t3.medium
+</span><span id="__span-1-94"><a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a>    - securityGroups: [SG-EC2-API]
+</span><span id="__span-1-95"><a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a>    - iamRole: EC2-API-Role
+</span><span id="__span-1-96"><a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a>    - userData: Script de instalação
+</span><span id="__span-1-97"><a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a>    - ebsOptimized: true
+</span><span id="__span-1-98"><a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a>    - monitoring: true
+</span><span id="__span-1-99"><a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a>    - keyName: swifttrack-key
+</span><span id="__span-1-100"><a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a>    - blockDeviceMappings: 30 GB gp3
+</span><span id="__span-1-101"><a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a>    + createVersion(): LaunchTemplateVersion
+</span><span id="__span-1-102"><a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a>    + getLatestVersion(): LaunchTemplateVersion
+</span><span id="__span-1-103"><a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a>    + setDefaultVersion(version): void
+</span><span id="__span-1-104"><a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a>    + validateConfiguration(): Boolean
+</span><span id="__span-1-105"><a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a>  }
+</span><span id="__span-1-106"><a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a>
+</span><span id="__span-1-107"><a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a>  class &quot;ScalingPolicy&quot; as SP {
+</span><span id="__span-1-108"><a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a>    - name: swifttrack-scale-out
+</span><span id="__span-1-109"><a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a>    - metric: CPUUtilization
+</span><span id="__span-1-110"><a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a>    - threshold: 70
+</span><span id="__span-1-111"><a id="__codelineno-1-111" name="__codelineno-1-111" href="#__codelineno-1-111"></a>    - adjustmentType: ChangeInCapacity
+</span><span id="__span-1-112"><a id="__codelineno-1-112" name="__codelineno-1-112" href="#__codelineno-1-112"></a>    - adjustmentValue: +1
+</span><span id="__span-1-113"><a id="__codelineno-1-113" name="__codelineno-1-113" href="#__codelineno-1-113"></a>    - cooldown: 300
+</span><span id="__span-1-114"><a id="__codelineno-1-114" name="__codelineno-1-114" href="#__codelineno-1-114"></a>    - evaluationPeriods: 2
+</span><span id="__span-1-115"><a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a>    - statistic: Average
+</span><span id="__span-1-116"><a id="__codelineno-1-116" name="__codelineno-1-116" href="#__codelineno-1-116"></a>    - namespace: AWS/EC2
+</span><span id="__span-1-117"><a id="__codelineno-1-117" name="__codelineno-1-117" href="#__codelineno-1-117"></a>    + execute(): void
+</span><span id="__span-1-118"><a id="__codelineno-1-118" name="__codelineno-1-118" href="#__codelineno-1-118"></a>    + validate(): Boolean
+</span><span id="__span-1-119"><a id="__codelineno-1-119" name="__codelineno-1-119" href="#__codelineno-1-119"></a>    + getMetricValue(): Double
+</span><span id="__span-1-120"><a id="__codelineno-1-120" name="__codelineno-1-120" href="#__codelineno-1-120"></a>  }
+</span><span id="__span-1-121"><a id="__codelineno-1-121" name="__codelineno-1-121" href="#__codelineno-1-121"></a>
+</span><span id="__span-1-122"><a id="__codelineno-1-122" name="__codelineno-1-122" href="#__codelineno-1-122"></a>  ASG &quot;1&quot; -- &quot;1..*&quot; CI : contém
+</span><span id="__span-1-123"><a id="__codelineno-1-123" name="__codelineno-1-123" href="#__codelineno-1-123"></a>  ASG &quot;1&quot; -- &quot;1&quot; LT : usa
+</span><span id="__span-1-124"><a id="__codelineno-1-124" name="__codelineno-1-124" href="#__codelineno-1-124"></a>  ASG &quot;1&quot; -- &quot;1..*&quot; SP : possui
+</span><span id="__span-1-125"><a id="__codelineno-1-125" name="__codelineno-1-125" href="#__codelineno-1-125"></a>  LB &quot;1&quot; -- &quot;1..*&quot; TG : roteia para
+</span><span id="__span-1-126"><a id="__codelineno-1-126" name="__codelineno-1-126" href="#__codelineno-1-126"></a>  TG &quot;1&quot; -- &quot;1..*&quot; CI : registra
+</span><span id="__span-1-127"><a id="__codelineno-1-127" name="__codelineno-1-127" href="#__codelineno-1-127"></a>  LT &quot;1&quot; -- &quot;0..*&quot; CI : cria
+</span><span id="__span-1-128"><a id="__codelineno-1-128" name="__codelineno-1-128" href="#__codelineno-1-128"></a>  LB &quot;1&quot; -- &quot;1&quot; TG : direciona
+</span><span id="__span-1-129"><a id="__codelineno-1-129" name="__codelineno-1-129" href="#__codelineno-1-129"></a>}
+</span><span id="__span-1-130"><a id="__codelineno-1-130" name="__codelineno-1-130" href="#__codelineno-1-130"></a>
+</span><span id="__span-1-131"><a id="__codelineno-1-131" name="__codelineno-1-131" href="#__codelineno-1-131"></a>@enduml
+</span></code></pre></div>
+<hr />
+<h2 id="5-diagrama-de-sequencia-auto-scaling-scale-out">5. DIAGRAMA DE SEQUÊNCIA - AUTO SCALING (SCALE OUT)<a class="headerlink" href="#5-diagrama-de-sequencia-auto-scaling-scale-out" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>@startuml
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>title Auto Scaling (Scale Out) - SwiftTrack IoT
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>actor &quot;CloudWatch&quot; as CW
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>participant &quot;Auto Scaling\nGroup&quot; as ASG
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>participant &quot;Launch\nTemplate&quot; as LT
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>participant &quot;EC2 Instance\n(nova)&quot; as EC2
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>participant &quot;Target Group&quot; as TG
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>participant &quot;Load Balancer&quot; as ALB
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>participant &quot;SNS&quot; as SNS
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>== Monitoramento ==
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>CW -&gt; CW: Métrica CPU &gt; 70%\n(2 períodos de 5 min)
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>CW -&gt; ASG: Alarm (CPU &gt; 70%)
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>activate ASG
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>== Scale Out ==
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>ASG -&gt; ASG: Avaliar política\n(scale-out)
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>ASG -&gt; LT: Criar nova instância
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>activate LT
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>LT --&gt; ASG: Instância criada
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>deactivate LT
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>ASG -&gt; EC2: Lançar instância\n(t3.medium)
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>activate EC2
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>EC2 -&gt; EC2: Executar User Data\n(instalar Django, Gunicorn, Nginx)
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>EC2 -&gt; TG: Registrar no Target Group
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>activate TG
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>TG --&gt; EC2: Registrado
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>deactivate TG
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>TG -&gt; EC2: Health Check\n(/health/)
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>activate EC2
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>EC2 --&gt; TG: Healthy
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>deactivate EC2
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>TG -&gt; ALB: Instância saudável
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>activate ALB
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>ALB --&gt; TG: Roteamento atualizado
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>deactivate ALB
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>ASG -&gt; CW: Publicar métrica\n(GroupDesiredCapacity)
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>deactivate ASG
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>== Notificação ==
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>ASG -&gt; SNS: Notificar scale out
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>activate SNS
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>SNS --&gt; ASG: Confirmação
+</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>deactivate SNS
+</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>
+</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>@enduml
+</span></code></pre></div>
+<hr />
+<h2 id="6-diagrama-de-sequencia-failover-do-alb">6. DIAGRAMA DE SEQUÊNCIA - FAILOVER DO ALB<a class="headerlink" href="#6-diagrama-de-sequencia-failover-do-alb" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>@startuml
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>title Failover do ALB - SwiftTrack IoT
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>actor &quot;Cliente&quot; as Client
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>participant &quot;Route 53\n(DNS)&quot; as DNS
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>participant &quot;Load Balancer\n(ALB)&quot; as ALB
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>participant &quot;Target Group&quot; as TG
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>participant &quot;EC2 API\n(instância 1)&quot; as EC2_1
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>participant &quot;EC2 API\n(instância 2)&quot; as EC2_2
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>participant &quot;CloudWatch&quot; as CW
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>participant &quot;SNS&quot; as SNS
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>== Operação Normal ==
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>Client -&gt; DNS: Resolver swifttrack.com
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>activate DNS
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>DNS --&gt; Client: IP do ALB
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>deactivate DNS
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>Client -&gt; ALB: HTTPS Request
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>activate ALB
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>ALB -&gt; TG: Encaminhar requisição
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>activate TG
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>TG -&gt; EC2_1: HTTP Request
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>activate EC2_1
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>EC2_1 --&gt; TG: HTTP Response
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>deactivate EC2_1
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>TG --&gt; ALB: Resposta
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>deactivate TG
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>ALB --&gt; Client: Resposta
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>deactivate ALB
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>== Falha na Instância 1 ==
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>EC2_1 -&gt; EC2_1: Falha detectada
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>activate EC2_1
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>EC2_1 -&gt; TG: Health Check falha
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>deactivate EC2_1
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>TG -&gt; TG: Marcar como unhealthy\n(3 verificações)
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>TG -&gt; ALB: Remover instância 1
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>activate ALB
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>ALB --&gt; TG: Instância removida
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>deactivate ALB
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>TG -&gt; CW: Métrica (UnHealthyHostCount = 1)
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>activate CW
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>CW -&gt; SNS: Alerta
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>activate SNS
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>SNS --&gt; CW: Confirmação
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>deactivate SNS
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>deactivate CW
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>== Redirecionamento para Instância 2 ==
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>Client -&gt; ALB: HTTPS Request
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>activate ALB
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>ALB -&gt; TG: Encaminhar requisição
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>activate TG
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>TG -&gt; EC2_2: HTTP Request
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>activate EC2_2
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>EC2_2 --&gt; TG: HTTP Response
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>deactivate EC2_2
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>TG --&gt; ALB: Resposta
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>deactivate TG
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>ALB --&gt; Client: Resposta
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>deactivate ALB
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>== Auto Scaling (substituição) ==
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>CW -&gt; ASG: Alarme (UnHealthyHostCount)
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>activate ASG
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>ASG -&gt; ASG: Terminar instância 1
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>ASG -&gt; ASG: Criar nova instância
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>ASG --&gt; CW: Instância substituída
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>deactivate ASG
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>@enduml
+</span></code></pre></div>
+<hr />
+<h2 id="7-diagrama-de-atividades-deploy-com-launch-template">7. DIAGRAMA DE ATIVIDADES - DEPLOY COM LAUNCH TEMPLATE<a class="headerlink" href="#7-diagrama-de-atividades-deploy-com-launch-template" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>@startuml
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>title Deploy com Launch Template - SwiftTrack IoT
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>start
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>:Engenheiro de DevOps\natualiza código no GitHub;
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>:CodePipeline detecta\nnovo commit;
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>:CodeBuild executa\nbuild e testes;
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>if (Build bem-sucedido?) then (Sim)
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  :Criar nova AMI\ncom código atualizado;
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  :Atualizar Launch Template\n(nova versão);
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  :Atualizar Auto Scaling Group\n(nova versão do template);
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  :Iniciar Instance Refresh\n(rolling update);
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>  while (Instâncias restantes?) do (Sim)
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    :Lançar nova instância\n(com nova AMI);
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    :Aguardar health check\n(/health/);
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    if (Instância saudável?) then (Sim)
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>      :Registrar no Target Group;
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>      :Drenar conexões\nda instância antiga;
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>      :Terminar instância antiga;
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    else (Não)
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>      :Rollback automático;
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>      :Notificar equipe;
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>      stop
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    endif
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>  endwhile (Não)
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>  :Deploy concluído;
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>  :Notificar equipe;
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>  stop
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>else (Não)
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>  :Notificar falha no build;
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>  :Corrigir código;
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>  stop
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>endif
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>@enduml
+</span></code></pre></div>
+<hr />
+<h2 id="8-memoria-de-calculo">8. MEMÓRIA DE CÁLCULO<a class="headerlink" href="#8-memoria-de-calculo" title="Permanent link">&para;</a></h2>
+<h3 id="81-calculo-de-vcpu-e-memoria">8.1. Cálculo de vCPU e Memória<a class="headerlink" href="#81-calculo-de-vcpu-e-memoria" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+<th style="text-align: left;"><strong>Fórmula</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>TPS (pico)</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1.000 TPS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CPU por requisição</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">0,5ms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CPU total</strong></td>
+<td style="text-align: left;">1.000 × 0,5ms</td>
+<td style="text-align: left;">500ms/s</td>
+<td style="text-align: left;">0,5 vCPU</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>vCPU com margem</strong></td>
+<td style="text-align: left;">0,5 × 4</td>
+<td style="text-align: left;">2 vCPU</td>
+<td style="text-align: left;">2 vCPU</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Memória por requisição</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">50 MB</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conexões simultâneas</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">500</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Memória total</strong></td>
+<td style="text-align: left;">500 × 50 MB</td>
+<td style="text-align: left;">25 GB (com pooling: ~4 GB)</td>
+<td style="text-align: left;">4 GB</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Instância escolhida</strong></td>
+<td style="text-align: left;">2 vCPU, 4 GB RAM</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"><code>t3.medium</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-calculo-do-numero-de-instancias">8.2. Cálculo do Número de Instâncias<a class="headerlink" href="#82-calculo-do-numero-de-instancias" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+<th style="text-align: left;"><strong>Fórmula</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>TPS por instância</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">500 TPS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TPS total necessário</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1.000 TPS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Número de instâncias (base)</strong></td>
+<td style="text-align: left;">1.000 / 500</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Número de instâncias (mínimo)</strong></td>
+<td style="text-align: left;">Multi-AZ</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Número de instâncias (pico)</strong></td>
+<td style="text-align: left;">2 × 10</td>
+<td style="text-align: left;">20 (limitado a 10)</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Máximo do Auto Scaling</strong></td>
+<td style="text-align: left;">Limite orçamentário</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">10</td>
+</tr>
+</tbody>
+</table>
+<h3 id="83-calculo-de-disponibilidade">8.3. Cálculo de Disponibilidade<a class="headerlink" href="#83-calculo-de-disponibilidade" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Métrica</strong></th>
+<th style="text-align: left;"><strong>Fórmula</strong></th>
+<th style="text-align: left;"><strong>Cálculo</strong></th>
+<th style="text-align: left;"><strong>Resultado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SLA desejado</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">99,95%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Downtime mensal</strong></td>
+<td style="text-align: left;">(1 - 0,9995) × 30 dias</td>
+<td style="text-align: left;">0,0005 × 43.200 min</td>
+<td style="text-align: left;">21,6 min</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Downtime anual</strong></td>
+<td style="text-align: left;">(1 - 0,9995) × 365 dias</td>
+<td style="text-align: left;">0,0005 × 525.600 min</td>
+<td style="text-align: left;">262,8 min (4,38h)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Multi-AZ</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Reduz downtime para ~0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RPO</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">15 min (RDS PITR)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RTO</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">1 hora (failover)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="84-estimativa-de-custo-total">8.4. Estimativa de Custo Total<a class="headerlink" href="#84-estimativa-de-custo-total" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Componente</strong></th>
+<th style="text-align: left;"><strong>Configuração</strong></th>
+<th style="text-align: left;"><strong>Custo Mensal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>EC2 (2 × t3.medium)</strong></td>
+<td style="text-align: left;">On-Demand, Multi-AZ</td>
+<td style="text-align: left;">$60,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EBS (2 × 30 GB gp3)</strong></td>
+<td style="text-align: left;">30 GB por instância</td>
+<td style="text-align: left;">$4,80</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Application Load Balancer</strong></td>
+<td style="text-align: left;">1 ALB, Multi-AZ</td>
+<td style="text-align: left;">$22,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LCU (Load Balancer)</strong></td>
+<td style="text-align: left;">~100 GB/mês</td>
+<td style="text-align: left;">$5,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data Transfer</strong></td>
+<td style="text-align: left;">~100 GB/mês</td>
+<td style="text-align: left;">$9,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Picos (média)</strong></td>
+<td style="text-align: left;">+2 instâncias (10% do tempo)</td>
+<td style="text-align: left;">$12,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Auto Scaling Group</strong></td>
+<td style="text-align: left;">2 instâncias base</td>
+<td style="text-align: left;">$0,00 (incluído)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Target Group</strong></td>
+<td style="text-align: left;">HTTP/8000</td>
+<td style="text-align: left;">$0,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Launch Template</strong></td>
+<td style="text-align: left;">Configuração</td>
+<td style="text-align: left;">$0,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Scaling Policy</strong></td>
+<td style="text-align: left;">2 políticas</td>
+<td style="text-align: left;">$0,00</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TOTAL</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>$112,80/mês</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Percentual do Orçamento Total:</strong> $112,80 / $1.500 = <strong>7,5%</strong></p>
+<p><strong>Nota:</strong> Em picos (10 instâncias), o custo pode chegar a ~$300/mês.</p>
+<hr />
+<h2 id="9-trade-offs-documentados">9. TRADE-OFFS DOCUMENTADOS<a class="headerlink" href="#9-trade-offs-documentados" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Decisão</strong></th>
+<th style="text-align: left;"><strong>Alternativa</strong></th>
+<th style="text-align: left;"><strong>Prós</strong></th>
+<th style="text-align: left;"><strong>Contras</strong></th>
+<th style="text-align: left;"><strong>Custo Impacto</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>t3.medium</code></strong></td>
+<td style="text-align: left;"><code>c5.large</code></td>
+<td style="text-align: left;">t3: mais barato; c5: mais CPU.</td>
+<td style="text-align: left;">t3: burst, c5: mais caro.</td>
+<td style="text-align: left;">t3: $60; c5: $124</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>On-Demand</strong></td>
+<td style="text-align: left;">Reserved (1 ano)</td>
+<td style="text-align: left;">On-Demand: flexível; Reserved: 40% desconto.</td>
+<td style="text-align: left;">Reserved: compromisso de 1 ano.</td>
+<td style="text-align: left;">Reserved: $36 vs $60</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Auto Scaling</strong></td>
+<td style="text-align: left;">Instâncias fixas</td>
+<td style="text-align: left;">Escala em picos, reduz custo em baixa.</td>
+<td style="text-align: left;">Complexidade de configuração.</td>
+<td style="text-align: left;">+$0 (mas paga por uso)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ALB</strong></td>
+<td style="text-align: left;">NLB</td>
+<td style="text-align: left;">ALB: L7, roteamento; NLB: L4, ultra-rápido.</td>
+<td style="text-align: left;">ALB: mais caro; NLB: menos features.</td>
+<td style="text-align: left;">ALB: $22; NLB: $18</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Multi-AZ</strong></td>
+<td style="text-align: left;">Single-AZ</td>
+<td style="text-align: left;">Alta disponibilidade, failover automático.</td>
+<td style="text-align: left;">Dobra o custo.</td>
+<td style="text-align: left;">+$60/mês</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ubuntu 22.04</strong></td>
+<td style="text-align: left;">Amazon Linux 2</td>
+<td style="text-align: left;">Ubuntu: familiar; Amazon Linux: otimizado.</td>
+<td style="text-align: left;">Amazon Linux: menos familiar.</td>
+<td style="text-align: left;">$0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>30 GB gp3</strong></td>
+<td style="text-align: left;">50 GB gp2</td>
+<td style="text-align: left;">gp3: mais barato; gp2: mais IOPS.</td>
+<td style="text-align: left;">gp2: mais caro.</td>
+<td style="text-align: left;">gp3: $2,40; gp2: $5,75</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-riscos-e-mitigacoes">10. RISCOS E MITIGAÇÕES<a class="headerlink" href="#10-riscos-e-mitigacoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Risco</strong></th>
+<th style="text-align: left;"><strong>Probabilidade</strong></th>
+<th style="text-align: left;"><strong>Impacto</strong></th>
+<th style="text-align: left;"><strong>Mitigação</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Esgotamento de CPU</strong></td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Auto Scaling (CPU &gt; 70%).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Falha na instância</strong></td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Multi-AZ + ALB health check.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Picos de tráfego</strong></td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Auto Scaling (max 10).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Custo acima do orçamento</strong></td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Médio</td>
+<td style="text-align: left;">Monitoramento via CloudWatch + Budgets.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Deploy com falha</strong></td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Rolling update + rollback automático.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Acesso não autorizado</strong></td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Crítico</td>
+<td style="text-align: left;">SG restritivo + IAM Role.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Latência elevada</strong></td>
+<td style="text-align: left;">Média</td>
+<td style="text-align: left;">Médio</td>
+<td style="text-align: left;">CloudWatch + alarmes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Falta de capacidade</strong></td>
+<td style="text-align: left;">Baixa</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: left;">Auto Scaling + instance refresh.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="11-consideracoes-finais">11. CONSIDERAÇÕES FINAIS<a class="headerlink" href="#11-consideracoes-finais" title="Permanent link">&para;</a></h2>
+<h3 id="111-licoes-aprendidas">11.1. Lições Aprendidas<a class="headerlink" href="#111-licoes-aprendidas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>O dimensionamento do EC2 deve ser baseado em <strong>requisitos mensuráveis</strong> (TPS, latência, conexões).</li>
+<li><strong>Auto Scaling é obrigatório</strong> para picos de demanda (Black Friday).</li>
+<li><strong>Multi-AZ</strong> garante alta disponibilidade (99,95%).</li>
+<li><strong>Load Balancer</strong> distribui carga e termina SSL.</li>
+<li><strong>Launch Template</strong> padroniza instâncias e facilita deploys.</li>
+<li>O <strong>custo do EC2</strong> (~$112,80/mês base) representa 7,5% do orçamento total, o que é aceitável.</li>
+</ul>
+<h3 id="112-proximos-passos">11.2. Próximos Passos<a class="headerlink" href="#112-proximos-passos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Semana 7:</strong> Dimensionamento de Armazenamento (S3) - <code>StorageBucket</code>, <code>LifecyclePolicy</code>, <code>ReplicationRule</code>.</li>
+<li><strong>Semana 8:</strong> Consolidação da Arquitetura - Diagramas de Sequência e Design.</li>
+<li><strong>Semana 9:</strong> Estratégias de Deploy (Blue-Green, Canary, Rolling) e CI/CD.</li>
+</ul>
+<hr />
+<h2 id="12-aprovacoes">12. APROVAÇÕES<a class="headerlink" href="#12-aprovacoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Função</strong></th>
+<th style="text-align: left;"><strong>Nome</strong></th>
+<th style="text-align: left;"><strong>Data</strong></th>
+<th style="text-align: left;"><strong>Assinatura</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Arquiteto de Soluções</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Arquiteto de Computação</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Professor Responsável</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Coordenador do Curso</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="13-historico-de-versoes">13. HISTÓRICO DE VERSÕES<a class="headerlink" href="#13-historico-de-versoes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Versão</strong></th>
+<th style="text-align: left;"><strong>Data</strong></th>
+<th style="text-align: left;"><strong>Autor</strong></th>
+<th style="text-align: left;"><strong>Descrição das Alterações</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0.1</td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+<td style="text-align: left;">[Nome do Grupo]</td>
+<td style="text-align: left;">Criação inicial do documento.</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.0</td>
+<td style="text-align: left;">[DD/MM/AAAA]</td>
+<td style="text-align: left;">[Nome do Grupo]</td>
+<td style="text-align: left;">Versão completa com todas as classes e cálculos.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>FIM DO DOCUMENTO</strong></p>
+<hr />
+<h2 id="instrucoes-de-preenchimento">INSTRUÇÕES DE PREENCHIMENTO<a class="headerlink" href="#instrucoes-de-preenchimento" title="Permanent link">&para;</a></h2>
+<h3 id="como-utilizar-este-modelo">Como Utilizar Este Modelo<a class="headerlink" href="#como-utilizar-este-modelo" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Substitua os placeholders</strong> <code>[NOME DO PROJETO]</code>, <code>[DD/MM/AAAA]</code>, <code>[Nome do Grupo]</code> pelas informações do seu projeto.</p>
+</li>
+<li>
+<p><strong>Adapte os atributos</strong> de cada classe conforme as necessidades específicas do seu projeto.</p>
+</li>
+<li>
+<p><strong>Preencha a memória de cálculo</strong> com os números reais do seu caso.</p>
+</li>
+<li>
+<p><strong>Utilize os diagramas PlantUML</strong> como base, adaptando as classes e relacionamentos.</p>
+</li>
+<li>
+<p><strong>Documente os trade-offs</strong> e justificativas técnicas para cada decisão.</p>
+</li>
+<li>
+<p><strong>Valide os requisitos</strong> (SLA, TPS, latência) com as escolhas feitas.</p>
+</li>
+</ol>
+<h3 id="criterios-de-avaliacao">Critérios de Avaliação<a class="headerlink" href="#criterios-de-avaliacao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Critério</strong></th>
+<th style="text-align: left;"><strong>Peso</strong></th>
+<th style="text-align: left;"><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Completude das Classes</strong></td>
+<td style="text-align: left;">25%</td>
+<td style="text-align: left;">Todas as classes necessárias estão descritas?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Diagramas PlantUML</strong></td>
+<td style="text-align: left;">20%</td>
+<td style="text-align: left;">Os diagramas estão corretos e completos?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Memória de Cálculo</strong></td>
+<td style="text-align: left;">20%</td>
+<td style="text-align: left;">Os cálculos estão documentados e corretos?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Justificativas Técnicas</strong></td>
+<td style="text-align: left;">20%</td>
+<td style="text-align: left;">As decisões são bem fundamentadas?</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Riscos e Mitigações</strong></td>
+<td style="text-align: left;">15%</td>
+<td style="text-align: left;">Os riscos estão identificados e mitigados?</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright ©️ 2026, Jonh Carvalho
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>
