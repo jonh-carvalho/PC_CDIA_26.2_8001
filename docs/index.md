@@ -33,6 +33,9 @@ hide:
         <h2 class="bdcc-card__title">Entrega das atividades</h2>
         <p class="bdcc-note">
           As APs deverão ser enviadas no GitHub.
+          <a href="https://github.com/Projetos-de-Extensao/PC_CDIA_26.2_8001_I">Grupo I</a>,
+          <a href="https://github.com/Projetos-de-Extensao/PC_CDIA_26.2_8001_II">Grupo II</a> e
+          <a href="https://github.com/Projetos-de-Extensao/PC_CDIA_26.2_8001_III">Grupo III</a>.
         </p>
         <div class="bdcc-accent-line" aria-hidden="true"></div>
       </section>
