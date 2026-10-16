@@ -534,7 +534,7 @@ Com estes três scripts, o aluno tem:
 | Arquivo | O que entrega |
 | :--- | :--- |
 | `01_schema.sql` | Schema relacional robusto com constraints e índices |
-| `02_transactions.sql` | Demonstração prática do ACID com ROLLBACK |
+| `02_transactions/01_setup.sql` a `05_verification.sql` | Demonstração do ACID dividida em cinco cenas executáveis |
 | `03_seed.sql` | 1.000 entregas + dados relacionados coerentes |
 
 **Objetivos da Semana 1 atingidos:**
@@ -544,4 +544,3 @@ Com estes três scripts, o aluno tem:
 - Índices B-Tree otimizando consultas  
 - Transações ACID com `BEGIN`, `COMMIT` e `ROLLBACK`  
 - Seed de 1.000 entregas com dados realistas  
-
