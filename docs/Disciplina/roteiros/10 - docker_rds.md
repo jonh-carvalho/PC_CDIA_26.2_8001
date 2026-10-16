@@ -4,6 +4,38 @@
 
 Subir um banco PostgreSQL com suporte à extensão pgvector usando a imagem `pgvector/pgvector:pg16` em um container Docker, persistir os dados e conectar-se a ele (simulando um serviço gerenciado como o RDS).
 
+### **Instância EC2: ** Conectando via senha
+
+Para conectar via senha, você precisará ter a senha da instância EC2. Isso é menos seguro e não é recomendado em ambientes de produção.
+
+Recomenda-se sempre usar o método de chave pública/privada para autenticação SSH, pois é mais seguro e evita ataques de força bruta.
+
+No config do SSH, você pode habilitar a autenticação por senha, mas isso deve ser feito com cautela e apenas em ambientes de teste.
+
+#### Como configurar o SSH para permitir autenticação por senha:
+1.  Conecte-se à instância via console:
+    - Acesse o AWS Management Console.
+    - Vá para a seção "EC2".
+    - Selecione a instância desejada.
+    - Clique em "Conectar" e siga as instruções para obter a senha.
+
+2.  Edite o arquivo de configuração do SSH:
+    ```bash
+    sudo nano /etc/ssh/sshd_config
+    ```
+3.  Descomente ou adicione a linha:
+    ```
+    PasswordAuthentication yes
+    ```
+4.  Reinicie o serviço SSH:
+    ```bash
+    # Ubuntu
+    sudo systemctl restart ssh
+
+    # Amazon Linux
+    sudo service sshd restart
+    ```
+
 ### Pré-requisitos
 
 - Docker instalado (`docker --version`)
