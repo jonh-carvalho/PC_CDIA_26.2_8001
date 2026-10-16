@@ -12,7 +12,7 @@ Desenvolvimento dos Documentos propostos: Documento de Visão e Requisitos Suple
 
 - Repositório Github - Código-fonte do projeto atualizado, incluindo as novas classes e as APIs relacionadas professor adicionado como colaborador.
 <span style="color: red">
-- **Não é necessário a presença do Grupo no Lab 205, se até o início da aula o projeto já estiver atualizado e o deploy realizado. O envio deve ser feito adicionando o professor ao repositório, e no readme do projeto deve conter o link da API publicada.** 
+- **Não é necessário a presença do Grupo no Lab 105, se até o início da aula o projeto já estiver atualizado e o deploy realizado 13:30h - 02/10/2026. O envio deve ser feito adicionando o professor ao repositório, e no readme do projeto deve conter o link da API publicada.** 
 </span>
 
 - Retire o app e a classe produtos
