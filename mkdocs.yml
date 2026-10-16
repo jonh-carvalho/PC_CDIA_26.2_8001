@@ -27,6 +27,10 @@ nav:
         - 07 - BE: Disciplina/roteiros/07 - eb.md
         - 10 - Aurora RDS: Disciplina/roteiros/10 - aurora.md
         - 10 - Docker RDS: Disciplina/roteiros/10 - docker_rds.md
+        - Big Data: 
+          - 11 - Constraints: Disciplina/roteiros/bigdata/aula01/aula01 - 01.md
+          - 11 - Transactional: Disciplina/roteiros/bigdata/aula01/aula01 - 02_transaction.md
+          - 11 - Data Lake: Disciplina/roteiros/bigdata/aula01/aula01 - 03_seed.md
 #        - 12 - EB MySQL: Disciplina/roteiros/12 - ebmysql.md
   - Iniciação: 
     - Index: Iniciacao/index.md
