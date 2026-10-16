@@ -117,6 +117,12 @@ markdown_extensions:
 
 plugins:
   - search
+  - pygments: 
+      light: murphy
+      dark: solarized-dark
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      puml_keyword: plantuml
 
           
   

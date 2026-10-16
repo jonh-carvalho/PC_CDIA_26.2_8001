@@ -140,61 +140,47 @@ UC07 ..> AWSSystem : <<includes>>
 
 ```plantuml
 @startuml
-!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v16.0/dist
-!include AWSPuml/AWSCommon.puml
-!include AWSPuml/NetworkingContentDelivery/AmazonVPC.puml
-!include AWSPuml/NetworkingContentDelivery/AmazonRoute53.puml
-!include AWSPuml/NetworkingContentDelivery/ElasticLoadBalancing.puml
-!include AWSPuml/Compute/AmazonEC2.puml
-!include AWSPuml/Database/AmazonRDS.puml
-!include AWSPuml/Database/AmazonDynamoDB.puml
-!include AWSPuml/Storage/AmazonS3.puml
-!include AWSPuml/ApplicationIntegration/AmazonAPIGateway.puml
-!include AWSPuml/Compute/AWSLambda.puml
-!include AWSPuml/ManagementGovernance/AWSCloudWatch.puml
-!include AWSPuml/DeveloperTools/AWSCodePipeline.puml
-
 title Arquitetura de Componentes - [NOME DO PROJETO]
 
 package "AWS Cloud" {
   package "VPC 10.0.0.0/16" {
     package "Availability Zone A" {
-      package "Subnet-Public-A\n10.0.1.0/24" {
-        AmazonALB(albA, "Application Load Balancer", "ALB - A")
-        NATGateway(natA, "NAT Gateway", "NAT-A")
+      package "Subnet-Public-A (10.0.1.0/24)" {
+        node "ALB - A\nApplication Load Balancer" as albA
+        node "NAT-A\nNAT Gateway" as natA
       }
-      package "Subnet-Private-A\n10.0.2.0/24" {
-        AmazonEC2(ec2A, "API Instance", "EC2 - A")
-        AmazonRDS(rdsA, "RDS Primary", "PostgreSQL")
+      package "Subnet-Private-A (10.0.2.0/24)" {
+        node "EC2 - A\nAPI Instance" as ec2A
+        database "RDS Primary\nPostgreSQL" as rdsA
       }
     }
     package "Availability Zone B" {
-      package "Subnet-Public-B\n10.0.3.0/24" {
-        AmazonALB(albB, "Application Load Balancer", "ALB - B")
-        NATGateway(natB, "NAT Gateway", "NAT-B")
+      package "Subnet-Public-B (10.0.3.0/24)" {
+        node "ALB - B\nApplication Load Balancer" as albB
+        node "NAT-B\nNAT Gateway" as natB
       }
-      package "Subnet-Private-B\n10.0.4.0/24" {
-        AmazonEC2(ec2B, "API Instance", "EC2 - B")
-        AmazonRDS(rdsB, "RDS Standby", "PostgreSQL")
+      package "Subnet-Private-B (10.0.4.0/24)" {
+        node "EC2 - B\nAPI Instance" as ec2B
+        database "RDS Standby\nPostgreSQL" as rdsB
       }
     }
-    
+
     package "VPC Endpoints" {
-      AmazonDynamoDB(dynamoDB, "DynamoDB", "GPS Data")
-      AmazonS3(s3, "S3", "Static Files")
-      AWSSecretsManager(secrets, "Secrets Manager", "Credentials")
+      database "DynamoDB\nGPS Data" as dynamoDB
+      storage "S3\nStatic Files" as s3
+      component "Secrets Manager\nCredentials" as secrets
     }
-    
-    AmazonAPIGateway(apiGw, "API Gateway", "Ingestão")
-    AWSLambda(lambda, "Lambda", "Processamento")
+
+    component "API Gateway\nIngestão" as apiGw
+    component "Lambda\nProcessamento" as lambda
   }
-  
-  AmazonS3(s3cdn, "S3 + CloudFront", "CDN")
-  AWSCloudWatch(cloudwatch, "CloudWatch", "Monitoramento")
-  AWSCodePipeline(pipeline, "CodePipeline", "CI/CD")
-  
-  Cloudflare(client, "Clientes/Operadores")
+
+  cloud "CloudFront\nCDN" as cloudfront
+  component "CloudWatch\nMonitoramento" as cloudwatch
+  component "CodePipeline\nCI/CD" as pipeline
 }
+
+actor "Clientes/Operadores" as client
 
 ' Conexões
 client --> albA
@@ -220,7 +206,7 @@ lambda --> s3
 
 apiGw --> lambda
 
-s3cdn <-- s3
+cloudfront <-- s3
 
 pipeline --> ec2A
 pipeline --> ec2B
