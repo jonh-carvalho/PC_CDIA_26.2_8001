@@ -20,6 +20,8 @@ nav:
       - Elaboração:
           - Casos de Uso Arquitetural: Disciplina/roteiros/Elaboracao/casos_uso_arquiteturais.md
           - Modelo de Análise - Segurança: Disciplina/roteiros/Elaboracao/modelo_de_analise-pacotes_subsistemas.md
+      - Transição:
+          - Modelo de Design (Atividades - Deploy): Disciplina\roteiros\Transicao\atividades_deploy.md
       - Roteiros:
         - 01- AWS: Disciplina/roteiros/02 - aws.md
         - 04 - EC2: Disciplina/roteiros/04 - ec2.md
@@ -30,10 +32,13 @@ nav:
         - 07 - BE: Disciplina/roteiros/07 - eb.md
         - 10 - Aurora RDS: Disciplina/roteiros/10 - aurora.md
         - 10 - Docker RDS: Disciplina/roteiros/10 - docker_rds.md
+        - 13 - Django Sqlite no Docker EC2: Disciplina/roteiros/13 - djangosqlitedocker.md
         - Big Data: 
-          - 11 - Constraints: Disciplina/roteiros/bigdata/aula01/aula01 - 01.md
-          - 11 - Transactional: Disciplina/roteiros/bigdata/aula01/aula01 - 02_transaction.md
+          - 11 - Transacional: Disciplina/roteiros/bigdata/aula01/aula01 - 01.md
+          - 11 - Analítico: Disciplina/roteiros/bigdata/aula01/aula01 - 02_transaction.md
           - 11 - Data Lake: Disciplina/roteiros/bigdata/aula01/aula01 - 03_seed.md
+          - 13 - Document: Disciplina/roteiros/bigdata/aula02/aula02_01.md
+          - 13 - Setup: Disciplina/roteiros/bigdata/aula02/aula02_03_1.md
 #        - 12 - EB MySQL: Disciplina/roteiros/12 - ebmysql.md
   - Iniciação: 
     - Index: Iniciacao/index.md
