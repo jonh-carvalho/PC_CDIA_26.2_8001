@@ -10,7 +10,7 @@
 | Aula 06 - 11/09/2026 | :octicons-project-roadmap-24: [Requisitos Suplementares](../Disciplina/docs/aula04/Architecting_the_Measurable_Cloud.pdf) | :material-cloud-outline: Roteiros - EC2 VsCode - Docker - Wsl|
 | Aula 07 - 18/09/2026 | :octicons-project-roadmap-24: [Casos de Uso Arquitetural](./docs/aula07/AWS_VPC_Design.pdf) | :material-cloud-outline: Roteiros - S3 |
 | Aula 08 - 25/09/2026 | :octicons-project-roadmap-24: [Modelo de Análise - Segurança](./docs/aula08/Aws_Security.pdf) | :material-cloud-outline: Roteiros - Elastic Beanstalk |
-| Aula 09 - 02/10/2026 | :octicons-project-roadmap-24: AP1 - Apresentação | :material-cloud-outline:  |
+| Aula 09 - 02/10/2026 | :octicons-project-roadmap-24: AP1 - Apresentação | :material-cloud-outline: AP1 - Apresentação |
 | Aula 10 - 09/10/2026 | :octicons-project-roadmap-24: Dimensionamento [RDS](./docs/aula09/Dimensionamento_RDS.pdf) | :material-cloud-outline: Roteiros - Big Data |
 | Aula 11 - 16/10/2026 | :octicons-project-roadmap-24: Dimensionamento [EC2](./docs/aula10/Arquitetura_EC2_SwiftTrack.pdf) | :material-cloud-outline: Roteiros - Big Data |
 | Aula 12 - 23/10/2026 | :octicons-project-roadmap-24: Consolida [Arquitetura](./docs/aula10/SwiftTrack_IoT_Architecture_Blueprint.pdf) | :material-cloud-outline: Roteiros - Big Data |
