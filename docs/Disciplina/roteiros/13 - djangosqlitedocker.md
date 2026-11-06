@@ -203,85 +203,6 @@ __pycache__/
 db.sqlite3
 ```
 
-## Docker compose
-
-No Amazon Linux (seja a versão 2 ou a versão 2023), o Docker e o Docker Compose funcionam de forma um pouco diferente do Ubuntu, pois usam o gerenciador de pacotes yum (ou dnf) e os diretórios do sistema mudam. Para resolver isso agora e deixar o comando global ativo, execute estes três passos simples no terminal da sua EC2:
-
-1. Criar a pasta oficial de plugins do Docker
-
-No Amazon Linux, o Docker busca os plugins em um diretório específico do sistema. Crie essa pasta rodando: 
-
-```bash
-sudo mkdir -p /usr/libexec/docker/cli-plugins/
-```
-
-2. Baixar a versão mais recente do Docker Compose
-
-Baixar o binário correto diretamente do repositório oficial da ferramenta: 
-
-```bash
-sudo curl -SL "https://github.com/docker/compose/releases/latest/download/docker-compose-linux-$(uname -m)" -o /usr/libexec/docker/cli-plugins/docker-compose
-```
-3. Dar permissão de execução
-
-Torne o arquivo que você acabou de baixar executável pelo sistema: 
-
-```bash
-sudo chmod +x /usr/libexec/docker/cli-plugins/docker-compose
-```
-
-Verifique se o comando agora responde corretamente:
-
-```bash
-docker compose version
-```
-
-Se o número da versão aparecer na tela, o seu ambiente está 100% pronto. Pode entrar na pasta do seu projeto e rodar a sua aplicação normalmente:
-
-```bash
-docker compose up -d --build
-```
-
-O comando docker compose version respondeu com a versão após esses três passos? Se não.
-
----
-
-Esse erro significa que o Docker que está rodando na sua máquina não está encontrando o arquivo que baixamos no diretório de plugins dele. No Amazon Linux, a rota do plugin global muda dependendo da versão exata do sistema (Amazon Linux 2 vs. Amazon Linux 2023).
-Para resolver isso de forma simples e definitiva, vamos colocar o arquivo no diretório de binários globais do sistema (/usr/local/bin). Isso ativa o comando tradicional docker-compose (com hífen), que faz exatamente a mesma coisa.
-
-Siga estes passos:
-
-1. Mover o arquivo para o diretório de comandos do sistema
-
-Rode este comando para mover o arquivo baixado para a pasta global correta:
-
-```bash
-sudo mv /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose
-```
-
-2. Garantir a permissão de execução
-
-```bash
-sudo chmod +x /usr/local/bin/docker-compose
-```
-
-3. Testar a versão
-
-Agora, chame o comando usando o hífen:
-```bash
-docker-compose version
-```
-
-Se ele responder exibindo a versão, o problema está resolvido!)
-
-Passo Final: Rodar sua aplicação
-
-Com o comando global ativo, entre na pasta do seu projeto na EC2 e execute o Compose com o hífen:
-
-```bash
-docker-compose up -d --build
-```
-
 ### `docker-compose.yml`
 
 O arquivo `docker-compose.yml` descreve como iniciar e configurar os serviços de uma aplicação com o Docker Compose. Ele reúne em um só lugar informações como a forma de construir a imagem, as portas a publicar, as variáveis de ambiente e os volumes. Dessa forma, o ambiente pode ser iniciado de maneira consistente com um comando, como `docker compose up`.
@@ -337,8 +258,8 @@ No PowerShell, use `curl.exe` ou `Invoke-RestMethod`. Também é possível abrir
 ### Testar a persistência
 
 ```bash
-docker compose down
-docker compose up -d
+docker-compose down
+docker-compose up -d
 curl http://localhost:8000/api/tarefas/
 ```
 
@@ -357,15 +278,6 @@ Ao terminar os testes, pare o ambiente local com `docker compose down`.
 ---
 
 ## Parte 5 - Sincronizar com o GitHub (Windows → GitHub)
-
-### Instalar Docker Compose
-
-```bash
-mkdir -p ~/.docker/cli-plugins/
-curl -SL https://github.com -o ~/.docker/cli-plugins/docker-compose
-chmod +x ~/.docker/cli-plugins/docker-compose
-https://www.google.com/search?q=docker+compose+up+-d+--build+na+ec2+aws&newwindow=1&sca_esv=652a474648989aa3&sxsrf=AKL5yDhQUjj4sOYhRRtvtCAezWFL0TvwYg%3A1793318348728&source=chrome.ob&fbs=ACAhTvwDHIJOqwlL4Oqvyxosc1dFIDgJZaoFWGV79uMcXVW5UVJPM_Rs8l7DPD8HG7BtN_p-qfQw5ZeNTqPOsUZWzhnSw7A8CMzwCfpv7kuD6n8St4ONbBTdDCyFCZ-NvtYjgU2aCtRcD6oRnOXP9U5jT2eVLfptyeyDzarw0xON3814IRspmxP8kmlGSqkiLpibjndbgnwmTF_jPKsm53TXMBYHLzfh8A&vsint=&aep=1&ntc=1&cs=0&sa=X&ved=2ahUKEwi5jZS5t-CXAxUTs5UCHYhbNbcQ2J8OegQIEhAD&biw=820&bih=526&dpr=1.25&mstk=AUtExfCfhPkb_NlF-gRQE1A6kdVHVWpvILxd0sr3MiFXBt8o5ZE2f_Z-r2ykc301my5KurVwdLhVfRw51PyuGpIuY9GsEBTi7IpxebOfv7XlRcMqOLgWZAh4vopEqznp6DA5NBZeY_KgaKV_OxTV6ArNpNe2OHqdWkB2s8QMmkxVZkTWB_qLfOuUmzdY2Dz_-mcVa7d-L2LMdHUvsWE7UUvMCtTqIvBntwQ05ylXFOIUXOVvJj3fpc3mcnna-Zg_LOKbobd1tKoRNUaox3l0sIbjs-KhEx_EgCjqT_vtWBq5JAZvDmzr2bZsiQFfTkP2H7U325CaBwShP3hqgg&csuir=1&mtid=z93jatUfr9LWxA-w97egBQ&udm=50
-```
 
 No PowerShell, na pasta `minha-api`:
 
@@ -417,12 +329,110 @@ Se o repositório for privado, use um Personal Access Token ou uma deploy key.
 
 ## Parte 7 - Deploy com Docker (EC2)
 
-Execute na **EC2**, na pasta do projeto:
+## I. Instalar e iniciar o Docker
+
+Teste se o Docker já está instalado:    
+```bash
+docker --version
+```
+
+Se estiver instalado, execute os comandos a seguir:
 
 ```bash
-docker compose up -d --build
-docker compose ps
-docker compose logs -f web
+sudo dnf install -y docker
+sudo systemctl enable --now docker
+```
+
+O DNF instala automaticamente as dependências necessárias.
+
+## II. Permitir que o usuário use Docker sem `sudo`
+
+Na imagem padrão do EC2, o usuário costuma ser `ec2-user`:
+
+```bash
+sudo usermod -aG docker ec2-user
+```
+
+Saia da sessão SSH e entre novamente para aplicar a associação ao grupo.
+Enquanto isso, você pode executar comandos Docker com `sudo`.
+
+> **Atenção:** o grupo `docker` concede privilégios equivalentes aos de root.
+> Adicione somente usuários confiáveis.
+
+## III. Instalar o Docker Compose
+
+O pacote `docker` do repositório do Amazon Linux não instala necessariamente o
+Compose. Instale o plugin oficial no diretório global de plugins do Docker CLI:
+
+```bash
+ARCH=$(uname -m)
+case "$ARCH" in
+  x86_64) COMPOSE_ARCH=x86_64 ;;
+  aarch64) COMPOSE_ARCH=aarch64 ;;
+  *) echo "Arquitetura não suportada: $ARCH" >&2; exit 1 ;;
+esac
+
+COMPOSE_VERSION=v5.7.0
+PLUGIN_DIR=/usr/local/lib/docker/cli-plugins
+
+sudo mkdir -p "$PLUGIN_DIR"
+sudo curl -fL \
+  "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-linux-${COMPOSE_ARCH}" \
+  -o "$PLUGIN_DIR/docker-compose"
+sudo chmod +x "$PLUGIN_DIR/docker-compose"
+```
+
+O plugin é instalado para todos os usuários. Para atualizar, altere
+`COMPOSE_VERSION` para a versão desejada e repita o download e o `chmod`.
+Consulte as versões publicadas em
+[Docker Compose releases](https://github.com/docker/compose/releases).
+
+## IV. Instalar ou atualizar o Docker Buildx
+
+O Buildx é necessário para executar builds pelo Compose. Instale o plugin
+oficial no mesmo diretório global de plugins do Docker CLI. A versão estável
+mais recente em 6 de novembro de 2026 é `v0.38.2`; consulte
+[Buildx releases](https://github.com/docker/buildx/releases) para verificar
+atualizações antes de repetir estes comandos.
+
+```bash
+ARCH=$(uname -m)
+case "$ARCH" in
+  x86_64) BUILDX_ARCH=amd64 ;;
+  aarch64) BUILDX_ARCH=arm64 ;;
+  *) echo "Arquitetura não suportada: $ARCH" >&2; exit 1 ;;
+esac
+
+BUILDX_VERSION=v0.38.2
+PLUGIN_DIR=/usr/local/lib/docker/cli-plugins
+
+sudo mkdir -p "$PLUGIN_DIR"
+sudo curl -fL \
+  "https://github.com/docker/buildx/releases/download/${BUILDX_VERSION}/buildx-${BUILDX_VERSION}.linux-${BUILDX_ARCH}" \
+  -o "$PLUGIN_DIR/docker-buildx"
+sudo chmod +x "$PLUGIN_DIR/docker-buildx"
+```
+
+## V. Verificar a instalação
+
+Depois de entrar novamente na sessão (ou usando `sudo` antes de entrar no grupo):
+
+```bash
+docker --version
+docker compose version
+docker buildx version
+docker info
+```
+
+Confirme que `docker buildx version` mostra `v0.38.2` ou posterior. Em seguida,
+construa e inicie os serviços:
+
+Agora Execute na **EC2** para criar o ambiente Django/Postgres. Na pasta do projeto:
+
+```bash
+docker-compose up -d --build
+docker-compose ps
+docker-compose logs -f web
 ```
 
 Teste de qualquer máquina (inclusive o Windows):
@@ -435,9 +445,21 @@ Para restringir o acesso, defina `DJANGO_ALLOWED_HOSTS` no Compose (ex.: `<IP_PU
 
 ### Ciclo de atualização
 
-1. **Windows**: altere o código, teste com `docker compose up -d --build` e execute `git push`.
-2. **EC2**: execute `git pull`.
-3. **EC2**: execute `docker compose up -d --build`.
+1. **Windows**: 
+
+- altere o código, teste com: 
+
+```bash
+docker compose up -d --build
+git push
+```
+
+2. **EC2**: 
+
+```bash
+git pull
+docker-compose up -d --build
+```
 
 Os dados ficam no volume `sqlitedata` da EC2, separado do volume local do Windows; não use `down -v` na EC2 se quiser preservá-los.
 
@@ -469,4 +491,4 @@ Os dados ficam no volume `sqlitedata` da EC2, separado do volume local do Window
 
 ## Próximo passo
 
-Siga [djangopg.md](./djangopg.md) e [preparopg.md](./preparopg.md) para trocar o SQLite pelo PostgreSQL em container. A mudança se resume a: ajustar `DATABASES` em `settings.py` para ler as variáveis `POSTGRES_*`, adicionar `psycopg[binary]` ao `requirements.txt` e incluir o serviço `db` no Compose.
+Siga [djangopgdocker.md](./djangopgdocker.md) para trocar o SQLite pelo PostgreSQL em container. A mudança se resume a: ajustar `DATABASES` em `settings.py` para ler as variáveis `POSTGRES_*`, adicionar `psycopg[binary]` ao `requirements.txt` e incluir o serviço `db` no Compose.
