@@ -18,7 +18,7 @@
     
     
       
-        <title>Djangopgdocker - PC_CDIA_26.2_8001</title>
+        <title>14 djangopgdocker - PC_CDIA_26.2_8001</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Djangopgdocker
+              14   djangopgdocker
             
           </span>
         </div>
@@ -937,6 +937,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1183,6 +1187,48 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../14 - djangopostgresdocker.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14 - Django Postgres no Docker EC2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14%20-%20Ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14 - Ubuntu Django Postgres no Docker EC2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1205,24 +1251,24 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_13" >
         
           
-          <label class="md-nav__link" for="__nav_2_6_11" id="__nav_2_6_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_6_13" id="__nav_2_6_13_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    Big Data
+    Dados MultiModelo
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6_11">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_13">
             <span class="md-nav__icon md-icon"></span>
-            Big Data
+            Dados MultiModelo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1872,7 +1918,7 @@
   
 
 
-  <h1>Djangopgdocker</h1>
+  <h1>14   djangopgdocker</h1>
 
 <h2 id="django-api-com-docker-postgresql">Django API com Docker + PostgreSQL<a class="headerlink" href="#django-api-com-docker-postgresql" title="Permanent link">&para;</a></h2>
 <h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
@@ -1911,20 +1957,20 @@
 <tr>
 <td>4. Deploy</td>
 <td><strong>EC2 (Docker)</strong></td>
-<td>Parte 6: criar o <code>.env</code>, <code>docker compose up -d --build</code> e testar pelo IP público</td>
+<td>Parte 6: criar o <code>.env</code>, <code>docker-compose up -d --build</code> e testar pelo IP público</td>
 </tr>
 </tbody>
 </table>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flowchart LR
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    A[Windows&lt;br/&gt;altera e testa] --&gt;|git push| B[GitHub]
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    B --&gt;|git pull| C[EC2 AWS]
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    C --&gt;|docker compose up| D[Django + Postgres&lt;br/&gt;em containers]
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    C --&gt;|docker-compose up| D[Django + Postgres&lt;br/&gt;em containers]
 </span></code></pre></div>
 <p>Regra: o código é alterado <strong>somente no Windows</strong>. A EC2 apenas recebe as mudanças via Git e executa o deploy. A única exceção é o <code>.env</code>, que contém a senha e por isso <strong>não vai para o GitHub</strong>: ele é criado manualmente em cada máquina.</p>
 <hr />
 <h2 id="parte-1-alterar-o-projeto-windows">Parte 1 - Alterar o projeto (Windows)<a class="headerlink" href="#parte-1-alterar-o-projeto-windows" title="Permanent link">&para;</a></h2>
 <p>Na pasta <code>minha-api</code>, com o ambiente antigo parado:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker-compose<span class="w"> </span>down
 </span></code></pre></div>
 <h3 id="11-requirementstxt">1.1 <code>requirements.txt</code><a class="headerlink" href="#11-requirementstxt" title="Permanent link">&para;</a></h3>
 <p>Adicione uma linha ao final do arquivo:</p>
@@ -1989,26 +2035,26 @@
 <hr />
 <h2 id="parte-2-executar-e-testar-localmente-windows">Parte 2 - Executar e testar localmente (Windows)<a class="headerlink" href="#parte-2-executar-e-testar-localmente-windows" title="Permanent link">&para;</a></h2>
 <p>Execute no PowerShell, na pasta <code>minha-api</code>, com o Docker Desktop em execução. Só avance para a Parte 4 depois que a API responder corretamente aqui.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>web
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>web
 </span></code></pre></div>
 <p><code>Ctrl+C</code> para de acompanhar os logs; os containers continuam em execução.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>curl.exe<span class="w"> </span>http://localhost:8000/api/tarefas/
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>curl.exe<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8000/api/tarefas/<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;{\&quot;titulo\&quot;:\&quot;Estudar Postgres\&quot;}&quot;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8000/api/tarefas/<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;titulo&quot;:&quot;Estudar Docker&quot;}&#39;</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>curl.exe<span class="w"> </span>http://localhost:8000/api/tarefas/
 </span></code></pre></div>
 <hr />
 <h2 id="parte-3-conferir-o-banco-e-a-persistencia-windows-docker">Parte 3 - Conferir o banco e a persistência (Windows / Docker)<a class="headerlink" href="#parte-3-conferir-o-banco-e-a-persistencia-windows-docker" title="Permanent link">&para;</a></h2>
 <h3 id="confirmar-que-os-dados-estao-no-postgres">Confirmar que os dados estão no Postgres<a class="headerlink" href="#confirmar-que-os-dados-estao-no-postgres" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>db<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;psql -U $POSTGRES_USER -d $POSTGRES_DB -c &quot;SELECT * FROM tarefas_tarefa;&quot;&#39;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>db<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;psql -U $POSTGRES_USER -d $POSTGRES_DB -c &quot;SELECT * FROM tarefas_tarefa;&quot;&#39;</span>
 </span></code></pre></div>
 <h3 id="testar-a-persistencia">Testar a persistência<a class="headerlink" href="#testar-a-persistencia" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker-compose<span class="w"> </span>down
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>curl.exe<span class="w"> </span>http://localhost:8000/api/tarefas/
 </span></code></pre></div>
-<p>A tarefa deve continuar na lista. Evite <code>docker compose down -v</code>: ele apaga o volume <code>pgdata</code>.</p>
-<p>Ao terminar, pare o ambiente local com <code>docker compose down</code>.</p>
+<p>A tarefa deve continuar na lista. Evite <code>docker-compose down -v</code>: ele apaga o volume <code>pgdata</code>.</p>
+<p>Ao terminar, pare o ambiente local com <code>docker-compose down</code>.</p>
 <hr />
 <h2 id="parte-4-sincronizar-com-o-github-windows-github">Parte 4 - Sincronizar com o GitHub (Windows → GitHub)<a class="headerlink" href="#parte-4-sincronizar-com-o-github-windows-github" title="Permanent link">&para;</a></h2>
 <p>No PowerShell, na pasta <code>minha-api</code>:</p>
@@ -2041,10 +2087,10 @@
 <p>Use uma senha diferente da usada no Windows.</p>
 <h3 id="62-subir-os-containers">6.2 Subir os containers<a class="headerlink" href="#62-subir-os-containers" title="Permanent link">&para;</a></h3>
 <p>Se o ambiente SQLite antigo ainda estiver rodando, pare-o primeiro (o volume <code>sqlitedata</code> antigo pode ser mantido ou removido depois):</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>docker<span class="w"> </span>compose<span class="w"> </span>ps
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>web
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>docker-compose<span class="w"> </span>down
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>docker-compose<span class="w"> </span>ps
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>web
 </span></code></pre></div>
 <h3 id="63-testar">6.3 Testar<a class="headerlink" href="#63-testar" title="Permanent link">&para;</a></h3>
 <p>De qualquer máquina (inclusive o Windows):</p>
@@ -2053,9 +2099,9 @@
 <p>O banco da EC2 começa vazio: os dados do Windows e do SQLite antigo <strong>não</strong> são migrados.</p>
 <h3 id="ciclo-de-atualizacao">Ciclo de atualização<a class="headerlink" href="#ciclo-de-atualizacao" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Windows</strong>: altere o código, teste com <code>docker compose up -d --build</code> e execute <code>git push</code>.</li>
+<li><strong>Windows</strong>: altere o código, teste com <code>docker-compose up -d --build</code> e execute <code>git push</code>.</li>
 <li><strong>EC2</strong>: execute <code>git pull</code>.</li>
-<li><strong>EC2</strong>: execute <code>docker compose up -d --build</code>.</li>
+<li><strong>EC2</strong>: execute <code>docker-compose up -d --build</code>.</li>
 </ol>
 <p>Os dados ficam no volume <code>pgdata</code> de cada máquina; não use <code>down -v</code> na EC2 se quiser preservá-los.</p>
 <hr />
@@ -2072,40 +2118,40 @@
 <tr>
 <td>Ver containers</td>
 <td>Windows / EC2</td>
-<td><code>docker compose ps</code></td>
+<td><code>docker-compose ps</code></td>
 </tr>
 <tr>
 <td>Logs da API</td>
 <td>Windows / EC2</td>
-<td><code>docker compose logs -f web</code></td>
+<td><code>docker-compose logs -f web</code></td>
 </tr>
 <tr>
 <td>Logs do banco</td>
 <td>Windows / EC2</td>
-<td><code>docker compose logs -f db</code></td>
+<td><code>docker-compose logs -f db</code></td>
 </tr>
 <tr>
 <td>Shell do Postgres</td>
 <td>Windows / EC2</td>
-<td><code>docker compose exec db sh -c 'psql -U $POSTGRES_USER -d $POSTGRES_DB'</code></td>
+<td><code>docker-compose exec db sh -c 'psql -U $POSTGRES_USER -d $POSTGRES_DB'</code></td>
 </tr>
 <tr>
 <td>Parar</td>
 <td>Windows / EC2</td>
-<td><code>docker compose down</code></td>
+<td><code>docker-compose down</code></td>
 </tr>
 <tr>
 <td>Parar e <strong>apagar dados</strong></td>
 <td>Windows / EC2</td>
-<td><code>docker compose down -v</code></td>
+<td><code>docker-compose down -v</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="problemas-comuns">Problemas comuns<a class="headerlink" href="#problemas-comuns" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong><code>could not translate host name "db"</code></strong>: o <code>POSTGRES_HOST</code> não é <code>db</code> ou o serviço <code>db</code> não está no Compose.</li>
-<li><strong><code>password authentication failed</code></strong>: o volume <code>pgdata</code> já foi criado com outra senha. Em ambiente de teste, rode <code>docker compose down -v</code> e suba de novo.</li>
-<li><strong><code>ModuleNotFoundError: psycopg</code></strong>: faltou <code>psycopg[binary]</code> no <code>requirements.txt</code>; rode <code>docker compose up -d --build</code>.</li>
+<li><strong><code>password authentication failed</code></strong>: o volume <code>pgdata</code> já foi criado com outra senha. Em ambiente de teste, rode <code>docker-compose down -v</code> e suba de novo.</li>
+<li><strong><code>ModuleNotFoundError: psycopg</code></strong>: faltou <code>psycopg[binary]</code> no <code>requirements.txt</code>; rode <code>docker-compose up -d --build</code>.</li>
 <li><strong><code>env file .env not found</code> na EC2</strong>: o <code>.env</code> não vai pelo GitHub; crie-o conforme a Parte 6.1.</li>
 <li><strong>Dados antigos do SQLite</strong>: não são migrados; o Postgres começa vazio.</li>
 </ul>
