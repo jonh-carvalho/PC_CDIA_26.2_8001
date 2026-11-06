@@ -33,6 +33,8 @@ nav:
         - 10 - Aurora RDS: Disciplina/roteiros/10 - aurora.md
         - 10 - Docker RDS: Disciplina/roteiros/10 - docker_rds.md
         - 13 - Django Sqlite no Docker EC2: Disciplina/roteiros/13 - djangosqlitedocker.md
+        - 14 - Django Postgres no Docker EC2: Disciplina/roteiros/14 - djangopostgresdocker.md
+        - 14 - Ubuntu Django Postgres no Docker EC2: Disciplina/roteiros/14 - Ubuntu.md
         - Dados MultiModelo: 
           - 11 - Transacional: Disciplina/roteiros/bigdata/aula01/aula01 - 01.md
           - 11 - Analítico: Disciplina/roteiros/bigdata/aula01/aula01 - 02_transaction.md
@@ -64,7 +66,7 @@ nav:
 #        - AC4: Avalia/AC04.md
        - AP:
           - AP1: Avalia/ap1.md
-   #     - AP2: Avalia/ap2.md
+          - AP2: Avalia/ap2.md
 #        - AS: Avalia/as.md
   - Bibliografia: Disciplina/bibliografia.md
 
