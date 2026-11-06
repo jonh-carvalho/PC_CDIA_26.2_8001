@@ -40,15 +40,7 @@ O grupo já possui um projeto Django Rest, no contexto do Tema do Projeto de Clo
 | A5 | API DRF com CRUD completo dos models, serializers aninhados quando fizer sentido, e **ao menos 1 filtro por campo JSON** (ex.: `?atributos__chave=valor`). |
 | A6 | Django Admin funcional com superusuário criado (via variáveis de ambiente ou `createsuperuser` no container). |
 | A7 | Configuração por variáveis de ambiente (`POSTGRES_*`, `SECRET_KEY`, `DEBUG`, `ALLOWED_HOSTS`), sem segredos no código. |
-| A8 | Dados de exemplo (seed/fixture) e ao menos 3 testes automatizados (`python manage.py test`). |
-
-### Pontos extras (até +10)
-
-Implementar **um** paradigma adicional no mesmo PostgreSQL, justificado no Tema:
-
-- **Vetorial:** `pgvector` + endpoint de busca por similaridade.
-- **Objetos:** upload de mídia em MinIO/S3 com `django-storages`.
-- **Grafos:** Apache AGE com consulta Cypher (ex.: relacionamentos do domínio).
+| A8 | Dados de exemplo (seed/fixture) |
 
 ---
 
@@ -67,12 +59,6 @@ Implementar **um** paradigma adicional no mesmo PostgreSQL, justificado no Tema:
 | B7 | **Persistência comprovada:** reiniciar os containers (`docker-compose down` / `up`) e demonstrar que os dados permanecem. |
 | B8 | Evidências no README: prints de `docker ps`, `docker-compose logs`, acesso à API e à tabela no Postgres (`psql`). |
 
-### Pontos extras (até +5)
-
-- Proxy reverso Nginx na porta 80 ou HTTPS.
-- Gunicorn no lugar do `runserver`.
-- Script de deploy/backup (`pg_dump`) documentado.
-- Elastic IP associado.
 
 ---
 
@@ -92,17 +78,7 @@ Todos os documentos devem estar no site MkDocs do repositório (publicado via Gi
 | Documento | Arquivo | Conteúdo esperado |
 |---|---|---|
 | Casos de Uso Arquiteturais | `cua.md` | Casos de uso significativos para a arquitetura e diagramas. |
-| Pacotes/Subsistemas | `maps.md` | Pacotes (Django apps, API, dados, infraestrutura, segurança), dependências e rastreabilidade. |
-| Dimensionamento de Computação (EC2) | `dim_comp.md` | Tipo de instância justificado (CPU/RAM para `web` + `db`), classes de análise, diagrama PlantUML. |
-| Dimensionamento de Banco de Dados | `dimrbd.md` | Volumetria, crescimento, memória de cálculo, armazenamento, backup/restauração. Comparar volume Docker em EC2 vs. RDS. |
-| Sequência/Comunicação | `seq_com.md` | Fluxos críticos (ex.: criação de registro transacional, consulta por JSONB, deploy) e matriz de rastreamento. |
-| Índice da fase | `index.md` | Resumo e links dos artefatos. |
 
-### Transição (`docs/Transicao`)
-
-| Documento | Arquivo | Conteúdo esperado |
-|---|---|---|
-| Estratégias de Deploy (Atividades) | `ativ_deploy.md` | Estratégias avaliadas (Beanstalk, EC2 + Docker, RDS, etc.), a escolhida, diagrama de atividades do deploy realizado, estimativa de tempo e custo, plano de rollback. |
 
 ### Critérios gerais de documentação
 
@@ -118,8 +94,7 @@ Todos os documentos devem estar no site MkDocs do repositório (publicado via Gi
 1. Repositório GitHub (professor como colaborador) com código, `Dockerfile`, `docker-compose.yml`, `.env.example`, seed e testes.
 2. `README.md` com: arquitetura (diagrama), execução local, passo a passo do deploy na EC2, links da API e do MkDocs, e evidências (B8).
 3. Site MkDocs publicado com todos os documentos da Parte C.
-4. API no ar na EC2 até a data/hora da avaliação.
-5. Apresentação no laboratório (todos os membros).
+4. API no ar na EC2.
 
 ---
 
@@ -142,13 +117,6 @@ Todos os documentos devem estar no site MkDocs do repositório (publicado via Gi
 | | Publicação do MkDocs e consistência com a aplicação | 3 |
 | **Apresentação (5)** | Participação de todos os membros e clareza | 5 |
 | **Extras** | Paradigma adicional (+10) e infraestrutura (+5) | até +15 (nota limitada a 10,0) |
-
-### Penalidades
-
-- Segredos (senhas, chaves) versionados no Git: **-10 pontos**.
-- API fora do ar na data da avaliação: máximo de 50% do eixo Deploy.
-- Documentos com texto de template não preenchido: pontuação proporcional zerada no item.
-
 
 ---
 
