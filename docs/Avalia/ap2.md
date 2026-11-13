@@ -1,5 +1,7 @@
 # AP2 - Django API Multimodelo (PostgreSQL) em Docker na EC2 + Documentação RUP
 
+[AP2 - Online - 13/11/2026](https://teams.microsoft.com/meet/2356446430879789?p=neNaWEd01zzN9ETWzN)
+
 ## Objetivo
 
 Evoluir o projeto da AP1 (Django Rest + SQLite no Elastic Beanstalk) para uma arquitetura mais próxima de produção:
