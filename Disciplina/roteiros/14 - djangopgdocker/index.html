@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../13%20-%20djangosqlitedocker/">
+      
+      
+        <link rel="next" href="../14%20-%20Ubuntu/">
       
       
       <link rel="icon" href="../../../assets/ibmec_icon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>14 djangopgdocker - PC_CDIA_26.2_8001</title>
+        <title>14 - Django Postgres no Docker EC2 - PC_CDIA_26.2_8001</title>
       
     
     
@@ -114,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              14   djangopgdocker
+              14 - Django Postgres no Docker EC2
             
           </span>
         </div>
@@ -250,10 +254,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../aulas/" class="md-tabs__link">
           
   
@@ -443,8 +449,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -467,12 +475,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -486,7 +494,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Disciplina
@@ -910,8 +918,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -945,12 +955,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -964,7 +974,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Roteiros
@@ -1185,10 +1195,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../14 - djangopostgresdocker.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    14 - Django Postgres no Docker EC2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1197,6 +1225,240 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#django-api-com-docker-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django API com Docker + PostgreSQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pré-requisitos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-de-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluxo de trabalho
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-1-alterar-o-projeto-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 1 - Alterar o projeto (Windows)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 1 - Alterar o projeto (Windows)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 requirements.txt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-configsettingspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 config/settings.py
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-env-novo-arquivo-na-raiz-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 .env (novo arquivo, na raiz do projeto)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 docker-compose.yml
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-2-executar-e-testar-localmente-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 2 - Executar e testar localmente (Windows)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-3-conferir-o-banco-e-a-persistencia-windows-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 3 - Conferir o banco e a persistência (Windows / Docker)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 3 - Conferir o banco e a persistência (Windows / Docker)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confirmar-que-os-dados-estao-no-postgres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirmar que os dados estão no Postgres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testar-a-persistencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testar a persistência
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-4-sincronizar-com-o-github-windows-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 4 - Sincronizar com o GitHub (Windows → GitHub)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-5-sincronizar-com-a-ec2-github-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 5 - Sincronizar com a EC2 (GitHub → EC2)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-6-deploy-com-docker-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parte 6 - Deploy com Docker (EC2)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte 6 - Deploy com Docker (EC2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-criar-o-env-somente-na-primeira-vez" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Criar o .env (somente na primeira vez)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-subir-os-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Subir os containers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-testar" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Testar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-atualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciclo de atualização
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-uteis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos úteis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problemas comuns
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1941,7 +2203,7 @@
   
 
 
-  <h1>14   djangopgdocker</h1>
+  <h1>14 - Django Postgres no Docker EC2</h1>
 
 <h2 id="django-api-com-docker-postgresql">Django API com Docker + PostgreSQL<a class="headerlink" href="#django-api-com-docker-postgresql" title="Permanent link">&para;</a></h2>
 <h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>

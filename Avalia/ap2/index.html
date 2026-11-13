@@ -1196,7 +1196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Disciplina/roteiros/14 - djangopostgresdocker.md" class="md-nav__link">
+      <a href="../../Disciplina/roteiros/14%20-%20djangopgdocker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1977,15 +1977,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#pontos-extras-ate-10" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pontos extras (até +10)
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2005,15 +1996,6 @@
   <a href="#requisitos-minimos_1" class="md-nav__link">
     <span class="md-ellipsis">
       Requisitos mínimos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pontos-extras-ate-5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pontos extras (até +5)
     </span>
   </a>
   
@@ -2053,15 +2035,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#transicao-docstransicao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transição (docs/Transicao)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#criterios-gerais-de-documentacao" class="md-nav__link">
     <span class="md-ellipsis">
       Critérios gerais de documentação
@@ -2090,21 +2063,6 @@
       Critérios de Correção (100 pontos + extras)
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Critérios de Correção (100 pontos + extras)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#penalidades" class="md-nav__link">
-    <span class="md-ellipsis">
-      Penalidades
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2245,17 +2203,10 @@
 </tr>
 <tr>
 <td>A8</td>
-<td>Dados de exemplo (seed/fixture) e ao menos 3 testes automatizados (<code>python manage.py test</code>).</td>
+<td>Dados de exemplo (seed/fixture)</td>
 </tr>
 </tbody>
 </table>
-<h3 id="pontos-extras-ate-10">Pontos extras (até +10)<a class="headerlink" href="#pontos-extras-ate-10" title="Permanent link">&para;</a></h3>
-<p>Implementar <strong>um</strong> paradigma adicional no mesmo PostgreSQL, justificado no Tema:</p>
-<ul>
-<li><strong>Vetorial:</strong> <code>pgvector</code> + endpoint de busca por similaridade.</li>
-<li><strong>Objetos:</strong> upload de mídia em MinIO/S3 com <code>django-storages</code>.</li>
-<li><strong>Grafos:</strong> Apache AGE com consulta Cypher (ex.: relacionamentos do domínio).</li>
-</ul>
 <hr />
 <h2 id="parte-b-deploy-em-ec2-com-docker">Parte B - Deploy em EC2 com Docker<a class="headerlink" href="#parte-b-deploy-em-ec2-com-docker" title="Permanent link">&para;</a></h2>
 <h3 id="requisitos-minimos_1">Requisitos mínimos<a class="headerlink" href="#requisitos-minimos_1" title="Permanent link">&para;</a></h3>
@@ -2301,13 +2252,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="pontos-extras-ate-5">Pontos extras (até +5)<a class="headerlink" href="#pontos-extras-ate-5" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Proxy reverso Nginx na porta 80 ou HTTPS.</li>
-<li>Gunicorn no lugar do <code>runserver</code>.</li>
-<li>Script de deploy/backup (<code>pg_dump</code>) documentado.</li>
-<li>Elastic IP associado.</li>
-</ul>
 <hr />
 <h2 id="parte-c-documentacao-mkdocs-publicado">Parte C - Documentação (MkDocs publicado)<a class="headerlink" href="#parte-c-documentacao-mkdocs-publicado" title="Permanent link">&para;</a></h2>
 <p>Todos os documentos devem estar no site MkDocs do repositório (publicado via GitHub Pages), preenchidos <strong>para o Tema do grupo</strong>, sem trechos como <code>[NOME DO PROJETO]</code> ou <code>XXXX</code>, e consistentes com a aplicação implementada.</p>
@@ -2348,48 +2292,6 @@
 <td><code>cua.md</code></td>
 <td>Casos de uso significativos para a arquitetura e diagramas.</td>
 </tr>
-<tr>
-<td>Pacotes/Subsistemas</td>
-<td><code>maps.md</code></td>
-<td>Pacotes (Django apps, API, dados, infraestrutura, segurança), dependências e rastreabilidade.</td>
-</tr>
-<tr>
-<td>Dimensionamento de Computação (EC2)</td>
-<td><code>dim_comp.md</code></td>
-<td>Tipo de instância justificado (CPU/RAM para <code>web</code> + <code>db</code>), classes de análise, diagrama PlantUML.</td>
-</tr>
-<tr>
-<td>Dimensionamento de Banco de Dados</td>
-<td><code>dimrbd.md</code></td>
-<td>Volumetria, crescimento, memória de cálculo, armazenamento, backup/restauração. Comparar volume Docker em EC2 vs. RDS.</td>
-</tr>
-<tr>
-<td>Sequência/Comunicação</td>
-<td><code>seq_com.md</code></td>
-<td>Fluxos críticos (ex.: criação de registro transacional, consulta por JSONB, deploy) e matriz de rastreamento.</td>
-</tr>
-<tr>
-<td>Índice da fase</td>
-<td><code>index.md</code></td>
-<td>Resumo e links dos artefatos.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="transicao-docstransicao">Transição (<code>docs/Transicao</code>)<a class="headerlink" href="#transicao-docstransicao" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Documento</th>
-<th>Arquivo</th>
-<th>Conteúdo esperado</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Estratégias de Deploy (Atividades)</td>
-<td><code>ativ_deploy.md</code></td>
-<td>Estratégias avaliadas (Beanstalk, EC2 + Docker, RDS, etc.), a escolhida, diagrama de atividades do deploy realizado, estimativa de tempo e custo, plano de rollback.</td>
-</tr>
 </tbody>
 </table>
 <h3 id="criterios-gerais-de-documentacao">Critérios gerais de documentação<a class="headerlink" href="#criterios-gerais-de-documentacao" title="Permanent link">&para;</a></h3>
@@ -2405,8 +2307,7 @@
 <li>Repositório GitHub (professor como colaborador) com código, <code>Dockerfile</code>, <code>docker-compose.yml</code>, <code>.env.example</code>, seed e testes.</li>
 <li><code>README.md</code> com: arquitetura (diagrama), execução local, passo a passo do deploy na EC2, links da API e do MkDocs, e evidências (B8).</li>
 <li>Site MkDocs publicado com todos os documentos da Parte C.</li>
-<li>API no ar na EC2 até a data/hora da avaliação.</li>
-<li>Apresentação no laboratório (todos os membros).</li>
+<li>API no ar na EC2.</li>
 </ol>
 <hr />
 <h2 id="criterios-de-correcao-100-pontos-extras">Critérios de Correção (100 pontos + extras)<a class="headerlink" href="#criterios-de-correcao-100-pontos-extras" title="Permanent link">&para;</a></h2>
@@ -2496,12 +2397,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="penalidades">Penalidades<a class="headerlink" href="#penalidades" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Segredos (senhas, chaves) versionados no Git: <strong>-10 pontos</strong>.</li>
-<li>API fora do ar na data da avaliação: máximo de 50% do eixo Deploy.</li>
-<li>Documentos com texto de template não preenchido: pontuação proporcional zerada no item.</li>
-</ul>
 <hr />
 <h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
 <ul>
